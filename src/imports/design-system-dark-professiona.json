@@ -1,0 +1,126 @@
+PROMPT:
+
+Uprav vizuální styl mého webu podle referenčního obrázku (tmavý profesionální hero s jemným gradientem a hloubkou), ale zachovej strukturu a layout stávajícího webu.
+
+Cíl:
+Působit jako digitální architekt – profesionálně, důvěryhodně, systematicky.
+Ne startup šablona, ne marketingový hype.
+
+🎨 BAREVNÁ PALETA (POUŽÍT PŘESNĚ TYTO HODNOTY)
+
+Primární (tmavé plochy, hero pozadí):
+Deep navy #1F2A37
+
+Sekundární (světlé sekce, kontrastní bloky):
+Off-white #F4F4F2
+
+Text:
+Antracit #1C1C1C
+
+Akcent (vyber jednu variantu a používej konzistentně):
+Muted teal #2F6F6D
+nebo
+Soft green #4A7C59
+
+CTA:
+Použij světlejší odstín akcentu (o 10–15 % světlejší než základní akcentová barva).
+
+🧱 HERO SEKCE – STYL
+
+Použij tmavé pozadí Deep navy #1F2A37.
+
+Přidej velmi jemný gradient přecházející do o něco světlejšího odstínu navy (max +5 % světlosti).
+
+Může být přidána velmi jemná radiální světelná textura nebo rozostřený gradient v rohu (nízká opacity 5–8 %), aby vznikla hloubka.
+
+Text v hero sekci nastav na Off-white #F4F4F2.
+
+CTA tlačítko:
+
+pozadí: světlejší akcent
+
+text: Off-white
+
+hover: mírné zesvětlení nebo jemný glow efekt (velmi decentní)
+
+Nepoužívej agresivní stíny ani výrazné glow efekty.
+
+📐 OSTATNÍ SEKCE
+
+Střídej:
+
+tmavé bloky (Deep navy)
+
+světlé bloky (Off-white)
+
+Na světlém pozadí:
+
+text: Antracit #1C1C1C
+
+nadpisy: mírně tmavší varianta antracitu
+
+Na tmavém pozadí:
+
+text: Off-white
+
+akcentové prvky: akcentová barva
+
+🧩 KOMPONENTY
+
+Karty / boxy:
+
+na tmavém pozadí: lehce světlejší navy s velmi jemným borderem (opacity 8–12 %)
+
+na světlém pozadí: bílá nebo velmi jemná šedá s minimálním stínem
+
+Ikony:
+
+line style
+
+barva: akcent
+
+žádné barevné přechody
+
+🔠 TYPOGRAFIE
+
+Zachovej současné fonty, pokud jsou profesionální a čisté.
+
+Preferuj:
+
+výrazné, ale jednoduché nadpisy
+
+dostatek whitespace
+
+větší řádkování
+
+žádné dekorativní prvky
+
+🚫 ČEMU SE VYHNOUT
+
+Neonové efekty
+
+Modro-fialové AI gradienty
+
+Těžké stíny
+
+Přehnané animace
+
+Glassmorphism
+
+Styl má být klidný, stabilní, technicky přesný.
+
+✨ CELKOVÝ DOJEM
+
+Výsledek musí působit:
+
+profesionálně
+
+sebevědomě
+
+architektonicky
+
+stabilně
+
+nadčasově
+
+Jako web digitálního architekta, který staví obchodní infrastrukturu, ne marketingovou landing page.

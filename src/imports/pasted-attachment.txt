@@ -1,0 +1,153 @@
+PROMPT:
+
+Aktualizuj obsah mého webu podle níže uvedené obchodní strategie.
+
+DŮLEŽITÉ:
+
+Zachovej současný design, layout, grid, barevnost, typografii i rozložení sekcí.
+
+Nepřidávej nové designové prvky.
+
+Nepřestavuj strukturu stránky.
+
+Pouze uprav textový obsah a využij existující komponenty.
+
+Pokud je potřeba přidat novou sekci, použij již existující styl bloků (stejné mezery, nadpisy, boxy).
+
+Cíl:
+Odlišit se od běžných webových studií v regionu.
+Působit jako digitální architekt a partner pro firmy.
+Komunikovat projekty v rozmezí 80 000 – 120 000 Kč.
+Zdůraznit CMS na míru a obchodní přístup.
+
+1️⃣ HERO SEKCE
+
+Headline:
+
+„Web jako obchodní systém. Ne jen prezentace.“
+
+Podnadpis:
+
+Navrhuji a vyvíjím weby s vlastním CMS na míru.
+Každý projekt stavím jako nástroj pro získávání zákazníků a dlouhodobý růst firmy.
+
+CTA tlačítka:
+
+Nezávazná konzultace
+
+Zobrazit případové studie
+
+2️⃣ SEKCE – CO DĚLÁM
+
+Uprav existující sekci služeb na tři jasně definované produkty:
+
+Lead Web System
+
+Web zaměřený na poptávky a konverzi.
+Analýza cíle, struktura zaměřená na zákazníka, CMS na míru, vysoký výkon.
+
+Service Funnel System
+
+Web pro firmy s více službami.
+Strukturované landing podstránky, formuláře, jednoduchý systém správy poptávek.
+
+Web + Simple Shop
+
+Jednoduchý e-shop bez napojení na skladové systémy.
+Přehledná správa produktů, varianty, platby, doprava, CMS na míru.
+
+3️⃣ SEKCE – INVESTICE
+
+Nadpis:
+
+„Investice do systému, který vydělává.“
+
+Text:
+
+Typická investice do projektu se pohybuje mezi 80 000 – 120 000 Kč podle rozsahu řešení.
+
+Každý web navrhuji jako dlouhodobý systém, který lze rozšiřovat bez závislosti na šablonách nebo pluginové džungli.
+
+Neprodávám hotovou šablonu.
+Navrhuji řešení podle konkrétního obchodního cíle.
+
+4️⃣ SEKCE – JAK PROBÍHÁ SPOLUPRÁCE
+
+Analýza cíle a zákazníků
+
+Návrh struktury a architektury
+
+Vývoj a nastavení CMS na míru
+
+Spuštění a dlouhodobý rozvoj
+
+Text stručný, věcný, profesionální.
+
+5️⃣ SEKCE – PŘÍPADOVÉ STUDIE
+
+Přetvoř reference na strukturované případové studie.
+
+U každého projektu použij strukturu:
+
+Název projektu
+Typ projektu (Web / Web + e-shop)
+
+Zadání
+Hlavní problém
+Navržené řešení
+Výsledek
+
+Text formuluj profesionálně a obchodně.
+
+6️⃣ SEKCE – PAUŠÁLNÍ SPOLUPRÁCE
+
+Přidej sekci využívající existující designové boxy:
+
+Care – 2 100 Kč / měsíc
+
+Technická správa, drobné úpravy, dohled nad výkonem.
+
+Growth – 3 900 Kč / měsíc
+
+Care + pravidelné rozšiřování obsahu a konverzní úpravy.
+
+Pro – 5 900 Kč / měsíc
+
+Strategický rozvoj webu, optimalizace struktury, kvartální roadmapa.
+
+7️⃣ SEKCE – O MNĚ
+
+Zaměř text na:
+
+technické zázemí
+
+zkušenost se systémovým prostředím
+
+architektonické myšlení
+
+dlouhodobý přístup
+
+Tón:
+Klidný, sebevědomý, profesionální.
+Bez marketingových klišé.
+
+8️⃣ PATIČKA
+
+Krátké shrnutí:
+
+„Web není cíl. Je to systém.
+Postavím vám digitální základ, na kterém můžete růst.“
+
+Výsledný obsah musí působit:
+
+profesionálně
+
+systematicky
+
+stabilně
+
+obchodně
+
+bez šablonového dojmu
+
+Design zůstává beze změny.

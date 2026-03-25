@@ -1,82 +1,69 @@
 import { motion } from 'motion/react';
-import { NeuralNetworkFragment } from './NeuralNetworkFragment';
 
 const processes = [
-  { num: "01", title: "Pochopení Zadání", detail: "Společně probereme vaše cíle a vymyslíme nejlepší technologické řešení." },
-  { num: "02", title: "Návrh Řešení", detail: "Vytvořím strukturu, vyberu stack a připravím technický plán." },
-  { num: "03", title: "Kódování", detail: "Transparentní a agilní vývoj. Jsem s vámi v neustálém kontaktu." },
-  { num: "04", title: "Spuštění", detail: "Testování, optimalizace výkonu a nasazení na ostrou doménu." }
+  {
+    num: '01',
+    title: 'Pochopení zadání',
+    detail: 'Probereme cíle, uživatele a omezení — společně nastavíme měřítko úspěchu.',
+  },
+  {
+    num: '02',
+    title: 'Návrh řešení',
+    detail: 'Struktura obrazovek, stack a milníky. Písemný plán, ne překvapení.',
+  },
+  {
+    num: '03',
+    title: 'Iterativní vývoj',
+    detail: 'Pravidelné ukázky, krátké cykly, prostor pro zpětnou vazbu.',
+  },
+  {
+    num: '04',
+    title: 'Spuštění',
+    detail: 'Testy, výkon, nasazení a předání — včetně dokumentace.',
+  },
 ];
 
 export function Process() {
   return (
-    <section id="proces" className="py-24 lg:py-32 w-full relative bg-[#F2F2F2] overflow-hidden">
-      {/* Neural Network Fragments */}
-      <NeuralNetworkFragment 
-        particleCount={10}
-        connectionDistance={130}
-        particleSpeed={0.08}
-        opacity={0.28}
-        className="top-20 left-0 w-[350px] h-[350px] z-0"
-      />
-      <NeuralNetworkFragment 
-        particleCount={6}
-        connectionDistance={90}
-        particleSpeed={0.15}
-        opacity={0.22}
-        className="bottom-0 right-20 w-[250px] h-[250px] z-0"
-      />
-      
-      <div className="max-w-[90rem] mx-auto px-6 lg:px-12">
-        
-        {/* Section Header */}
-        <div className="mb-20">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+    <section id="proces" className="py-20 lg:py-28 w-full relative bg-[#F8F7F5] overflow-hidden">
+      <div className="max-w-[90rem] mx-auto px-4 md:px-8">
+        <div className="rounded-[2rem] border border-[#9D9C99]/15 bg-[#FBFAD6]/50 p-8 md:p-12 lg:p-14 mb-14 md:mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="max-w-2xl"
           >
-            <h2 className="text-4xl lg:text-6xl font-black tracking-tighter leading-[1] text-[#0D0D0D] uppercase mb-6">
-              Můj <br/> <span className="text-[#737068]">Postup.</span>
+            <p className="text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.35em] text-[#9C9F5B] mb-3">
+              Proces
+            </p>
+            <h2 className="text-3xl md:text-5xl font-black tracking-tight text-[#5C5850] leading-[1.08]">
+              Přehledně od první zprávy po ostrý provoz.
             </h2>
-            <p className="text-lg text-[#0D0D0D]/80 font-medium">
-              Žádná složitá byrokracie. Nabízím přímou komunikaci a efektivní postup vývoje od prvního hovoru po úspěšný launch.
+            <p className="mt-5 text-[#7E7B76] font-medium leading-relaxed">
+              Žádná zbytečná byrokracie — přímá komunikace a jasné milníky.
             </p>
           </motion.div>
         </div>
 
-        {/* Minimalist Grid Execution */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-t border-[#D9D4C5]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
           {processes.map((step, idx) => (
-            <motion.div 
-              key={idx}
-              initial={{ opacity: 0, y: 30 }}
+            <motion.div
+              key={step.num}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className={`relative py-10 lg:py-12 pr-6 ${idx !== processes.length -1 ? 'border-b md:border-b-0 md:border-r border-[#D9D4C5]' : 'border-b md:border-b-0 border-[#D9D4C5]'} lg:pl-6 ${idx === 0 ? 'lg:pl-0' : ''} group`}
+              viewport={{ once: true, margin: '-40px' }}
+              transition={{ duration: 0.45, delay: idx * 0.07 }}
+              className="relative rounded-2xl border border-[#9D9C99]/15 bg-white p-8 shadow-sm hover:border-[#9C9F5B]/35 transition-colors"
             >
-              {/* Scaled down offset number */}
-              <div className="text-5xl lg:text-6xl font-black text-[#A6A297] leading-none mb-8 -ml-1 tracking-tighter group-hover:text-[#737068] group-hover:-translate-y-2 transition-all duration-500 ease-out">
+              <span className="text-4xl font-black text-[#DEEA55]/90 leading-none block mb-6">
                 {step.num}
-              </div>
-              
-              <div className="relative z-10 mt-auto">
-                <h3 className="text-xl font-bold text-[#0D0D0D] mb-3 tracking-tight group-hover:text-[#0D0D0D]/70 transition-colors duration-500">
-                  {step.title}
-                </h3>
-                <p className="text-[#0D0D0D]/70 font-medium leading-relaxed text-sm">
-                  {step.detail}
-                </p>
-              </div>
-
-              {/* Decorative node connecting to the line */}
-              <div className="absolute top-[-4px] left-0 w-2 h-2 rounded-full bg-[#0D0D0D] ring-2 ring-[#F2F2F2] group-hover:scale-150 group-hover:bg-[#737068] transition-all duration-500" />
+              </span>
+              <h3 className="text-lg font-bold text-[#5C5850] mb-3">{step.title}</h3>
+              <p className="text-sm text-[#7E7B76] font-medium leading-relaxed">{step.detail}</p>
             </motion.div>
           ))}
         </div>
-
       </div>
     </section>
   );

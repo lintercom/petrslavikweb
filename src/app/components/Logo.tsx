@@ -1,16 +1,16 @@
-export function Logo({ scrolled = false }: { scrolled?: boolean }) {
+export function Logo({ scrolled: _scrolled = false }: { scrolled?: boolean }) {
   return (
-    <a 
-      href="#" 
-      className="relative group flex flex-col justify-center items-start z-50 py-2"
+    <a
+      href="#"
+      className="relative group flex flex-col justify-center items-start z-50 py-1"
       aria-label="Petr Slavík - Domů"
     >
-      <div className="flex flex-col items-start hover:opacity-70 transition-opacity duration-300">
-        <span className="text-sm sm:text-[15px] font-bold tracking-[0.35em] text-[#737068] uppercase leading-none -mb-0.5 sm:-mb-1 z-10">
+      <div className="flex flex-col items-start hover:opacity-80 transition-opacity duration-300">
+        <span className="text-[11px] sm:text-xs font-semibold tracking-[0.28em] text-[#9D9C99] uppercase leading-none mb-0.5">
           Petr
         </span>
-        <span className="text-2xl sm:text-3xl font-black tracking-[-0.04em] text-[#0D0D0D] uppercase leading-[0.85]">
-          Slavík<span className="text-[#737068]">.</span>
+        <span className="text-xl sm:text-2xl font-black tracking-[-0.03em] text-[#5C5850] uppercase leading-[0.92]">
+          Slavík<span className="text-[#7E7B76]">.</span>
         </span>
       </div>
     </a>

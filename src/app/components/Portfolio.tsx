@@ -4,104 +4,99 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 
 const projects = [
   {
-    title: "SaaS pro FinTech",
-    category: "Webová Aplikace",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
-    year: "2024"
+    title: 'SaaS pro FinTech',
+    category: 'Webová aplikace',
+    image:
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200',
+    year: '2024',
+    tint: 'bg-[#FBFAD6]/80',
   },
   {
-    title: "B2B Obchodní Portál",
-    category: "E-Commerce",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
-    year: "2023"
+    title: 'B2B obchodní portál',
+    category: 'E-commerce',
+    image:
+      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200',
+    year: '2023',
+    tint: 'bg-white',
   },
   {
-    title: "Interní CRM Systém",
-    category: "Dashboard",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200",
-    year: "2023"
-  }
+    title: 'Interní CRM',
+    category: 'Dashboard',
+    image:
+      'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200',
+    year: '2023',
+    tint: 'bg-[#F8F7F5]',
+  },
 ];
 
 export function Portfolio() {
   return (
-    <section id="portfolio" className="relative w-full bg-[#0D0D0D] text-[#F2F2F2] py-24 lg:py-32">
-      
-      <div className="max-w-[90rem] mx-auto px-6 lg:px-12">
-        
-        {/* Typographic Intro */}
-        <div className="mb-20 lg:mb-32">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="max-w-3xl"
-          >
-            <h2 className="text-4xl sm:text-5xl lg:text-7xl font-black tracking-tighter leading-[1] uppercase mb-6">
-              Poslední <br /> <span className="text-[#A6A297]">Projekty.</span>
-            </h2>
-          </motion.div>
-        </div>
+    <section id="portfolio" className="relative w-full bg-white py-20 lg:py-28 border-y border-[#9D9C99]/10">
+      <div className="max-w-[90rem] mx-auto px-4 md:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="max-w-3xl mb-12 md:mb-16"
+        >
+          <p className="text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.35em] text-[#9D9C99] mb-4">
+            Portfolio
+          </p>
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tight text-[#5C5850] leading-[1.05]">
+            Vybrané projekty, kde technologie slouží lidem i číslům.
+          </h2>
+          <p className="mt-5 text-[#7E7B76] font-medium leading-relaxed max-w-xl">
+            Od návrhu komponent po produkční nasazení — důraz na rychlost, jasné
+            rozhraní a udržitelný kód.
+          </p>
+        </motion.div>
 
-        {/* Stacked Cards Container */}
-        <div className="relative z-10 flex flex-col gap-12 lg:gap-0 lg:block">
+        <div className="flex flex-col gap-8 md:gap-10">
           {projects.map((project, idx) => (
-            <motion.div 
-              key={idx}
-              initial={{ opacity: 0, y: 50 }}
+            <motion.article
+              key={project.title}
+              initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              // Each card sticks at a balanced offset
-              className="lg:sticky w-full rounded-[2.5rem] overflow-hidden bg-[#121212] border border-[#737068]/30 shadow-[0_0_40px_rgba(0,0,0,0.4)] lg:mb-32 group hover:border-[#D9D4C5]/40 transition-colors duration-500"
-              style={{ top: `calc(15vh + ${idx * 30}px)` }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.5, delay: idx * 0.06 }}
+              className={`group grid lg:grid-cols-12 gap-0 rounded-[2rem] overflow-hidden border border-[#9D9C99]/15 ${project.tint} shadow-[0_16px_50px_rgba(92,88,80,0.06)] hover:border-[#9C9F5B]/30 transition-colors`}
             >
-              <div className="grid lg:grid-cols-12 min-h-[400px] lg:min-h-[550px]">
-                
-                {/* Content Side */}
-                <div className="lg:col-span-5 p-10 lg:p-14 flex flex-col justify-between order-2 lg:order-1 bg-[#121212] relative overflow-hidden">
-                  <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#D9D4C5]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
-                  
-                  <div className="relative z-10">
-                    <div className="flex justify-between items-center mb-10">
-                      <span className="px-4 py-2 rounded-full border border-[#737068]/50 bg-[#0D0D0D] text-[10px] font-bold uppercase tracking-widest text-[#D9D4C5] shadow-inner">
-                        {project.category}
-                      </span>
-                      <span className="text-[#A6A297] text-sm font-mono font-bold tracking-wider">{project.year}</span>
-                    </div>
-                    <h3 className="text-3xl lg:text-5xl font-black tracking-tight mb-6 text-[#F2F2F2] leading-[1.1] group-hover:text-[#D9D4C5] transition-colors duration-500">{project.title}</h3>
-                    <p className="text-[#A6A297] font-medium text-lg leading-relaxed">
-                      Vývoj na míru s primárním zaměřením na uživatelskou přívětivost, čistý kód a snadnou škálovatelnost.
-                    </p>
+              <div className="lg:col-span-5 p-8 md:p-10 lg:p-12 flex flex-col justify-between order-2 lg:order-1">
+                <div>
+                  <div className="flex flex-wrap items-center gap-3 mb-6">
+                    <span className="px-3 py-1.5 rounded-full border border-[#9D9C99]/30 text-[10px] font-bold uppercase tracking-[0.2em] text-[#7E7B76] bg-white/60">
+                      {project.category}
+                    </span>
+                    <span className="text-xs font-mono font-semibold text-[#9D9C99]">
+                      {project.year}
+                    </span>
                   </div>
-                  
-                  <div className="mt-12 lg:mt-0 relative z-10">
-                    <motion.button 
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="w-14 h-14 rounded-full border border-[#737068]/50 flex items-center justify-center bg-[#0D0D0D] text-[#F2F2F2] group-hover:border-[#D9D4C5] group-hover:bg-[#D9D4C5]/40 group-hover:text-[#0D0D0D] group-hover:shadow-[0_0_20px_rgba(217,212,197,0.15)] transition-all duration-300"
-                    >
-                      <ArrowUpRight className="w-6 h-6 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
-                    </motion.button>
-                  </div>
+                  <h3 className="text-2xl md:text-4xl font-black tracking-tight text-[#5C5850] leading-tight group-hover:text-[#7F7560] transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="mt-4 text-[#7E7B76] font-medium leading-relaxed">
+                    Vývoj na míru s důrazem na UX, čistý kód a škálovatelnost.
+                  </p>
                 </div>
-
-                {/* Image Side */}
-                <div className="lg:col-span-7 relative order-1 lg:order-2 h-[350px] lg:h-auto overflow-hidden">
-                  <ImageWithFallback 
-                    src={project.image} 
-                    alt={project.title}
-                    className="absolute inset-0 w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-[1.5s] ease-out grayscale-[0.4] group-hover:grayscale-0"
-                  />
-                  {/* Subtle overlay to blend with dark mode */}
-                  <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-[#121212] via-[#121212]/40 to-transparent opacity-100 group-hover:opacity-70 transition-opacity duration-700 pointer-events-none" />
-                </div>
-
+                <button
+                  type="button"
+                  className="mt-8 w-12 h-12 rounded-full border border-[#9D9C99]/35 flex items-center justify-center text-[#5C5850] hover:bg-[#DEEA55] hover:border-[#DEEA55] transition-all"
+                  aria-label={`Detail: ${project.title}`}
+                >
+                  <ArrowUpRight className="w-5 h-5" />
+                </button>
               </div>
-            </motion.div>
+              <div className="lg:col-span-7 relative order-1 lg:order-2 h-[260px] md:h-[340px] lg:h-auto min-h-[260px]">
+                <ImageWithFallback
+                  src={project.image}
+                  alt={project.title}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-l from-[#F8F7F5]/90 via-transparent to-transparent pointer-events-none" />
+              </div>
+            </motion.article>
           ))}
         </div>
-
       </div>
     </section>
   );

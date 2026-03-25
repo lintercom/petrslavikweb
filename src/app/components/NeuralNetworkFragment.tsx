@@ -1,10 +1,22 @@
 import { useEffect, useRef } from 'react';
 
+type FragmentVariant = 'neutral' | 'sage' | 'lime';
+
+const VARIANT_COLORS: Record<
+  FragmentVariant,
+  { node: string; line: string; lineBoost: number }
+> = {
+  neutral: { node: '92, 88, 80', line: '157, 156, 153', lineBoost: 1 },
+  sage: { node: '156, 159, 91', line: '127, 130, 75', lineBoost: 1.1 },
+  lime: { node: '222, 234, 85', line: '156, 159, 91', lineBoost: 0.85 },
+};
+
 interface NeuralNetworkFragmentProps {
   particleCount?: number;
   connectionDistance?: number;
   particleSpeed?: number;
   opacity?: number;
+  variant?: FragmentVariant;
   className?: string;
 }
 
@@ -13,6 +25,7 @@ export function NeuralNetworkFragment({
   connectionDistance = 120,
   particleSpeed = 0.15,
   opacity = 0.4,
+  variant = 'neutral',
   className = ''
 }: NeuralNetworkFragmentProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -23,6 +36,8 @@ export function NeuralNetworkFragment({
 
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
+
+    const { node: nodeRgb, line: lineRgb, lineBoost } = VARIANT_COLORS[variant];
 
     let particles: Particle[] = [];
     let animationFrameId: number;
@@ -64,7 +79,7 @@ export function NeuralNetworkFragment({
         if (!ctx) return;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(115, 112, 104, ${opacity * 0.8})`;
+        ctx.fillStyle = `rgba(${nodeRgb}, ${opacity * 0.75})`;
         ctx.fill();
       }
     }
@@ -93,8 +108,10 @@ export function NeuralNetworkFragment({
 
           if (distance < connectionDistance) {
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(115, 112, 104, ${opacity * 0.5 * (1 - distance / connectionDistance)})`;
-            ctx.lineWidth = 0.8;
+            const a =
+              opacity * lineBoost * 0.45 * (1 - distance / connectionDistance);
+            ctx.strokeStyle = `rgba(${lineRgb}, ${a})`;
+            ctx.lineWidth = 0.75;
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
             ctx.stroke();
@@ -114,7 +131,7 @@ export function NeuralNetworkFragment({
       window.removeEventListener('resize', resize);
       cancelAnimationFrame(animationFrameId);
     };
-  }, [particleCount, connectionDistance, particleSpeed, opacity]);
+  }, [particleCount, connectionDistance, particleSpeed, opacity, variant]);
 
   return (
     <canvas

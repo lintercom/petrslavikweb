@@ -14,7 +14,7 @@ export function PlatformShoptet() {
       />
       <PageHero 
         title="Shoptet."
-        description="Kompletní realizace a úpravy e-shopů na nejpopulárnější české platformě. Vytěžte ze Shoptetu maximum."
+        description="Realizace a úpravy e-shopů na nejrozšířenější české platformě — od šablon po integrace."
       />
 
       {/* Services Section */}
@@ -22,10 +22,10 @@ export function PlatformShoptet() {
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {[
-              { title: "Kódování šablon", desc: "Úpravy vzhledu na míru vaší značce. Od drobných změn po kompletní redesign šablony." },
-              { title: "Napojení systémů", desc: "Propojení s účetnictvím, ERP, CRM nebo jinými externími nástroji přes API." },
-              { icon: "zap", title: "Optimalizace", desc: "Zrychlení načítání a vylepšení konverzního poměru pro maximální prodeje." },
-              { title: "Migrace dat", desc: "Bezpečný přenos produktů, zákazníků a objednávek z vašeho starého e-shopu na Shoptet." }
+              { title: "Kódování šablon", desc: "Úpravy vzhledu na míru značce — od drobností po kompletní redesign." },
+              { title: "Napojení systémů", desc: "Propojení s účetnictvím, ERP, CRM a dalšími nástroji přes API." },
+              { icon: "zap", title: "Optimalizace", desc: "Zrychlení načítání a vyšší konverzní poměr." },
+              { title: "Migrace dat", desc: "Bezpečný přenos produktů, zákazníků a objednávek ze starého e-shopu." }
             ].map((item, i) => (
               <motion.div 
                 key={i}

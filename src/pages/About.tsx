@@ -14,7 +14,7 @@ export function About() {
       />
       <PageHero 
         title="O mně."
-        description="Spojuji osobní přístup freelancera se spolehlivostí a procesy agentury. Stavím weby, které prodávají."
+        description="Přímá komunikace freelancera a procesy agentury. Stavím weby, které prodávají."
       />
 
       {/* Intro Section */}
@@ -29,10 +29,10 @@ export function About() {
             >
               <h2 className="text-3xl md:text-5xl font-extrabold uppercase tracking-tighter mb-6 text-brand-black">Jsem Petr Slavík.</h2>
               <p className="text-lg text-brand-grey-dark leading-relaxed mb-6">
-                Weby a e-shopy nestavím jako vizitky, ale jako prodejní systémy. Věřím, že technologie má byznysu sloužit, ne ho komplikovat. Proto se zaměřuji na integrace, automatizace a měřitelné výsledky.
+                Weby a e-shopy stavím jako prodejní systémy, ne jako vizitky. Soustředím se na integrace, automatizace a měřitelné výsledky.
               </p>
               <p className="text-lg text-brand-grey-dark leading-relaxed mb-10">
-                Moje práce je kombinací technické preciznosti a obchodního myšlení. Každý řádek kódu, který napíšu, má za cíl posunout váš byznys dál.
+                Kombinuji technickou preciznost s obchodním myšlením. Každý projekt má jasný cíl — posunout váš byznys dál.
               </p>
               <Button href="/kontakt" variant="primary" className="py-4 px-10 text-base uppercase tracking-widest font-extrabold">Napište mi</Button>
             </motion.div>
@@ -64,10 +64,10 @@ export function About() {
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {[
-              { title: "Přímá komunikace", desc: "Žádní account manageři. Komunikujete přímo s člověkem, který váš projekt navrhuje a staví. Znamená to rychlejší reakce a žádné ztracené informace v překladu." },
-              { title: "Obchodní přesah", desc: "Nejsem jen kodér. Přemýšlím nad tím, jak vám web přinese peníze, jak zjednoduší procesy a jak ho napojíme na vaše stávající systémy." },
-              { title: "Agenturní procesy", desc: "Pracuji podle jasného harmonogramu. Víte, co se kdy stane, kdy potřebuji vaši součinnost a kdy bude projekt hotový. Žádné protahování." },
-              { title: "Dlouhodobý partner", desc: "Spuštěním webu to nekončí. Nabízím servisní plány, starám se o bezpečnost, aktualizace a pomáhám s dalším rozvojem na základě dat." }
+              { title: "Přímá komunikace", desc: "Žádní account manageři. Mluvíte přímo s tím, kdo projekt staví. Rychlejší reakce, nic se neztratí v překladu." },
+              { title: "Obchodní přesah", desc: "Přemýšlím nad tím, jak vám web přinese peníze, zjednoduší procesy a napojí se na vaše stávající systémy." },
+              { title: "Agenturní procesy", desc: "Jasný harmonogram. Víte, co se kdy stane a kdy bude projekt hotový. Bez protahování." },
+              { title: "Dlouhodobý partner", desc: "Servisní plány, bezpečnost, aktualizace a další rozvoj na základě dat. Spuštěním to nekončí." }
             ].map((item, i) => (
               <motion.div 
                 key={i}

@@ -15,7 +15,7 @@ export function ServiceApp() {
       />
       <PageHero 
         title="Aplikace."
-        description="Digitalizuji firemní procesy. Od klientských portálů po interní CRM systémy a rezervační platformy na míru."
+        description="Klientské portály, interní CRM a rezervační systémy na míru. Digitalizace firemních procesů."
       />
 
       {/* Features Grid */}
@@ -23,10 +23,10 @@ export function ServiceApp() {
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {[
-              { icon: Settings, title: "MVP přístup", desc: "Nestavíme rovnou vesmírnou loď. Začneme s Minimum Viable Product (MVP), otestujeme ho a postupně přidáváme funkce podle reálných dat." },
-              { icon: ShieldCheck, title: "Role a oprávnění", desc: "Bezpečné přihlašování, správa uživatelů a detailní nastavení toho, kdo má přístup k jakým datům." },
-              { icon: Link2, title: "API a Integrace", desc: "Aplikace neexistuje ve vakuu. Napojím ji na vaše stávající systémy, ERP, účetnictví nebo externí služby." },
-              { icon: LineChart, title: "Monitoring a rozvoj", desc: "Zajišťuji provoz, monitoring chyb a dlouhodobý rozvoj aplikace na základě vašich požadavků." }
+              { icon: Settings, title: "MVP přístup", desc: "Začneme s Minimum Viable Product, otestujeme na reálných datech a funkce přidáváme postupně." },
+              { icon: ShieldCheck, title: "Role a oprávnění", desc: "Bezpečné přihlašování a přesné nastavení toho, kdo má přístup k jakým datům." },
+              { icon: Link2, title: "API a integrace", desc: "Napojení na ERP, účetnictví nebo externí služby. Aplikace propojená s vašimi systémy." },
+              { icon: LineChart, title: "Monitoring a rozvoj", desc: "Provoz, hlídání chyb a dlouhodobý rozvoj podle vašich priorit." }
             ].map((item, i) => (
               <motion.div 
                 key={i}
@@ -47,7 +47,7 @@ export function ServiceApp() {
 
       <PageCTA 
         title="Máte nápad na aplikaci?"
-        description="Ceny začínají na 120 000 Kč. Pojďme si zavolat a probrat, jak váš proces digitalizovat."
+        description="Ceny od 120 000 Kč. Zavolejme si a probereme, jak proces digitalizovat."
       />
 
       <BigFooterCTA />

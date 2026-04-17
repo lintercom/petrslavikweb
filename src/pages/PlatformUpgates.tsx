@@ -14,7 +14,7 @@ export function PlatformUpgates() {
       />
       <PageHero 
         title="Upgates."
-        description="Tvorba a úpravy e-shopů na flexibilní platformě Upgates. Ideální volba pro ty, kteří chtějí víc než jen krabici."
+        description="Flexibilní platforma pro e-shopy, které přerůstají krabicové řešení."
       />
 
       {/* Intro Section */}
@@ -22,7 +22,7 @@ export function PlatformUpgates() {
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-4xl md:text-6xl font-semibold tracking-tighter mb-8 text-brand-black">Proč Upgates.</h2>
           <p className="text-xl text-brand-grey-medium leading-relaxed mb-12">
-            Upgates nabízí skvělý kompromis mezi krabicovým řešením a vývojem na míru. Umožňuje hluboké zásahy do kódu šablony a nabízí robustní API pro náročné integrace.
+            Kompromis mezi krabicovým řešením a vývojem na míru. Hluboké zásahy do šablony a robustní API pro náročné integrace.
           </p>
         </div>
       </section>
@@ -32,9 +32,9 @@ export function PlatformUpgates() {
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: "Unikátní design", desc: "Využití Designer modulu pro vytvoření vizuálu, který vás odliší od konkurence." },
-              { title: "API integrace", desc: "Napojení na ERP, CRM a další systémy pro plnou automatizaci vašeho byznysu." },
-              { title: "B2B řešení", desc: "Nastavení velkoobchodních funkcí, individuálních ceníků a klientských sekcí." }
+              { title: "Unikátní design", desc: "Designer modul pro vizuál, který vás odliší od konkurence." },
+              { title: "API integrace", desc: "Napojení na ERP, CRM a další systémy — plná automatizace byznysu." },
+              { title: "B2B řešení", desc: "Velkoobchodní funkce, individuální ceníky a klientské sekce." }
             ].map((item, i) => (
               <motion.div 
                 key={i}

@@ -30,18 +30,18 @@ export function BlogDetail() {
 
           <div className="prose prose-2xl max-w-none text-brand-grey-medium leading-relaxed">
             <p className="text-3xl text-brand-black font-medium mb-12">
-              Toto je ukázkový obsah článku. Zde by byl podrobný text vysvětlující danou problematiku s důrazem na praktické rady a zkušenosti z reálných projektů.
+              Ukázkový obsah článku — praktické rady a zkušenosti z reálných projektů.
             </p>
             <p>
-              Ať už řešíte výběr platformy, napojení na účetnictví nebo optimalizaci rychlosti, správné technické řešení je základem úspěchu. V dnešní době nestačí mít jen hezký web, musí být funkční, rychlý a integrovaný do vašich procesů.
+              Výběr platformy, napojení na účetnictví, rychlost webu. Hezký vzhled dnes nestačí — web musí být funkční a zapadat do vašich procesů.
             </p>
             <p>
-              V tomto článku se podíváme na klíčové aspekty, které byste neměli podcenit při plánování vašeho dalšího digitálního projektu.
+              V článku projdeme to, na co si dát pozor při plánování dalšího digitálního projektu.
             </p>
           </div>
 
           <div className="mt-32 p-16 bg-gradient-to-b from-brand-white to-brand-grey-light/10 rounded-[3rem] border border-brand-grey-light/10 text-center">
-            <h3 className="text-4xl font-semibold tracking-tighter text-brand-black mb-8">Potřebujete s tímto tématem pomoci?</h3>
+            <h3 className="text-4xl font-semibold tracking-tighter text-brand-black mb-8">Řešíte totéž?</h3>
             <div className="flex flex-col sm:flex-row justify-center gap-6">
               <Link to="/kontakt" className="bg-brand-black text-brand-white px-12 py-6 rounded-full font-semibold uppercase tracking-widest hover:bg-brand-grey-dark transition-colors">
                 Domluvit konzultaci

@@ -18,7 +18,7 @@ export function Pricing() {
       title: "Webové stránky",
       price: "od 35 000 Kč",
       time: "4–6 týdnů",
-      desc: "Ideální pro firemní prezentace, které potřebují budit důvěru a generovat leady.",
+      desc: "Firemní prezentace, které budí důvěru a nosí leady.",
       features: ["Návrh struktury a UX", "Unikátní moderní design", "Rychlé načítání a SEO základ", "CMS pro snadnou správu", "Základní nastavení analytiky (GA4)"]
     },
     {
@@ -26,7 +26,7 @@ export function Pricing() {
       title: "E-shopy",
       price: "od 60 000 Kč",
       time: "2–3 měsíce",
-      desc: "Prodejní stroje na platformách Shoptet/Upgates s důrazem na automatizaci.",
+      desc: "Shoptet, Upgates nebo Woo s automatizací a napojením na účetnictví.",
       features: ["Vizuální úpravy šablony", "Nastavení platformy a dopravy", "Napojení na platební bránu", "Základní napojení na POHODA / ERP", "E-commerce analytika"],
       featured: true
     },
@@ -35,7 +35,7 @@ export function Pricing() {
       title: "Webové aplikace",
       price: "od 120 000 Kč",
       time: "3+ měsíce",
-      desc: "Systémy na míru, klientské portály a digitalizace interních procesů.",
+      desc: "Klientské portály, interní systémy a digitalizace procesů.",
       features: ["Discovery fáze a návrh architektury", "Vývoj na míru (React, Node.js)", "API integrace třetích stran", "Správa rolí a oprávnění", "Zabezpečení a testování"]
     }
   ];
@@ -49,7 +49,7 @@ export function Pricing() {
       />
       <PageHero 
         title="Ceník."
-        description="Transparentní cenové rámce. Přesnou fixní cenu a harmonogram dostanete vždy předem na základě úvodní diagnostiky."
+        description="Transparentní rámce. Přesnou fixní cenu a termín dostanete po úvodní diagnostice — předem a písemně."
       />
 
       {/* Pricing Grid */}
@@ -109,7 +109,7 @@ export function Pricing() {
             <div>
               <h2 className="text-4xl md:text-5xl font-extrabold uppercase tracking-tighter mb-6 text-brand-black">Měsíční servis a rozvoj.</h2>
               <p className="text-lg text-brand-grey-dark leading-relaxed max-w-xl">
-                Spuštěním webu to nekončí. Starám se o to, aby váš projekt byl bezpečný, rychlý a neustále se zlepšoval.
+                Spuštěním to nekončí. Hlídám bezpečnost, rychlost a postupný rozvoj podle dat.
               </p>
             </div>
             <div className="space-y-6">

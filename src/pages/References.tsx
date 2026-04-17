@@ -39,7 +39,7 @@ export function References() {
       />
       <PageHero 
         title="Projekty."
-        description="Projekty, které přinášejí reálné výsledky. Podívejte se, jak pomáhám klientům růst skrze technologie a design."
+        description="Vybrané projekty s měřitelnými výsledky — víc poptávek, ušetřený čas, digitalizace procesů."
       />
 
       {/* References Grid */}

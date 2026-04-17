@@ -14,7 +14,7 @@ export function IntegrationPohoda() {
       />
       <PageHero 
         title="Pohoda."
-        description="Automatizujte přenos dat mezi vaším e-shopem a účetním systémem POHODA. Konec ručního přepisování."
+        description="Automatický přenos dat mezi e-shopem a účetnictvím POHODA. Konec ručního přepisování."
       />
 
       {/* Features Section */}
@@ -22,10 +22,10 @@ export function IntegrationPohoda() {
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {[
-              { title: "Objednávky", desc: "Automatický import z e-shopu do Pohody v reálném čase. Žádné prodlevy, žádné chyby." },
-              { title: "Zásoby", desc: "Aktualizace skladových zásob z Pohody na e-shop. Zákazník vždy vidí aktuální dostupnost." },
-              { title: "Ceníky", desc: "Synchronizace cen a slevových skupin. Spravujte ceny na jednom místě a nechte je propsat všude." },
-              { title: "Faktury", desc: "Vystavování faktur a jejich párování s platbami. Kompletní automatizace finančních toků." }
+              { title: "Objednávky", desc: "Automatický import z e-shopu do Pohody v reálném čase. Bez prodlev a chyb." },
+              { title: "Zásoby", desc: "Sklady z Pohody se propisují na e-shop. Zákazník vidí reálnou dostupnost." },
+              { title: "Ceníky", desc: "Synchronizace cen a slevových skupin. Spravujete na jednom místě, propíše se všude." },
+              { title: "Faktury", desc: "Vystavení faktur a automatické párování s platbami." }
             ].map((item, i) => (
               <motion.div 
                 key={i}
@@ -48,7 +48,7 @@ export function IntegrationPohoda() {
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-5xl md:text-7xl font-semibold tracking-tighter mb-8 text-brand-black">Jak to funguje.</h2>
           <p className="text-2xl text-brand-grey-medium leading-relaxed mb-12">
-            Využívám POHODA mServer nebo XML komunikaci pro bezpečný a spolehlivý přenos dat. Řešení je vždy navrženo na míru vašim specifickým procesům a potřebám.
+            POHODA mServer nebo XML komunikace. Řešení navrhnu podle vašich procesů.
           </p>
           <Button href="/kontakt" variant="primary" className="py-6 px-12 text-lg uppercase tracking-widest font-semibold">Poptat integraci</Button>
         </div>

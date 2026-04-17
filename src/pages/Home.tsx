@@ -12,12 +12,12 @@ import { SEO } from '@/components/ui/SEO';
 
 export function Home() {
   const faqItems = [
-    { title: "Kolik to stojí?", content: "Menší weby začínají na 35 000 Kč, e-shopy s integracemi na 60 000 Kč a webové aplikace na 120 000 Kč. Vždy ale dostanete přesnou fixní cenu předem na základě diagnostiky." },
-    { title: "Jak dlouho to trvá?", content: "Standardní firemní web trvá 4-6 týdnů. E-shop s integracemi 2-3 měsíce. Pracuji podle jasného harmonogramu." },
-    { title: "Co když nemám texty?", content: "Nevadí. Pomohu vám s obsahovou strukturou a v rámci doplňkových služeb zajistím profesionálního copywritera, který texty napíše tak, aby prodávaly." },
-    { title: "Kdo vlastní web a data?", content: "Vy. Po doplacení faktury přechází veškerá práva k dílu na vás. Hosting i doména jsou vedeny na vaše jméno." },
-    { title: "Jak řešíte měření a cookies?", content: "Weby odevzdávám se základním nastavením Google Analytics 4, měřením hlavních konverzí a plně funkční cookie lištou v souladu s legislativou." },
-    { title: "Jak funguje napojení na POHODA?", content: "Využívám POHODA mServer nebo XML komunikaci. Z e-shopu se automaticky stahují objednávky a tvoří faktury, zpět se posílají stavy skladů a ceníky." }
+    { title: "Kolik to stojí?", content: "Weby od 35 000 Kč, e-shopy od 60 000 Kč, aplikace od 120 000 Kč. Přesnou fixní cenu dostanete po úvodní diagnostice." },
+    { title: "Jak dlouho to trvá?", content: "Firemní web 4–6 týdnů, e-shop s integracemi 2–3 měsíce. Podle pevného harmonogramu." },
+    { title: "Co když nemám texty?", content: "Pomůžu se strukturou obsahu a zajistím copywritera, který texty napíše tak, aby prodávaly." },
+    { title: "Kdo vlastní web a data?", content: "Vy. Po doplacení faktury přechází veškerá práva na vás. Hosting i doména jsou vedeny na vaše jméno." },
+    { title: "Jak řešíte měření a cookies?", content: "Každý web odevzdávám s GA4, měřením hlavních konverzí a cookie lištou v souladu s legislativou." },
+    { title: "Jak funguje napojení na POHODA?", content: "Přes POHODA mServer nebo XML. Z e-shopu se automaticky stahují objednávky a vytváří faktury, zpět putují stavy skladů a ceníky." }
   ];
 
   const faqSchema = {
@@ -57,18 +57,15 @@ export function Home() {
           >
             <div>
               <p className="text-xl md:text-2xl font-medium leading-relaxed text-brand-black">
-                Jsem Petr Slavík a navrhuji weby, e-shopy a aplikace na míru, které mají jasný cíl – přivádět zákazníky a podporovat růst vašeho byznysu.
+                Stavím weby a e-shopy, které přivádějí zákazníky — ne jen návštěvnost.
               </p>
             </div>
             <div className="flex flex-col justify-between">
               <p className="text-base text-brand-grey-dark leading-relaxed mb-6">
-                Specializuji se na tvorbu webových stránek, e-shopů a webových aplikací na míru. Od prvního návrhu až po finální nasazení řeším celý proces tak, aby výsledek dával smysl nejen technicky, ale hlavně obchodně.
-              </p>
-              <p className="text-base text-brand-grey-dark leading-relaxed mb-6">
-                Na každém projektu pracuji osobně od začátku do konce. Díky tomu vznikají řešení, která jsou rychlá, přehledná a připravená na další rozvoj, bez zbytečné složitosti.
+                Od návrhu přes vývoj až po napojení na účetnictví. Kompletní řešení od jednoho člověka.
               </p>
               <p className="text-base text-brand-grey-dark leading-relaxed">
-                Spolupráce je přímá a efektivní – bez byrokracie, zdržování a zbytečných mezičlánků.
+                Komunikujete přímo se mnou. Žádní account manageři, žádné ztráty v překladu.
               </p>
             </div>
           </motion.div>
@@ -92,15 +89,15 @@ export function Home() {
             className="mb-16"
           >
             <SpotlightHeading as="h2" text="Pro koho tvořím." size="md" className="mb-4" />
-            <p className="text-xl text-brand-grey-light max-w-2xl">Řešení na míru vaší aktuální situaci a velikosti byznysu.</p>
+            <p className="text-xl text-brand-grey-light max-w-2xl">Řešení podle velikosti a fáze vašeho byznysu.</p>
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-16">
             {[
-              { title: "Malý podnikatel", desc: "Potřebujete profesionální web, ale bojíte se skrytých nákladů a složitého procesu. Rychlé spuštění, jasná cena, web, který budí důvěru a generuje poptávky.", link: "/sluzby/webove-stranky", linkText: "Webové stránky" },
-              { title: "Firma & Marketing", desc: "Váš současný web nekonvertuje, je pomalý a špatně se spravuje. Výkonný web postavený na datah, snadná správa, více kvalitních leadů.", link: "/sluzby/webove-stranky", linkText: "Firemní weby" },
-              { title: "E-commerce", desc: "Trávíte hodiny ručním přepisováním objednávek a faktur. E-shop s automatizovaným napojením na účetnictví a dopravce. Čas na růst.", link: "/sluzby/e-shop", linkText: "E-shopy na míru" },
-              { title: "Startup / Tech", desc: "Potřebujete digitalizovat procesy nebo postavit MVP aplikace. Bezpečný systém, API integrace, správa rolí a jasná roadmapa rozvoje.", link: "/sluzby/webove-aplikace", linkText: "Webové aplikace" }
+              { title: "Malý podnikatel", desc: "Profesionální web s jasnou cenou a rychlým spuštěním. Budí důvěru a nosí poptávky.", link: "/sluzby/webove-stranky", linkText: "Webové stránky" },
+              { title: "Firma & Marketing", desc: "Váš web nekonvertuje nebo je pomalý? Postavím výkonný web na datech s jednoduchou správou.", link: "/sluzby/webove-stranky", linkText: "Firemní weby" },
+              { title: "E-commerce", desc: "Konec ručního přepisování objednávek. E-shop s napojením na účetnictví a dopravce.", link: "/sluzby/e-shop", linkText: "E-shopy na míru" },
+              { title: "Startup / Tech", desc: "Digitalizace procesů nebo MVP aplikace. API integrace, role, bezpečnost, roadmapa.", link: "/sluzby/webove-aplikace", linkText: "Webové aplikace" }
             ].map((item, i) => (
               <motion.div 
                 key={i}

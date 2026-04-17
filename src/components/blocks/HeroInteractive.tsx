@@ -21,7 +21,7 @@ export function HeroInteractive() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-extrabold tracking-tighter text-brand-white leading-snug max-w-6xl mb-6 uppercase"
         >
-          Web, e-shop nebo<br />aplikace jako<br />funkční systém.
+          Weby, e-shopy<br />a aplikace,<br />co vydělávají.
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -29,7 +29,7 @@ export function HeroInteractive() {
           transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           className="text-lg md:text-2xl font-medium text-brand-grey-light max-w-2xl leading-relaxed"
         >
-          Propojím návrh, vývoj a procesy tak, aby všechno fungovalo jako celek — ne jen jako jednotlivé části.
+          Pro firmy, které chtějí fungující systém, ne jen vizitku. Fixní cena, jasný termín.
         </motion.p>
       </div>
     </section>

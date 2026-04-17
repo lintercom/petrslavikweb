@@ -5,12 +5,12 @@ import { PageHero } from '@/components/layout/PageHero';
 
 export function Process() {
   const steps = [
-    { step: '01', title: 'Úvodní konzultace', desc: 'Pochopení vašeho byznysu a cílů. Zjistíme, zda si sedneme a zda vám dokážu pomoci.', out: 'Zápis a návrh řešení' },
-    { step: '02', title: 'Specifikace a cena', desc: 'Detailní rozpis prací, funkcí a fixní rozpočet. Žádné skryté poplatky.', out: 'Smlouva a harmonogram' },
-    { step: '03', title: 'Wireframy a design', desc: 'Návrh struktury (drátěné modely) a vizuální podoby webu.', out: 'Schválený design' },
-    { step: '04', title: 'Vývoj a integrace', desc: 'Samotné kódování, nastavení platformy a napojení systémů (POHODA, platby).', out: 'Funkční beta verze' },
-    { step: '05', title: 'Testování a obsah', desc: 'Plnění daty, testování na různých zařízeních a kontrola rychlosti.', out: 'Web připravený ke spuštění' },
-    { step: '06', title: 'Spuštění a rozvoj', desc: 'Nasazení na ostrou doménu, měření a následná péče (servisní plán).', out: 'Živý projekt' },
+    { step: '01', title: 'Úvodní konzultace', desc: 'Projdeme cíle a zjistíme, zda vám dokážu pomoct.', out: 'Zápis a návrh řešení' },
+    { step: '02', title: 'Specifikace a cena', desc: 'Rozpis prací, funkcí a fixní cena. Bez skrytých poplatků.', out: 'Smlouva a harmonogram' },
+    { step: '03', title: 'Wireframy a design', desc: 'Návrh struktury stránek a vizuální podoby.', out: 'Schválený design' },
+    { step: '04', title: 'Vývoj a integrace', desc: 'Kódování, nastavení platformy a napojení systémů (POHODA, platby).', out: 'Funkční beta verze' },
+    { step: '05', title: 'Testování a obsah', desc: 'Plnění daty, testy na zařízeních a kontrola rychlosti.', out: 'Připraveno ke spuštění' },
+    { step: '06', title: 'Spuštění a rozvoj', desc: 'Nasazení, měření a servisní plán.', out: 'Živý projekt' },
   ];
 
   return (

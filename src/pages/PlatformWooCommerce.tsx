@@ -14,7 +14,7 @@ export function PlatformWooCommerce() {
       />
       <PageHero 
         title="Woo."
-        description="Vývoj e-shopů na nejrozšířenější open-source platformě. Plná kontrola nad kódem i daty."
+        description="E-shopy na open-source WooCommerce. Plná kontrola nad kódem i daty, bez poplatků za platformu."
       />
 
       {/* Intro Section */}
@@ -22,7 +22,7 @@ export function PlatformWooCommerce() {
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-4xl md:text-6xl font-semibold tracking-tighter mb-8 text-brand-black">Kdy zvolit WooCommerce.</h2>
           <p className="text-xl text-brand-grey-medium leading-relaxed mb-12">
-            Ideální pro specifické projekty, které vyžadují plnou kontrolu nad každým detailem, nebo pro weby, kde je e-shop doplňkem k rozsáhlému obsahu. Žádné měsíční poplatky za platformu, jen čistý výkon.
+            Pro projekty, které potřebují plnou kontrolu nad každým detailem, nebo weby, kde je e-shop doplňkem k obsahu. Bez měsíčních poplatků za platformu.
           </p>
         </div>
       </section>
@@ -32,10 +32,10 @@ export function PlatformWooCommerce() {
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {[
-              { title: "Šablony na míru", desc: "Stavím lehké a rychlé šablony od nuly. Žádné pomalé kupované balíky plné zbytečného kódu." },
-              { title: "Vlastní pluginy", desc: "Pokud neexistuje hotové řešení, naprogramuji vám plugin na míru vašim potřebám." },
-              { title: "Optimalizace", desc: "Ladění výkonu serveru i databáze pro bleskové načítání i při větším počtu produktů." },
-              { title: "České integrace", desc: "Bezchybné napojení na Zásilkovnu, GoPay, Comgate, POHODA a další lokální služby." }
+              { title: "Šablony na míru", desc: "Lehké a rychlé šablony od nuly. Žádné pomalé nafouknuté kupované balíky." },
+              { title: "Vlastní pluginy", desc: "Když hotové řešení neexistuje, naprogramuji plugin na míru." },
+              { title: "Optimalizace", desc: "Ladění serveru i databáze pro bleskové načítání i s velkým katalogem." },
+              { title: "České integrace", desc: "Zásilkovna, GoPay, Comgate, POHODA a další lokální služby." }
             ].map((item, i) => (
               <motion.div 
                 key={i}

@@ -23,7 +23,7 @@ export function Blog() {
       />
       <PageHero 
         title="Blog."
-        description="Články o vývoji webů, e-commerce platformách a automatizaci procesů. Sdílím své know-how a zkušenosti z praxe."
+        description="Zkušenosti z praxe — vývoj webů, e-commerce platformy, integrace a automatizace."
       />
 
       {/* Blog Grid */}

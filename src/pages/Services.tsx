@@ -9,19 +9,19 @@ export function Services() {
   const services = [
     { 
       title: "Webové stránky", 
-      desc: "Prezentační weby zaměřené na generování poptávek, budování důvěry a měřitelné výsledky. Žádné šablony, jen čistý kód a promyšlený UX design.", 
+      desc: "Prezentační weby, které nosí poptávky a budí důvěru. Žádné šablony, čistý kód a promyšlený UX.", 
       link: "/sluzby/webove-stranky",
       features: ["Rychlé načítání a SEO", "Měření konverzí (GA4)", "Snadná správa obsahu"]
     },
     { 
       title: "E-shopy na míru", 
-      desc: "Prodejní stroje s důrazem na automatizaci, napojení na účetnictví a bezchybný nákupní proces. Pomáhám vám prodávat víc s menším úsilím.", 
+      desc: "Prodejní stroje s automatizací, napojením na účetnictví a bezchybným nákupním procesem.", 
       link: "/sluzby/e-shop",
       features: ["Shoptet, Upgates, Woo", "Napojení na POHODA", "Důvěryhodný checkout"]
     },
     { 
       title: "Webové aplikace", 
-      desc: "Nástroje na míru pro digitalizaci interních procesů, klientské portály a složité integrace. Stavím systémy, které řeší reálné problémy.", 
+      desc: "Systémy na míru — klientské portály, digitalizace procesů a integrace, které řeší reálné problémy.", 
       link: "/sluzby/webove-aplikace",
       features: ["MVP a iterativní vývoj", "API a datové můstky", "Správa rolí a oprávnění"]
     }
@@ -36,7 +36,7 @@ export function Services() {
       />
       <PageHero 
         title="Služby."
-        description="Web není jen vizitka. Je to prodejní a procesní systém. Dodávám řešení, která skutečně pracují pro váš byznys."
+        description="Web není vizitka, ale prodejní a procesní systém. Dodávám řešení, která pracují pro váš byznys."
       />
 
       {/* Services List */}

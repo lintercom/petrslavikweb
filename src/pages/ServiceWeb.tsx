@@ -15,7 +15,7 @@ export function ServiceWeb() {
       />
       <PageHero 
         title="Weby."
-        description="Web není vizitka. Je to váš nejlepší obchodník, který pracuje 24/7. Stavím weby zaměřené na výsledky."
+        description="Web je váš obchodník, ne vizitka. Stavím weby zaměřené na poptávky a důvěru."
       />
 
       {/* Features Grid */}
@@ -23,10 +23,10 @@ export function ServiceWeb() {
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {[
-              { icon: TrendingUp, title: "Více poptávek", desc: "Jasná struktura, silná CTA a copywriting, který vede návštěvníka k akci. Žádné slepé uličky." },
-              { icon: ShieldCheck, title: "Maximální důvěra", desc: "Profesionální design, rychlé načítání a bezchybné zobrazení na mobilu přesvědčí i náročné klienty." },
-              { icon: LineChart, title: "Měření a data", desc: "Web odevzdávám s nastaveným měřením konverzí (GA4). Víte přesně, odkud k vám chodí platící klienti." },
-              { icon: Settings, title: "Snadná správa", desc: "Přidat referenci nebo upravit text zvládnete sami za pár minut. Bez nutnosti umět programovat." }
+              { icon: TrendingUp, title: "Více poptávek", desc: "Jasná struktura, silná CTA a copy, který vede k akci. Žádné slepé uličky." },
+              { icon: ShieldCheck, title: "Maximální důvěra", desc: "Profesionální design, rychlé načítání a bezchybný mobil přesvědčí i náročné klienty." },
+              { icon: LineChart, title: "Měření a data", desc: "Odevzdávám s nastaveným GA4 a měřením konverzí. Víte, odkud chodí platící klienti." },
+              { icon: Settings, title: "Snadná správa", desc: "Úpravu textu nebo přidání reference zvládnete sami za pár minut. Bez programování." }
             ].map((item, i) => (
               <motion.div 
                 key={i}
@@ -47,7 +47,7 @@ export function ServiceWeb() {
 
       <PageCTA 
         title="Potřebujete web, který vydělává?"
-        description="Ceny začínají na 35 000 Kč. Přesnou částku vám řeknu po krátkém hovoru, kde probereme vaše potřeby."
+        description="Ceny začínají na 35 000 Kč. Přesnou částku řeknu po krátkém hovoru."
       />
 
       <BigFooterCTA />

@@ -15,7 +15,7 @@ export function ServiceEshop() {
       />
       <PageHero 
         title="E-shopy."
-        description="Stavím prodejní stroje, které šetří váš čas. E-shop není jen výloha, je to systém, který musí bezchybně fungovat."
+        description="Prodejní stroje, které šetří čas. E-shop není výloha, ale systém napojený na účetnictví i dopravce."
       />
 
       {/* Features Grid */}
@@ -23,10 +23,10 @@ export function ServiceEshop() {
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {[
-              { icon: Link2, title: "Integrace na POHODA", desc: "Konec ručního přepisování. Objednávky, faktury, stavy skladů a ceníky se synchronizují automaticky." },
-              { icon: Zap, title: "Platby a doprava", desc: "Napojení na GoPay, Comgate, Stripe, Zásilkovnu a další. Rychlý a důvěryhodný checkout pro zákazníka." },
-              { icon: ShoppingCart, title: "Shoptet, Upgates, Woo", desc: "Vybereme platformu, která dává smysl pro vaši velikost. Od krabicového řešení po custom úpravy." },
-              { icon: TrendingUp, title: "Konverzní optimalizace", desc: "E-shop navrhuji tak, aby zákazník nakoupil. Rychlé vyhledávání, jasné filtry a bezproblémový nákupní košík." }
+              { icon: Link2, title: "Integrace na POHODA", desc: "Konec ručního přepisování. Objednávky, faktury, sklady i ceníky se synchronizují automaticky." },
+              { icon: Zap, title: "Platby a doprava", desc: "GoPay, Comgate, Stripe, Zásilkovna a další. Rychlý a důvěryhodný checkout." },
+              { icon: ShoppingCart, title: "Shoptet, Upgates, Woo", desc: "Vybereme platformu podle velikosti — od krabicového řešení po custom úpravy." },
+              { icon: TrendingUp, title: "Konverzní optimalizace", desc: "Rychlé vyhledávání, jasné filtry a bezproblémový košík. Navrženo tak, aby zákazník nakoupil." }
             ].map((item, i) => (
               <motion.div 
                 key={i}
@@ -47,7 +47,7 @@ export function ServiceEshop() {
 
       <PageCTA 
         title="Chcete e-shop, který šetří čas?"
-        description="Ceny začínají na 60 000 Kč včetně základních integrací. Pojďme probrat, jak můžeme automatizovat váš prodej."
+        description="Ceny od 60 000 Kč včetně základních integrací. Pojďme probrat automatizaci vašeho prodeje."
       />
 
       <BigFooterCTA />

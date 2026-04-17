@@ -18,11 +18,11 @@ export function ReferenceDetail() {
   const data = {
     title: slug === 'kava-premium' ? 'Káva Premium' : 'Projekt ' + slug,
     category: slug === 'kava-premium' ? 'E-shop & Integrace' : 'Webová aplikace',
-    problem: 'Zastaralý systém, ruční přepisování faktur do účetnictví a neustálé chyby v expedici.',
-    solution: 'Migrace na Shoptet, vytvoření API můstku do systému POHODA a kompletní redesign nákupního procesu.',
+    problem: 'Zastaralý systém, ruční přepis faktur a chyby v expedici.',
+    solution: 'Migrace na Shoptet, API můstek do POHODY a redesign nákupního procesu.',
     tech: 'Shoptet, Node.js, POHODA mServer',
-    results: 'Úspora 20 hodin týdně na administrativě. Nárůst obratu o 30 % díky lepšímu UX.',
-    testimonial: '"Spolupráce byla skvělá. Konečně nemusíme řešit papíry a můžeme se věnovat prodeji." - Jan Novák, CEO'
+    results: 'Úspora 20 hodin týdně. Obrat o 30 % výš díky lepšímu UX.',
+    testimonial: '"Konečně neřešíme papíry a můžeme prodávat." — Jan Novák, CEO'
   };
 
   return (

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://petrslavik.cz/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://petrslavik.cz/sluzby</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petrslavik.cz/sluzby/webove-stranky</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petrslavik.cz/sluzby/e-shop</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petrslavik.cz/sluzby/webove-aplikace</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petrslavik.cz/reference</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petrslavik.cz/cenik</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petrslavik.cz/proces</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petrslavik.cz/blog</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petrslavik.cz/kontakt</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petrslavik.cz/o-mne</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petrslavik.cz/integrace/pohoda</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petrslavik.cz/platformy/shoptet</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petrslavik.cz/platformy/upgates</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petrslavik.cz/platformy/woocommerce</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petrslavik.cz/ochrana-osobnich-udaju</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://petrslavik.cz/cookies</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>

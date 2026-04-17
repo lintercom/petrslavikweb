@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;800&family=Hind:wght@400;600&display=swap" />
+    <title>Petr Slavík | Tvorba webů, e-shopů a aplikací</title>
+    <meta name="description" content="Freelance web developer se specializací na weby, e-shopy a webové aplikace. Fixní ceny, jasný harmonogram, integrace s POHODOU." />
+    
+    <meta property="og:title" content="Petr Slavík | Tvorba webů, e-shopů a aplikací" />
+    <meta property="og:description" content="Freelance web developer se specializací na weby, e-shopy a webové aplikace. Fixní ceny, jasný harmonogram, integrace s POHODOU." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://petrslavik.cz" />
+    <meta property="og:locale" content="cs_CZ" />
+    <!-- TODO: přidat public/og-image.jpg (1200x630) a odkomentovat
+    <meta property="og:image" content="https://petrslavik.cz/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:image" content="https://petrslavik.cz/og-image.jpg" />
+    -->
+
+    <script>
+      // SPA redirect decoder pro GitHub Pages (spa-github-pages). Musí běžet
+      // PŘED načtením Reactu, aby BrowserRouter viděl správné location.
+      (function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function (s) {
+            return s.replace(/~and~/g, '&');
+          }).join('?');
+          window.history.replaceState(null, '', l.pathname.slice(0, -1) + decoded + l.hash);
+        }
+      })(window.location);
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Petr Slavík",
+        "url": "https://petrslavik.cz",
+        "email": "petr@petrslavik.cz",
+        "jobTitle": "Freelance Web Developer",
+        "sameAs": []
+      }
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <div style="padding:2rem;font-family:sans-serif;text-align:center;">
+        Pro zobrazení této stránky je potřeba mít zapnutý JavaScript.
+      </div>
+    </noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

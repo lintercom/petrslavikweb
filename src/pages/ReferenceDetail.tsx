@@ -48,24 +48,24 @@ export function ReferenceDetail() {
 
           <div className="grid grid-cols-1 gap-24">
             <div>
-              <h2 className="text-4xl font-semibold tracking-tighter mb-8 text-brand-black">Výzva.</h2>
+              <h2 className="text-4xl font-semibold tracking-tight mb-8 text-brand-black">Výzva.</h2>
               <p className="text-2xl text-brand-grey-medium leading-relaxed">{data.problem}</p>
             </div>
 
             <div>
-              <h2 className="text-4xl font-semibold tracking-tighter mb-8 text-brand-black">Řešení.</h2>
+              <h2 className="text-4xl font-semibold tracking-tight mb-8 text-brand-black">Řešení.</h2>
               <p className="text-2xl text-brand-grey-medium leading-relaxed">{data.solution}</p>
             </div>
 
             <div className="bg-gradient-to-b from-brand-white to-brand-grey-light/10 p-16 rounded-[3rem] border border-brand-grey-light/10">
-              <h2 className="text-4xl font-semibold tracking-tighter mb-8 text-brand-black">Výsledky.</h2>
+              <h2 className="text-4xl font-semibold tracking-tight mb-8 text-brand-black">Výsledky.</h2>
               <div className="text-3xl font-semibold text-brand-black flex items-center gap-4">
                 {data.results} <TrendingUp className="w-8 h-8" />
               </div>
             </div>
 
             <div>
-              <h2 className="text-4xl font-semibold tracking-tighter mb-8 text-brand-black">Technologie.</h2>
+              <h2 className="text-4xl font-semibold tracking-tight mb-8 text-brand-black">Technologie.</h2>
               <div className="flex flex-wrap gap-4">
                 {data.tech.split(', ').map((t, i) => (
                   <span key={i} className="px-8 py-4 bg-brand-grey-light/10 rounded-full font-semibold uppercase tracking-widest text-sm text-brand-grey-medium">

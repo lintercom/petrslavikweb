@@ -60,7 +60,7 @@ export function References() {
                     <div className="absolute inset-0 bg-brand-black opacity-0 group-hover:opacity-5 transition-opacity duration-500"></div>
                   </div>
                   <div className="text-xs font-extrabold uppercase tracking-widest text-brand-grey-dark mb-4">{c.category}</div>
-                  <h3 className="text-2xl font-extrabold uppercase tracking-tighter mb-4 group-hover:translate-x-2 transition-transform duration-500 text-brand-black">{c.title}</h3>
+                  <h3 className="text-2xl font-extrabold uppercase tracking-tight mb-4 group-hover:translate-x-2 transition-transform duration-500 text-brand-black">{c.title}</h3>
                   <p className="text-base text-brand-grey-dark mb-6 leading-relaxed flex-grow">{c.desc}</p>
                   <div className="text-lg font-extrabold uppercase text-brand-black flex items-center gap-2">
                     {c.metric} <TrendingUp className="w-5 h-5" />

@@ -53,7 +53,7 @@ export function Services() {
                 className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start"
               >
                 <div>
-                  <h2 className="text-3xl md:text-5xl font-extrabold uppercase tracking-tighter mb-6 text-brand-black">{service.title}</h2>
+                  <h2 className="text-3xl md:text-5xl font-extrabold uppercase tracking-tight mb-6 text-brand-black">{service.title}</h2>
                   <p className="text-lg text-brand-grey-dark leading-relaxed mb-8">{service.desc}</p>
                   <Link 
                     to={service.link} 

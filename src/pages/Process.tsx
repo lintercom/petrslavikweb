@@ -42,7 +42,7 @@ export function Process() {
                   {item.step}
                 </div>
                 <div>
-                  <h3 className="text-3xl md:text-4xl font-extrabold uppercase tracking-tighter text-brand-black mb-4">{item.title}</h3>
+                  <h3 className="text-3xl md:text-4xl font-extrabold uppercase tracking-tight text-brand-black mb-4">{item.title}</h3>
                   <p className="text-lg text-brand-grey-dark leading-relaxed mb-6 max-w-2xl">{item.desc}</p>
                   <div className="inline-flex items-center gap-3 px-6 py-3 border-2 border-brand-black bg-brand-white shadow-[4px_4px_0px_0px_rgba(18,18,18,1)]">
                     <span className="text-xs font-extrabold uppercase tracking-widest text-brand-grey-dark">Výstup:</span>

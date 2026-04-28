@@ -27,7 +27,7 @@ export function SpotlightHeading({ text, className, size = 'xl', variant = 'spot
         "px-4 md:px-8 py-3",
         variant === 'spotlight' ? "bg-brand-blue-spotlight text-brand-black" : "bg-brand-brown-spotlight text-brand-black"
       )}>
-        <Tag className={cn("font-extrabold tracking-tighter leading-none text-inherit uppercase", sizeClasses[size])}>
+        <Tag className={cn("font-extrabold tracking-tight leading-none text-inherit uppercase", sizeClasses[size])}>
           {text}
         </Tag>
       </div>

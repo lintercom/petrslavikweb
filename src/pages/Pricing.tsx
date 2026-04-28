@@ -68,7 +68,7 @@ export function Pricing() {
                 <div className={`text-xs font-extrabold uppercase tracking-widest mb-6 ${plan.featured ? 'text-brand-grey-light' : 'text-brand-grey-dark'}`}>
                   {plan.label}
                 </div>
-                <h3 className="text-3xl font-extrabold uppercase tracking-tighter mb-4">{plan.title}</h3>
+                <h3 className="text-3xl font-extrabold uppercase tracking-tight mb-4">{plan.title}</h3>
                 <div className="text-2xl font-extrabold mb-2">{plan.price}</div>
                 <div className={`text-xs font-extrabold uppercase tracking-widest mb-6 ${plan.featured ? 'text-brand-grey-light/60' : 'text-brand-grey-dark/60'}`}>
                   {plan.time}
@@ -107,7 +107,7 @@ export function Pricing() {
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-extrabold uppercase tracking-tighter mb-6 text-brand-black">Měsíční servis a rozvoj.</h2>
+              <h2 className="text-4xl md:text-5xl font-extrabold uppercase tracking-tight mb-6 text-brand-black">Měsíční servis a rozvoj.</h2>
               <p className="text-lg text-brand-grey-dark leading-relaxed max-w-xl">
                 Spuštěním to nekončí. Hlídám bezpečnost, rychlost a postupný rozvoj podle dat.
               </p>

@@ -73,7 +73,7 @@ export function Contact() {
                   animate={{ opacity: 1, scale: 1 }}
                   className="bg-brand-black text-brand-white p-12 border-2 border-brand-black text-center h-full flex flex-col items-center justify-center"
                 >
-                  <h3 className="text-3xl font-extrabold uppercase tracking-tighter mb-4">Děkuji!</h3>
+                  <h3 className="text-3xl font-extrabold uppercase tracking-tight mb-4">Děkuji!</h3>
                   <p className="text-lg text-brand-grey-light">Brzy se vám ozvu na zadaný e-mail.</p>
                 </motion.div>
               ) : (

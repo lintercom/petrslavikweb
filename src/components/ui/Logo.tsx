@@ -10,7 +10,7 @@ export function Logo({ className }: { className?: string }) {
         </span>
       </div>
       <div className="bg-brand-white px-3 pt-1.5 pb-1 md:px-4 md:pt-2 md:pb-1.5 flex items-end">
-        <span className="text-brand-black text-2xl md:text-3xl tracking-tighter leading-none block">
+        <span className="text-brand-black text-2xl md:text-3xl tracking-tight leading-none block">
           SLAVÍK
         </span>
       </div>

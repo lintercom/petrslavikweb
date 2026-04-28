@@ -20,7 +20,7 @@ export function PageCTA({
   return (
     <section className="py-24 px-4 bg-brand-white border-t-2 border-brand-black">
       <div className="container mx-auto max-w-4xl text-center">
-        <h2 className="text-4xl md:text-6xl font-extrabold uppercase tracking-tighter mb-6 text-brand-black">{title}</h2>
+        <h2 className="text-4xl md:text-6xl font-extrabold uppercase tracking-tight mb-6 text-brand-black">{title}</h2>
         {description && (
           <p className="text-lg text-brand-grey-dark mb-10 max-w-2xl mx-auto leading-relaxed">
             {description}

@@ -16,7 +16,7 @@ export function BigFooterCTA() {
       <div className="relative flex flex-col items-center justify-center px-4 text-center z-10 mix-blend-difference pointer-events-none">
         <h2 
           data-spotlight="true"
-          className="text-7xl md:text-9xl lg:text-[12rem] font-extrabold tracking-tighter text-brand-white leading-[0.8] select-none uppercase"
+          className="text-7xl md:text-9xl lg:text-[12rem] font-extrabold tracking-tight text-brand-white leading-[0.8] select-none uppercase"
         >
           DO TOHO!
         </h2>

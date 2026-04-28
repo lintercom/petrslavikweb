@@ -37,7 +37,7 @@ export function ServiceApp() {
                 className="bg-brand-white p-12 border-2 border-brand-black hover:-translate-y-1 hover:shadow-[8px_8px_0px_0px_rgba(18,18,18,1)] transition-[transform,box-shadow] duration-300"
               >
                 <item.icon className="w-12 h-12 text-brand-black mb-8" />
-                <h3 className="text-3xl font-extrabold uppercase tracking-tighter mb-6 text-brand-black">{item.title}</h3>
+                <h3 className="text-3xl font-extrabold uppercase tracking-tight mb-6 text-brand-black">{item.title}</h3>
                 <p className="text-lg text-brand-grey-dark leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}

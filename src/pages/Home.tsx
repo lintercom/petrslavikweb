@@ -129,7 +129,7 @@ export function Home() {
             transition={{ duration: 0.8 }}
             className="mb-12"
           >
-            <h2 className="text-4xl md:text-5xl font-extrabold uppercase tracking-tighter mb-8 text-brand-black">Časté dotazy.</h2>
+            <h2 className="text-4xl md:text-5xl font-extrabold uppercase tracking-tight mb-8 text-brand-black">Časté dotazy.</h2>
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}

@@ -16,7 +16,7 @@ export function MarqueeServices() {
         <div className="flex items-center gap-8 md:gap-16 animate-marquee">
           {duplicatedServices.map((service, index) => (
             <div key={index} className="flex items-center gap-6 md:gap-12">
-              <span className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tighter text-brand-black uppercase">
+              <span className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-brand-black uppercase">
                 {service}
               </span>
               <div className="w-16 h-8 md:w-24 md:h-12 rounded-full bg-brand-grey-light overflow-hidden relative shrink-0 grayscale">

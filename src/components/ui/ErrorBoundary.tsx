@@ -29,7 +29,7 @@ export class ErrorBoundary extends Component<Props, State> {
       return (
         <div className="min-h-screen flex flex-col items-center justify-center px-4 bg-brand-white text-brand-black">
           <div className="text-center max-w-xl">
-            <h1 className="text-4xl md:text-6xl font-extrabold uppercase tracking-tighter mb-6">
+            <h1 className="text-4xl md:text-6xl font-extrabold uppercase tracking-tight mb-6">
               Něco se pokazilo.
             </h1>
             <p className="text-lg text-brand-grey-dark mb-10 leading-relaxed">

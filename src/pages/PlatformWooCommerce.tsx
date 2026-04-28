@@ -20,7 +20,7 @@ export function PlatformWooCommerce() {
       {/* Intro Section */}
       <section className="py-32 px-4 bg-brand-white">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl md:text-6xl font-semibold tracking-tighter mb-8 text-brand-black">Kdy zvolit WooCommerce.</h2>
+          <h2 className="text-4xl md:text-6xl font-semibold tracking-tight mb-8 text-brand-black">Kdy zvolit WooCommerce.</h2>
           <p className="text-xl text-brand-grey-medium leading-relaxed mb-12">
             Pro projekty, které potřebují plnou kontrolu nad každým detailem, nebo weby, kde je e-shop doplňkem k obsahu. Bez měsíčních poplatků za platformu.
           </p>
@@ -45,7 +45,7 @@ export function PlatformWooCommerce() {
                 transition={{ duration: 0.6, delay: i * 0.1 }}
                 className="bg-brand-white p-12 rounded-[2.5rem] border border-brand-grey-light/10 shadow-sm"
               >
-                <h3 className="text-3xl font-semibold tracking-tighter mb-6 text-brand-black">{item.title}</h3>
+                <h3 className="text-3xl font-semibold tracking-tight mb-6 text-brand-black">{item.title}</h3>
                 <p className="text-lg text-brand-grey-medium leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
@@ -56,7 +56,7 @@ export function PlatformWooCommerce() {
       {/* CTA Section */}
       <section className="py-32 px-4 bg-brand-white">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-5xl md:text-7xl font-semibold tracking-tighter mb-8 text-brand-black">Potřebujete WooCommerce e-shop?</h2>
+          <h2 className="text-5xl md:text-7xl font-semibold tracking-tight mb-8 text-brand-black">Potřebujete WooCommerce e-shop?</h2>
           <Button href="/kontakt" variant="primary" className="py-6 px-12 text-lg uppercase tracking-widest font-semibold">Nezávazná poptávka</Button>
         </div>
       </section>

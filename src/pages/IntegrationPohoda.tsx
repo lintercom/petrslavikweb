@@ -35,7 +35,7 @@ export function IntegrationPohoda() {
                 transition={{ duration: 0.6, delay: i * 0.1 }}
                 className="bg-brand-grey-light/5 p-12 rounded-[2.5rem] border border-brand-grey-light/10"
               >
-                <h3 className="text-3xl font-semibold tracking-tighter mb-6 text-brand-black">{item.title}</h3>
+                <h3 className="text-3xl font-semibold tracking-tight mb-6 text-brand-black">{item.title}</h3>
                 <p className="text-lg text-brand-grey-medium leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
@@ -46,7 +46,7 @@ export function IntegrationPohoda() {
       {/* How it works */}
       <section className="py-32 px-4 bg-brand-grey-light/5">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-5xl md:text-7xl font-semibold tracking-tighter mb-8 text-brand-black">Jak to funguje.</h2>
+          <h2 className="text-5xl md:text-7xl font-semibold tracking-tight mb-8 text-brand-black">Jak to funguje.</h2>
           <p className="text-2xl text-brand-grey-medium leading-relaxed mb-12">
             POHODA mServer nebo XML komunikace. Řešení navrhnu podle vašich procesů.
           </p>

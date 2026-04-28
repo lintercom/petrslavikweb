@@ -17,7 +17,7 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({ title, children, i
         onClick={onClick}
         aria-expanded={isOpen}
       >
-        <span className="text-xl font-extrabold uppercase tracking-tighter text-brand-black">{title}</span>
+        <span className="text-xl font-extrabold uppercase tracking-tight text-brand-black">{title}</span>
         <ChevronDown
           className={cn(
             "h-6 w-6 text-brand-black transition-transform duration-300",

@@ -41,7 +41,7 @@ export function BlogDetail() {
           </div>
 
           <div className="mt-32 p-16 bg-gradient-to-b from-brand-white to-brand-grey-light/10 rounded-[3rem] border border-brand-grey-light/10 text-center">
-            <h3 className="text-4xl font-semibold tracking-tighter text-brand-black mb-8">Řešíte totéž?</h3>
+            <h3 className="text-4xl font-semibold tracking-tight text-brand-black mb-8">Řešíte totéž?</h3>
             <div className="flex flex-col sm:flex-row justify-center gap-6">
               <Link to="/kontakt" className="bg-brand-black text-brand-white px-12 py-6 rounded-full font-semibold uppercase tracking-widest hover:bg-brand-grey-dark transition-colors">
                 Domluvit konzultaci

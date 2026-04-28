@@ -44,7 +44,7 @@ export function Blog() {
                     <div className="absolute inset-0 bg-brand-black opacity-0 group-hover:opacity-5 transition-opacity duration-500"></div>
                   </div>
                   <div className="text-xs font-extrabold uppercase tracking-widest text-brand-grey-dark mb-4">{post.category}</div>
-                  <h3 className="text-2xl font-extrabold uppercase tracking-tighter mb-6 group-hover:translate-x-2 transition-transform duration-500 leading-tight text-brand-black flex-grow">
+                  <h3 className="text-2xl font-extrabold uppercase tracking-tight mb-6 group-hover:translate-x-2 transition-transform duration-500 leading-tight text-brand-black flex-grow">
                     {post.title}
                   </h3>
                   <div className="text-sm font-extrabold uppercase tracking-widest text-brand-black flex items-center gap-2 group-hover:gap-4 transition-all duration-300">

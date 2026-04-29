@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://petrslavik.cz/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://petrslavik.cz/sluzby</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petrslavik.cz/sluzby/webove-stranky</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petrslavik.cz/sluzby/e-shop</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petrslavik.cz/sluzby/webove-aplikace</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petrslavik.cz/sluzby/integrace</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petrslavik.cz/reference</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petrslavik.cz/cenik</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petrslavik.cz/proces</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petrslavik.cz/blog</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petrslavik.cz/blog/kolik-stoji-web-na-miru-v-roce-2026</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://petrslavik.cz/blog/web-na-miru-vs-hotove-reseni</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://petrslavik.cz/blog/vlastni-cms-pro-web</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://petrslavik.cz/blog/eshop-na-miru</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://petrslavik.cz/blog/platebni-brana-na-web</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://petrslavik.cz/blog/rezervacni-system-na-miru</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://petrslavik.cz/blog/napojeni-webu-na-erp</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://petrslavik.cz/blog/jak-pripravit-podklady-pro-web</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://petrslavik.cz/kontakt</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petrslavik.cz/o-mne</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petrslavik.cz/integrace/pohoda</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petrslavik.cz/ochrana-osobnich-udaju</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://petrslavik.cz/cookies</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>

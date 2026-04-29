@@ -9,12 +9,12 @@ export function IntegrationPohoda() {
     <div className="flex flex-col bg-brand-white">
       <SEO
         title="Integrace POHODA | Petr Slavík"
-        description="Napojení e-shopů a aplikací na účetní systém POHODA."
+        description="Napojení webů, e-shopů a online systémů na účetní systém POHODA přes XML komunikaci, mServer nebo individuální integrační řešení."
         path="/integrace/pohoda"
       />
       <PageHero 
-        title="Pohoda."
-        description="Automatický přenos dat mezi e-shopem a účetnictvím POHODA. Konec ručního přepisování."
+        title="Integrace POHODA."
+        description="Propojení e-shopu, webového systému nebo vlastní administrace s účetnictvím POHODA. Méně ručního přepisování, méně chyb a lepší kontrola nad daty."
       />
 
       {/* Features Section */}
@@ -22,10 +22,10 @@ export function IntegrationPohoda() {
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {[
-              { title: "Objednávky", desc: "Automatický import z e-shopu do Pohody v reálném čase. Bez prodlev a chyb." },
-              { title: "Zásoby", desc: "Sklady z Pohody se propisují na e-shop. Zákazník vidí reálnou dostupnost." },
-              { title: "Ceníky", desc: "Synchronizace cen a slevových skupin. Spravujete na jednom místě, propíše se všude." },
-              { title: "Faktury", desc: "Vystavení faktur a automatické párování s platbami." }
+              { title: "Objednávky", desc: "Přenos objednávek z e-shopu nebo objednávkového systému do POHODY podle domluveného scénáře." },
+              { title: "Zásoby", desc: "Synchronizace skladů a dostupnosti podle možností vašeho systému, e-shopu a účetního nastavení." },
+              { title: "Ceníky", desc: "Přenos cen, slevových skupin nebo individuálních ceníků podle struktury dat a obchodního procesu." },
+              { title: "Faktury", desc: "Možnost vytváření faktur, přenosu dokladů a párování plateb podle konkrétního účetního postupu." }
             ].map((item, i) => (
               <motion.div 
                 key={i}
@@ -48,7 +48,7 @@ export function IntegrationPohoda() {
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-5xl md:text-7xl font-semibold tracking-tight mb-8 text-brand-black">Jak to funguje.</h2>
           <p className="text-2xl text-brand-grey-medium leading-relaxed mb-12">
-            POHODA mServer nebo XML komunikace. Řešení navrhnu podle vašich procesů.
+            POHODA mServer nebo XML komunikace. Řešení navrhnu podle vašich procesů a možností konkrétního systému.
           </p>
           <Button href="/kontakt" variant="primary" className="py-6 px-12 text-lg uppercase tracking-widest font-semibold">Poptat integraci</Button>
         </div>

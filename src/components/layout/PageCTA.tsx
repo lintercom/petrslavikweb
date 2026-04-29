@@ -18,20 +18,20 @@ export function PageCTA({
   secondaryButtonHref = "/cenik"
 }: PageCTAProps) {
   return (
-    <section className="py-24 px-4 bg-brand-white border-t-2 border-brand-black">
+    <section className="py-16 md:py-20 px-4 bg-brand-white border-t-2 border-brand-black">
       <div className="container mx-auto max-w-4xl text-center">
-        <h2 className="text-4xl md:text-6xl font-extrabold uppercase tracking-tight mb-6 text-brand-black">{title}</h2>
+        <h2 className="text-3xl md:text-5xl font-extrabold uppercase tracking-tight mb-6 text-brand-black">{title}</h2>
         {description && (
-          <p className="text-lg text-brand-grey-dark mb-10 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg text-brand-grey-dark mb-8 md:mb-10 max-w-2xl mx-auto leading-relaxed">
             {description}
           </p>
         )}
-        <div className="flex flex-col sm:flex-row justify-center gap-6">
-          <Button href={primaryButtonHref} variant="primary" className="py-4 px-10 text-base uppercase tracking-widest font-extrabold">
+        <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
+          <Button href={primaryButtonHref} variant="primary" size="xl">
             {primaryButtonText}
           </Button>
           {secondaryButtonText && (
-            <Button href={secondaryButtonHref} variant="outline" className="py-4 px-10 text-base uppercase tracking-widest font-extrabold">
+            <Button href={secondaryButtonHref} variant="outline" size="xl">
               {secondaryButtonText}
             </Button>
           )}

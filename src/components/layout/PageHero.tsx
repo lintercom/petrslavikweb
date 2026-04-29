@@ -12,7 +12,7 @@ interface PageHeroProps {
 
 export function PageHero({ title, description, children, size = 'lg' }: PageHeroProps) {
   return (
-    <section data-hero="true" style={{ isolation: 'isolate' }} className="relative pt-32 pb-20 px-4 bg-brand-black text-brand-white overflow-hidden">
+    <section data-hero="true" style={{ isolation: 'isolate' }} className="relative pt-28 md:pt-32 pb-14 md:pb-20 px-4 bg-brand-black text-brand-white overflow-hidden">
       <SectionSpotlight />
       <div className="container mx-auto max-w-6xl relative z-10 mix-blend-difference">
         {children}
@@ -20,7 +20,7 @@ export function PageHero({ title, description, children, size = 'lg' }: PageHero
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="mb-8"
+          className="mb-6 md:mb-8"
         >
           <SpotlightHeading text={title} size={size} />
         </motion.div>
@@ -29,7 +29,7 @@ export function PageHero({ title, description, children, size = 'lg' }: PageHero
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-brand-grey-light max-w-3xl leading-relaxed"
+            className="text-lg md:text-2xl text-brand-grey-light max-w-3xl leading-relaxed"
           >
             {description}
           </motion.p>

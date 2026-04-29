@@ -4,49 +4,26 @@ import { Link } from 'react-router-dom';
 import { BigFooterCTA } from '@/components/blocks/BigFooterCTA';
 import { TrendingUp } from 'lucide-react';
 import { PageHero } from '@/components/layout/PageHero';
+import { projectTypes } from '@/data/projects';
 
 export function References() {
-  const cases = [
-    {
-      slug: 'pravni-kancelar-novak',
-      title: 'Právní kancelář Novák',
-      category: 'Web pro službu',
-      desc: 'Kompletní redesign webu s důrazem na generování poptávek a SEO.',
-      metric: '+150 % nárůst poptávek'
-    },
-    {
-      slug: 'kava-premium',
-      title: 'Káva Premium',
-      category: 'E-shop & Integrace',
-      desc: 'Migrace na Shoptet a plná automatizace účetnictví s POHODA.',
-      metric: 'Ušetřeno 20 hodin týdně'
-    },
-    {
-      slug: 'interni-crm',
-      title: 'Interní CRM systém',
-      category: 'Webová aplikace',
-      desc: 'Vývoj aplikace na míru pro správu klientů a projektů stavební firmy.',
-      metric: 'Digitalizace 100 % procesů'
-    }
-  ];
-
   return (
     <div className="flex flex-col bg-brand-white">
       <SEO
-        title="Reference | Petr Slavík"
-        description="Ukázky mých prací a úspěšných projektů."
+        title="Ukázky typů řešení | Petr Slavík"
+        description="Ukázky typů řešení: firemní weby, e-shopy na míru, vlastní CMS, rezervační systémy a integrace na účetnictví nebo ERP."
         path="/reference"
       />
       <PageHero 
-        title="Projekty."
-        description="Vybrané projekty s měřitelnými výsledky — víc poptávek, ušetřený čas, digitalizace procesů."
+        title="Ukázky typů řešení."
+        description="Modelové scénáře bez falešných klientů a čísel. Ukazují, jak mohou vypadat weby, e-shopy, CMS, rezervace a integrace na míru."
       />
 
       {/* References Grid */}
-      <section className="py-24 px-4 bg-brand-white">
+      <section className="py-16 md:py-24 px-4 bg-brand-white">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            {cases.map((c, i) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projectTypes.map((c, i) => (
               <motion.div 
                 key={c.slug}
                 initial={{ opacity: 0, y: 30 }}
@@ -56,14 +33,22 @@ export function References() {
                 className="group cursor-pointer flex flex-col h-full"
               >
                 <Link to={`/reference/${c.slug}`} className="flex flex-col h-full">
-                  <div className="aspect-[4/5] bg-brand-white border-2 border-brand-black mb-6 overflow-hidden relative shadow-[4px_4px_0px_0px_rgba(18,18,18,1)] group-hover:-translate-y-1 group-hover:shadow-[8px_8px_0px_0px_rgba(18,18,18,1)] transition-[transform,box-shadow] duration-300">
+                  <div className="aspect-[4/3] bg-brand-white border-2 border-brand-black mb-6 overflow-hidden relative shadow-[4px_4px_0px_0px_rgba(18,18,18,1)] group-hover:-translate-y-1 group-hover:shadow-[8px_8px_0px_0px_rgba(18,18,18,1)] transition-[transform,box-shadow] duration-300">
+                    <div className="absolute inset-0 p-5 flex flex-col justify-between">
+                      <div className="h-8 w-24 bg-brand-black"></div>
+                      <div className="grid grid-cols-3 gap-2">
+                        <div className="h-12 border-2 border-brand-black"></div>
+                        <div className="h-12 border-2 border-brand-black bg-brand-black"></div>
+                        <div className="h-12 border-2 border-brand-black"></div>
+                      </div>
+                    </div>
                     <div className="absolute inset-0 bg-brand-black opacity-0 group-hover:opacity-5 transition-opacity duration-500"></div>
                   </div>
                   <div className="text-xs font-extrabold uppercase tracking-widest text-brand-grey-dark mb-4">{c.category}</div>
                   <h3 className="text-2xl font-extrabold uppercase tracking-tight mb-4 group-hover:translate-x-2 transition-transform duration-500 text-brand-black">{c.title}</h3>
                   <p className="text-base text-brand-grey-dark mb-6 leading-relaxed flex-grow">{c.desc}</p>
-                  <div className="text-lg font-extrabold uppercase text-brand-black flex items-center gap-2">
-                    {c.metric} <TrendingUp className="w-5 h-5" />
+                  <div className="text-sm font-extrabold uppercase tracking-widest text-brand-black flex items-center gap-2">
+                    Zobrazit detail <TrendingUp className="w-5 h-5" />
                   </div>
                 </Link>
               </motion.div>

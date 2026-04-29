@@ -9,12 +9,12 @@ export function About() {
     <div className="flex flex-col bg-brand-white">
       <SEO
         title="O mně | Petr Slavík"
-        description="Jsem Petr Slavík, freelance web developer. Přečtěte si více o mých zkušenostech."
+        description="Jsem Petr Slavík. Navrhuji a vyvíjím weby, e-shopy a online systémy na míru s vlastním CMS, databází a integracemi."
         path="/o-mne"
       />
       <PageHero 
         title="O mně."
-        description="Přímá komunikace freelancera a procesy agentury. Stavím weby, které prodávají."
+        description="Přímá komunikace, technický přesah a řešení na míru. Stavím weby a e-shopy, které zapadají do fungování firmy."
       />
 
       {/* Intro Section */}
@@ -29,10 +29,13 @@ export function About() {
             >
               <h2 className="text-3xl md:text-5xl font-extrabold uppercase tracking-tight mb-6 text-brand-black">Jsem Petr Slavík.</h2>
               <p className="text-lg text-brand-grey-dark leading-relaxed mb-6">
-                Weby a e-shopy stavím jako prodejní systémy, ne jako vizitky. Soustředím se na integrace, automatizace a měřitelné výsledky.
+                Navrhuji a vyvíjím weby, e-shopy a online systémy na míru. Neřeším jen vzhled webu, ale i to, jak zapadne do fungování firmy — od správy obsahu přes objednávky až po napojení na další systémy.
+              </p>
+              <p className="text-lg text-brand-grey-dark leading-relaxed mb-6">
+                Mám zkušenosti s vývojem, databázemi, ERP systémy a procesní logikou. Díky tomu se na web nedívám jen jako na stránku v prohlížeči, ale jako na nástroj, který má firmě šetřit čas, přivádět zákazníky a zjednodušovat práci.
               </p>
               <p className="text-lg text-brand-grey-dark leading-relaxed mb-10">
-                Kombinuji technickou preciznost s obchodním myšlením. Každý projekt má jasný cíl — posunout váš byznys dál.
+                Na projektu komunikuji přímo s klientem a řeším ho od návrhu po spuštění. Bez zbytečného předávání mezi obchodníkem, grafikem a vývojářem.
               </p>
               <Button href="/kontakt" variant="primary" className="py-4 px-10 text-base uppercase tracking-widest font-extrabold">Napište mi</Button>
             </motion.div>
@@ -65,8 +68,8 @@ export function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {[
               { title: "Přímá komunikace", desc: "Žádní account manageři. Mluvíte přímo s tím, kdo projekt staví. Rychlejší reakce, nic se neztratí v překladu." },
-              { title: "Obchodní přesah", desc: "Přemýšlím nad tím, jak vám web přinese peníze, zjednoduší procesy a napojí se na vaše stávající systémy." },
-              { title: "Agenturní procesy", desc: "Jasný harmonogram. Víte, co se kdy stane a kdy bude projekt hotový. Bez protahování." },
+              { title: "Obchodní přesah", desc: "Přemýšlím nad tím, jak má web získávat poptávky, prodávat, šetřit čas a napojit se na vaše stávající procesy nebo systémy." },
+              { title: "Agenturní procesy", desc: "Jasná specifikace, harmonogram a průběžná komunikace. Víte, co se řeší, proč se to řeší a kdy bude výstup hotový." },
               { title: "Dlouhodobý partner", desc: "Servisní plány, bezpečnost, aktualizace a další rozvoj na základě dat. Spuštěním to nekončí." }
             ].map((item, i) => (
               <motion.div 

@@ -13,7 +13,7 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({ title, children, i
   return (
     <div className="border-b-2 border-brand-black last:border-0">
       <button
-        className="flex w-full items-center justify-between py-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-black transition-colors hover:bg-brand-grey-light/5"
+        className="flex w-full items-center justify-between py-6 text-left cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-black transition-colors hover:bg-brand-grey-light/5"
         onClick={onClick}
         aria-expanded={isOpen}
       >

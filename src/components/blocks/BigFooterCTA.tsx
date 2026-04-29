@@ -1,26 +1,30 @@
-import { Link } from 'react-router-dom';
 import { SectionSpotlight } from '../ui/SectionSpotlight';
+import { Button } from '../ui/Button';
 
 export function BigFooterCTA() {
   return (
-    <footer
+    <section
       style={{ isolation: 'isolate' }}
-      className="relative w-full py-24 bg-brand-black flex flex-col items-center justify-center overflow-hidden"
+      className="relative w-full py-16 md:py-20 bg-brand-black flex flex-col items-center justify-center overflow-hidden"
     >
       <SectionSpotlight />
-      <Link
-        to="/kontakt"
-        aria-label="Přejít na kontakt"
-        className="absolute inset-0 z-20 cursor-pointer"
-      />
-      <div className="relative flex flex-col items-center justify-center px-4 text-center z-10 mix-blend-difference pointer-events-none">
-        <h2 
+      <div className="relative flex flex-col items-center justify-center px-4 text-center z-10 mix-blend-difference">
+        <p className="text-xs md:text-sm font-extrabold uppercase tracking-[0.24em] text-brand-grey-light mb-4">
+          Máte projekt na míru?
+        </p>
+        <h2
           data-spotlight="true"
-          className="text-7xl md:text-9xl lg:text-[12rem] font-extrabold tracking-tight text-brand-white leading-[0.8] select-none uppercase"
+          className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-brand-white leading-none select-none uppercase mb-6"
         >
-          DO TOHO!
+          Mám zájem
         </h2>
+        <p className="text-base md:text-xl text-brand-grey-light leading-relaxed max-w-2xl mb-8">
+          Máte web, e-shop nebo systém, který chcete postavit na míru? Napište mi a probereme, co má řešení umět.
+        </p>
+        <Button href="/kontakt" variant="onDark" size="xl">
+          Domluvit konzultaci
+        </Button>
       </div>
-    </footer>
+    </section>
   );
 }

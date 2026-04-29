@@ -20,11 +20,11 @@ export function Header() {
 
   const navItems = [
     { label: 'Služby', href: '/sluzby' },
-    { label: 'Reference', href: '/reference' },
-    { label: 'Ceník', href: '/cenik' },
     { label: 'Proces', href: '/proces' },
+    { label: 'Reference', href: '/reference' },
     { label: 'Blog', href: '/blog' },
     { label: 'O mně', href: '/o-mne' },
+    { label: 'Ceník', href: '/cenik' },
   ];
 
   const handleNavLinkClick = (href: string) => {
@@ -72,9 +72,8 @@ export function Header() {
         <div className="hidden lg:flex items-center gap-4">
           <Button 
             href="/kontakt" 
-            variant="outline" 
+            variant="onDark" 
             size="md" 
-            className="transition-all duration-300 border-brand-white text-brand-white hover:bg-brand-white hover:text-brand-black hover:shadow-[4px_4px_0px_0px_rgba(243,242,238,1)]"
           >
             Domluvit konzultaci
           </Button>
@@ -106,8 +105,8 @@ export function Header() {
           <div className="pt-4 border-t border-brand-grey-dark px-4 pb-4">
             <Button 
               href="/kontakt" 
-              variant="outline" 
-              className="w-full border-brand-white text-brand-white hover:bg-brand-white hover:text-brand-black hover:shadow-[4px_4px_0px_0px_rgba(243,242,238,1)]" 
+              variant="onDark"
+              className="w-full"
               onClick={() => handleNavLinkClick('/kontakt')}
             >
               Domluvit konzultaci

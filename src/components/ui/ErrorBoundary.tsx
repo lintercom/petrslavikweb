@@ -32,9 +32,9 @@ export class ErrorBoundary extends Component<Props, State> {
             <h1 className="text-4xl md:text-6xl font-extrabold uppercase tracking-tight mb-6">
               Něco se pokazilo.
             </h1>
-            <p className="text-lg text-brand-grey-dark mb-10 leading-relaxed">
-              Omlouvám se za nepříjemnost. Zkuste stránku obnovit nebo se vrátit na úvod.
-            </p>
+                  <p className="text-lg text-brand-grey-dark mb-10 leading-relaxed">
+                    Zkuste stránku obnovit nebo se vraťte na úvod. Pokud problém přetrvá, napište mi.
+                  </p>
             <a
               href="/"
               className="inline-block bg-brand-black text-brand-white px-10 py-5 font-extrabold uppercase tracking-widest text-sm hover:shadow-[4px_4px_0px_0px_rgba(18,18,18,1)] transition-shadow duration-300 border-2 border-brand-black"

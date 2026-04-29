@@ -1,10 +1,11 @@
 export function MarqueeServices() {
   const services = [
-    "WEBOVÉ STRÁNKY",
-    "E-SHOPY",
-    "WEBOVÉ APLIKACE",
-    "UX/UI DESIGN",
-    "INTEGRACE POHODA",
+    "WEBY NA MÍRU",
+    "E-SHOPY NA MÍRU",
+    "VLASTNÍ CMS",
+    "PLATEBNÍ BRÁNY",
+    "REZERVAČNÍ SYSTÉMY",
+    "ERP INTEGRACE",
     "AUTOMATIZACE"
   ];
 

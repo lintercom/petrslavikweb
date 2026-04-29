@@ -3,50 +3,57 @@ import { Logo } from '../ui/Logo';
 
 export function Footer() {
   return (
-    <footer className="bg-brand-white border-t-2 border-brand-black pt-16 pb-8">
+    <footer className="bg-brand-white border-t-2 border-brand-black pt-12 md:pt-16 pb-8">
       <div className="container mx-auto px-4 max-w-6xl">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12 mb-12">
           <div className="col-span-1 md:col-span-1">
             <Link to="/" className="mb-6 block">
               <Logo />
             </Link>
-            <p className="text-brand-grey-dark text-sm mb-8 leading-relaxed">
-              Osobní přístup freelancera. Systémový proces agentury. Weby, e-shopy a aplikace, které skutečně pracují pro váš byznys.
+            <p className="text-brand-grey-dark text-sm mb-6 leading-relaxed">
+              Weby, e-shopy, vlastní CMS a online systémy na míru pro firmy, které potřebují praktické řešení podle svého provozu.
             </p>
             <div className="text-sm text-brand-black font-medium space-y-2">
               <a href="mailto:petr@petrslavik.cz" className="block hover:text-brand-grey-dark transition-colors">petr@petrslavik.cz</a>
-              <a href="tel:+420123456789" className="block hover:text-brand-grey-dark transition-colors">+420 123 456 789</a>
+              <Link to="/kontakt" className="block hover:text-brand-grey-dark transition-colors">Domluvit konzultaci</Link>
             </div>
           </div>
 
           <div>
             <h3 className="font-semibold text-brand-black mb-6">Služby</h3>
             <ul className="space-y-4 text-sm text-brand-grey-dark">
-              <li><Link to="/sluzby/webove-stranky" className="hover:text-brand-black transition-colors">Webové stránky</Link></li>
+              <li><Link to="/sluzby/webove-stranky" className="hover:text-brand-black transition-colors">Weby na míru</Link></li>
               <li><Link to="/sluzby/e-shop" className="hover:text-brand-black transition-colors">E-shopy na míru</Link></li>
-              <li><Link to="/sluzby/webove-aplikace" className="hover:text-brand-black transition-colors">Webové aplikace</Link></li>
-              <li><Link to="/cenik" className="hover:text-brand-black transition-colors">Ceník služeb</Link></li>
+              <li><Link to="/sluzby/webove-aplikace" className="hover:text-brand-black transition-colors">Vlastní CMS</Link></li>
+              <li><Link to="/sluzby/integrace" className="hover:text-brand-black transition-colors">Integrace a automatizace</Link></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold text-brand-black mb-6">Platformy & Integrace</h3>
+            <h3 className="font-semibold text-brand-black mb-6">Informace</h3>
             <ul className="space-y-4 text-sm text-brand-grey-dark">
-              <li><Link to="/platformy/shoptet" className="hover:text-brand-black transition-colors">Shoptet</Link></li>
-              <li><Link to="/platformy/upgates" className="hover:text-brand-black transition-colors">Upgates</Link></li>
-              <li><Link to="/platformy/woocommerce" className="hover:text-brand-black transition-colors">WooCommerce</Link></li>
-              <li><Link to="/integrace/pohoda" className="hover:text-brand-black transition-colors">Napojení na POHODA</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-semibold text-brand-black mb-6">O mně</h3>
-            <ul className="space-y-4 text-sm text-brand-grey-dark">
-              <li><Link to="/o-mne" className="hover:text-brand-black transition-colors">Kdo jsem</Link></li>
-              <li><Link to="/proces" className="hover:text-brand-black transition-colors">Jak pracuji</Link></li>
+              <li><Link to="/proces" className="hover:text-brand-black transition-colors">Proces</Link></li>
+              <li><Link to="/cenik" className="hover:text-brand-black transition-colors">Ceník</Link></li>
               <li><Link to="/reference" className="hover:text-brand-black transition-colors">Reference</Link></li>
               <li><Link to="/blog" className="hover:text-brand-black transition-colors">Blog</Link></li>
-              <li><Link to="/kontakt" className="hover:text-brand-black transition-colors">Kontakt</Link></li>
+              <li><Link to="/o-mne" className="hover:text-brand-black transition-colors">O mně</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-brand-black mb-6">Kontakt</h3>
+            <ul className="space-y-4 text-sm text-brand-grey-dark">
+              <li><a href="mailto:petr@petrslavik.cz" className="hover:text-brand-black transition-colors">petr@petrslavik.cz</a></li>
+              <li><Link to="/kontakt" className="hover:text-brand-black transition-colors">Domluvit konzultaci</Link></li>
+              <li><Link to="/integrace/pohoda" className="hover:text-brand-black transition-colors">POHODA integrace</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-brand-black mb-6">Dokumenty</h3>
+            <ul className="space-y-4 text-sm text-brand-grey-dark">
+              <li><Link to="/ochrana-osobnich-udaju" className="hover:text-brand-black transition-colors">Ochrana osobních údajů</Link></li>
+              <li><Link to="/cookies" className="hover:text-brand-black transition-colors">Cookies</Link></li>
             </ul>
           </div>
         </div>

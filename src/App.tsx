@@ -22,9 +22,7 @@ const Process = lazy(() => import('./pages/Process').then(m => ({ default: m.Pro
 const Blog = lazy(() => import('./pages/Blog').then(m => ({ default: m.Blog })));
 const BlogDetail = lazy(() => import('./pages/BlogDetail').then(m => ({ default: m.BlogDetail })));
 const IntegrationPohoda = lazy(() => import('./pages/IntegrationPohoda').then(m => ({ default: m.IntegrationPohoda })));
-const PlatformShoptet = lazy(() => import('./pages/PlatformShoptet').then(m => ({ default: m.PlatformShoptet })));
-const PlatformUpgates = lazy(() => import('./pages/PlatformUpgates').then(m => ({ default: m.PlatformUpgates })));
-const PlatformWooCommerce = lazy(() => import('./pages/PlatformWooCommerce').then(m => ({ default: m.PlatformWooCommerce })));
+const ServiceIntegrations = lazy(() => import('./pages/ServiceIntegrations').then(m => ({ default: m.ServiceIntegrations })));
 const Contact = lazy(() => import('./pages/Contact').then(m => ({ default: m.Contact })));
 const Privacy = lazy(() => import('./pages/Privacy').then(m => ({ default: m.Privacy })));
 const Cookies = lazy(() => import('./pages/Cookies').then(m => ({ default: m.Cookies })));
@@ -44,6 +42,7 @@ export default function App() {
                 <Route path="sluzby/webove-stranky" element={<ServiceWeb />} />
                 <Route path="sluzby/e-shop" element={<ServiceEshop />} />
                 <Route path="sluzby/webove-aplikace" element={<ServiceApp />} />
+                <Route path="sluzby/integrace" element={<ServiceIntegrations />} />
                 <Route path="cenik" element={<Pricing />} />
                 <Route path="reference" element={<References />} />
                 <Route path="reference/:slug" element={<ReferenceDetail />} />
@@ -51,9 +50,6 @@ export default function App() {
                 <Route path="blog" element={<Blog />} />
                 <Route path="blog/:slug" element={<BlogDetail />} />
                 <Route path="integrace/pohoda" element={<IntegrationPohoda />} />
-                <Route path="platformy/shoptet" element={<PlatformShoptet />} />
-                <Route path="platformy/upgates" element={<PlatformUpgates />} />
-                <Route path="platformy/woocommerce" element={<PlatformWooCommerce />} />
                 <Route path="kontakt" element={<Contact />} />
                 <Route path="ochrana-osobnich-udaju" element={<Privacy />} />
                 <Route path="cookies" element={<Cookies />} />

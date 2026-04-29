@@ -26,12 +26,12 @@ export function Contact() {
     <div className="flex flex-col bg-brand-white">
       <SEO
         title="Kontakt | Petr Slavík"
-        description="Spojte se se mnou a proberme váš projekt."
+        description="Kontaktujte mě pro tvorbu webu, e-shopu, vlastního CMS, rezervačního systému nebo integrace na platební bránu, účetnictví či ERP."
         path="/kontakt"
       />
       <PageHero 
         title="Kontakt."
-        description="Pojďme probrat váš projekt. Vyplňte formulář nebo si rovnou rezervujte termín v mém kalendáři."
+        description="Pojďme probrat, jestli potřebujete web, e-shop, vlastní CMS, rezervační systém nebo napojení na další firemní systémy."
       />
 
       {/* Contact Form Section */}
@@ -39,31 +39,19 @@ export function Contact() {
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
-              <div className="mb-16">
+              <div className="mb-12 md:mb-16">
                 <h3 className="text-xs font-extrabold uppercase tracking-widest text-brand-grey-dark mb-6">Kde mě najdete</h3>
                 <div className="space-y-6 text-xl font-extrabold text-brand-black">
                   <p>
                     <span className="block text-xs text-brand-grey-dark mb-1 uppercase tracking-widest">Email</span>
-                    <a href="mailto:hello@devstudio.cz" className="hover:underline">hello@devstudio.cz</a>
+                    <a href="mailto:petr@petrslavik.cz" className="hover:underline">petr@petrslavik.cz</a>
                   </p>
-                  <p>
-                    <span className="block text-xs text-brand-grey-dark mb-1 uppercase tracking-widest">Telefon</span>
-                    <a href="tel:+420123456789" className="hover:underline">+420 123 456 789</a>
+                  <p className="text-base font-medium text-brand-grey-dark leading-relaxed">
+                    Telefon doplním podle domluvy u konkrétního projektu. Nejrychlejší cesta je poslat stručný popis přes formulář nebo e-mail.
                   </p>
                 </div>
               </div>
 
-              <div className="bg-brand-white p-8 border-2 border-brand-black shadow-[4px_4px_0px_0px_rgba(18,18,18,1)]">
-                <h3 className="text-xl font-extrabold uppercase mb-4 text-brand-black">Rychlá konzultace (20 min)</h3>
-                <p className="text-base text-brand-grey-dark mb-8">Probereme vaši situaci a zjistíme, zda vám dokážu pomoci.</p>
-                <Button 
-                  onClick={() => trackEvent('calendar_click')}
-                  variant="primary" 
-                  className="w-full py-4 text-base font-extrabold uppercase tracking-widest"
-                >
-                  Rezervovat call
-                </Button>
-              </div>
             </div>
 
             <div>
@@ -104,10 +92,12 @@ export function Contact() {
                       <label htmlFor="type" className={labelClass}>Typ projektu *</label>
                       <select required id="type" name="type" className={`${inputClass} text-brand-black`}>
                         <option value="">Vyberte…</option>
-                        <option value="web">Webové stránky</option>
-                        <option value="eshop">E-shop</option>
-                        <option value="app">Webová aplikace</option>
-                        <option value="other">Jiné / Konzultace</option>
+                        <option value="web">Web na míru</option>
+                        <option value="eshop">E-shop na míru</option>
+                        <option value="cms">Vlastní CMS</option>
+                        <option value="rezervace">Rezervační systém</option>
+                        <option value="integrace">Integrace</option>
+                        <option value="other">Jiné</option>
                       </select>
                     </div>
                   </div>

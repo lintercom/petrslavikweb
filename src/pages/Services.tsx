@@ -8,22 +8,28 @@ import { PageHero } from '@/components/layout/PageHero';
 export function Services() {
   const services = [
     { 
-      title: "Webové stránky", 
-      desc: "Prezentační weby, které nosí poptávky a budí důvěru. Žádné šablony, čistý kód a promyšlený UX.", 
+      title: "Weby na míru", 
+      desc: "Firemní a prezentační weby na míru, které jasně vysvětlí vaše služby, budí důvěru a vedou návštěvníka k poptávce.", 
       link: "/sluzby/webove-stranky",
-      features: ["Rychlé načítání a SEO", "Měření konverzí (GA4)", "Snadná správa obsahu"]
+      features: ["Návrh struktury", "Design na míru", "Rychlé načítání", "SEO základ", "Měření konverzí", "Možnost vlastního CMS"]
     },
     { 
       title: "E-shopy na míru", 
-      desc: "Prodejní stroje s automatizací, napojením na účetnictví a bezchybným nákupním procesem.", 
+      desc: "E-shopy navržené podle vašeho způsobu prodeje — od produktů a objednávek přes platby a dopravu až po napojení na účetnictví nebo ERP.", 
       link: "/sluzby/e-shop",
-      features: ["Shoptet, Upgates, Woo", "Napojení na POHODA", "Důvěryhodný checkout"]
+      features: ["Správa produktů", "Košík a objednávky", "Platební brána", "Doprava", "Administrace objednávek", "E-commerce měření", "Napojení na účetnictví / ERP"]
     },
     { 
-      title: "Webové aplikace", 
-      desc: "Systémy na míru — klientské portály, digitalizace procesů a integrace, které řeší reálné problémy.", 
+      title: "Vlastní CMS a webové systémy", 
+      desc: "Když běžný web nestačí, vytvořím vlastní administraci, databázi, rezervační systém, klientskou zónu nebo interní nástroj na míru.", 
       link: "/sluzby/webove-aplikace",
-      features: ["MVP a iterativní vývoj", "API a datové můstky", "Správa rolí a oprávnění"]
+      features: ["Vlastní databáze", "Správa obsahu", "Přihlášení a role", "Rezervace", "Klientské sekce", "Interní evidence"]
+    },
+    { 
+      title: "Integrace a automatizace", 
+      desc: "Propojuji weby, e-shopy a firemní systémy tak, aby data nemusela být přepisována ručně.", 
+      link: "/sluzby/integrace",
+      features: ["Platební brány", "Rezervační systémy", "Účetnictví / ERP", "CRM", "E-mailing", "API propojení", "Automatizace objednávek"]
     }
   ];
 
@@ -31,18 +37,18 @@ export function Services() {
     <div className="flex flex-col bg-brand-white">
       <SEO
         title="Služby | Petr Slavík"
-        description="Přehled služeb: tvorba webů, e-shopů a webových aplikací na míru."
+        description="Tvorba webů a e-shopů na míru, vlastní CMS, webové systémy, platební brány, rezervační systémy a integrace na ERP nebo účetnictví."
         path="/sluzby"
       />
       <PageHero 
         title="Služby."
-        description="Web není vizitka, ale prodejní a procesní systém. Dodávám řešení, která pracují pro váš byznys."
+        description="Web nemá být jen vizitka. Má přivádět zákazníky, prodávat, šetřit čas a zapadat do fungování vaší firmy."
       />
 
       {/* Services List */}
-      <section className="py-24 px-4 bg-brand-white">
+      <section className="py-16 md:py-24 px-4 bg-brand-white">
         <div className="container mx-auto max-w-6xl">
-          <div className="flex flex-col gap-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {services.map((service, i) => (
               <motion.div 
                 key={i}
@@ -50,23 +56,23 @@ export function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start"
+                className="flex flex-col h-full bg-brand-white border-2 border-brand-black p-6 md:p-8 hover:-translate-y-1 hover:shadow-[8px_8px_0px_0px_rgba(18,18,18,1)] transition-[transform,box-shadow] duration-300"
               >
-                <div>
-                  <h2 className="text-3xl md:text-5xl font-extrabold uppercase tracking-tight mb-6 text-brand-black">{service.title}</h2>
-                  <p className="text-lg text-brand-grey-dark leading-relaxed mb-8">{service.desc}</p>
+                <div className="flex-grow">
+                  <h2 className="text-2xl md:text-4xl font-extrabold uppercase tracking-tight mb-5 text-brand-black">{service.title}</h2>
+                  <p className="text-base md:text-lg text-brand-grey-dark leading-relaxed mb-8">{service.desc}</p>
                   <Link 
                     to={service.link} 
-                    className="inline-flex items-center gap-4 text-brand-black font-extrabold uppercase tracking-widest text-sm hover:gap-6 transition-all duration-300"
+                    className="inline-flex items-center gap-3 px-5 py-3 border-2 border-brand-black bg-brand-black text-brand-white font-extrabold uppercase tracking-widest text-xs md:text-sm hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_rgba(243,242,238,1),4px_4px_0px_2px_rgba(18,18,18,1)] transition-[transform,box-shadow,background-color,color] duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-black focus-visible:ring-offset-2"
                   >
-                    Detail služby <TrendingUp className="w-5 h-5" />
+                    Detail služby <TrendingUp className="w-4 h-4 md:w-5 md:h-5" />
                   </Link>
                 </div>
-                <div className="bg-brand-white p-8 border-2 border-brand-black shadow-[4px_4px_0px_0px_rgba(18,18,18,1)]">
-                  <h4 className="text-xs font-extrabold uppercase tracking-widest text-brand-grey-dark mb-6">Co získáte</h4>
-                  <ul className="space-y-4">
+                <div className="mt-8 pt-8 border-t-2 border-brand-black">
+                  <h4 className="text-xs font-extrabold uppercase tracking-widest text-brand-grey-dark mb-5">Co získáte</h4>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-4 text-lg font-extrabold uppercase text-brand-black">
+                      <li key={idx} className="flex items-center gap-3 text-sm font-extrabold uppercase text-brand-black">
                         <div className="w-2 h-2 bg-brand-black rounded-full"></div>
                         {feature}
                       </li>

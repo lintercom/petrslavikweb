@@ -39,7 +39,9 @@ export function Header() {
       data-dark={isScrolled ? "true" : "false"}
       className={cn(
       "fixed top-0 z-[100] w-full transition-all duration-300",
-      isScrolled ? "bg-brand-black/90 backdrop-blur-xl border-b border-brand-grey-dark py-3" : "bg-transparent py-6 mix-blend-difference"
+      (isScrolled || isMenuOpen)
+        ? "bg-brand-black/90 backdrop-blur-xl border-b border-brand-grey-dark py-3"
+        : "bg-transparent py-6 mix-blend-difference"
     )}>
       <div className="container mx-auto px-4 flex items-center justify-between transition-all duration-300">
         <Link 

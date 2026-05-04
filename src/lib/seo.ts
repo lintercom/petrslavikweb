@@ -1,6 +1,6 @@
 export const SITE_URL = 'https://www.petrslavikweb.cz';
 export const PERSON_NAME = 'Petr Slavík';
-export const SITE_EMAIL = 'petr@petrslavikweb.cz';
+export const SITE_EMAIL = 'petrslavikweb@gmail.com';
 
 export function absoluteUrl(path = '/') {
   return `${SITE_URL}${path.startsWith('/') ? path : `/${path}`}`;

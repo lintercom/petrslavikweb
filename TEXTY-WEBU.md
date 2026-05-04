@@ -166,7 +166,7 @@ Každý článek má title, perex, datum, kategorii, dobu čtení, sekce, odrá�
 
 ## Kontakt
 
-- Email: petr@petrslavikweb.cz
+- Email: petrslavikweb@gmail.com
 - Telefon: není prezentovaný jako ostrý kontakt
 - Typy projektu: Web na míru, E-shop na míru, Vlastní CMS, Rezervační systém, Integrace, Jiné
 
@@ -195,7 +195,7 @@ Každý článek má title, perex, datum, kategorii, dobu čtení, sekce, odrá�
 
 ### Kontakt
 
-- petr@petrslavikweb.cz
+- petrslavikweb@gmail.com
 - Domluvit konzultaci
 - POHODA integrace
 

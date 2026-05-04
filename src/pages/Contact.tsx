@@ -8,14 +8,45 @@ import { SEO } from '@/components/ui/SEO';
 
 export function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
+  const formEndpoint = 'https://formsubmit.co/ajax/petrslavikweb@gmail.com';
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
     const honeypot = form.elements.namedItem('website') as HTMLInputElement | null;
     if (honeypot && honeypot.value) return;
-    trackEvent('form_submit');
-    setIsSubmitted(true);
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitError('');
+
+    try {
+      const response = await fetch(formEndpoint, {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+        },
+        body: new FormData(form),
+      });
+
+      if (!response.ok) {
+        throw new Error('Form submit failed');
+      }
+
+      form.reset();
+      trackEvent('form_submit');
+      setIsSubmitted(true);
+    } catch {
+      setSubmitError('Zprávu se nepodařilo odeslat. Napište mi prosím přímo na petrslavikweb@gmail.com.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const labelClass = 'block text-xs font-extrabold uppercase tracking-widest text-brand-grey-dark mb-2';
@@ -35,7 +66,7 @@ export function Contact() {
                 <div className="space-y-6 text-xl font-extrabold text-brand-black">
                   <p>
                     <span className="block text-xs text-brand-grey-dark mb-1 uppercase tracking-widest">Email</span>
-                    <a href="mailto:petr@petrslavikweb.cz" className="hover:underline">petr@petrslavikweb.cz</a>
+                    <a href="mailto:petrslavikweb@gmail.com" className="hover:underline">petrslavikweb@gmail.com</a>
                   </p>
                   <p className="text-base font-medium text-brand-grey-dark leading-relaxed">
                     Nejrychlejší cesta je poslat stručný popis toho, co má web změnit. Nemusíte mít hotové zadání, stačí popsat současný problém.
@@ -52,6 +83,10 @@ export function Contact() {
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-10" noValidate>
+                  <input type="hidden" name="_subject" value="Nová poptávka z petrslavikweb.cz" />
+                  <input type="hidden" name="_template" value="table" />
+                  <input type="hidden" name="_captcha" value="false" />
+
                   <div aria-hidden="true" style={{ position: 'absolute', left: '-10000px', width: 1, height: 1, overflow: 'hidden' }}>
                     <label htmlFor="website">Vaše webové stránky</label>
                     <input type="text" id="website" name="website" tabIndex={-1} autoComplete="off" />
@@ -91,8 +126,14 @@ export function Contact() {
                     <textarea required id="message" name="message" rows={4} placeholder="Popište stručně současný web, cíle a problém, který chcete vyřešit..." className={`${inputClass} resize-none`}></textarea>
                   </div>
 
-                  <Button type="submit" variant="primary" className="w-full py-6 text-lg font-extrabold uppercase tracking-widest">
-                    Odeslat poptávku
+                  {submitError && (
+                    <p className="text-sm font-semibold text-red-700" role="alert">
+                      {submitError}
+                    </p>
+                  )}
+
+                  <Button type="submit" variant="primary" disabled={isSubmitting} className="w-full py-6 text-lg font-extrabold uppercase tracking-widest">
+                    {isSubmitting ? 'Odesílám...' : 'Odeslat poptávku'}
                   </Button>
                 </form>
               )}

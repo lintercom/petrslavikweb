@@ -22,7 +22,7 @@ export function Privacy() {
           <p>Zpracováváme údaje, které nám poskytnete přes kontaktní formulář (jméno, e-mail, telefon) za účelem vyřízení vaší poptávky a následné komunikace.</p>
 
           <h2 className="text-brand-black">3. Vaše práva</h2>
-          <p>Máte právo na přístup k údajům, jejich opravu, výmaz nebo omezení zpracování. Pro uplatnění svých práv mě kontaktujte na pecaslavik@gmail.com.</p>
+          <p>Máte právo na přístup k údajům, jejich opravu, výmaz nebo omezení zpracování. Pro uplatnění svých práv mě kontaktujte na petrslavikweb@gmail.com.</p>
         </div>
       </section>
     </div>

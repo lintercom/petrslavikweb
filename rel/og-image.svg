@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Petr Slavík - weby, které řeší problém</title>
+  <desc id="desc">Social image for petrslavikweb.cz</desc>
+  <rect width="1200" height="630" fill="#121212"/>
+  <rect x="64" y="64" width="1072" height="502" fill="#F3F2EE"/>
+  <rect x="88" y="88" width="1024" height="454" fill="none" stroke="#121212" stroke-width="6"/>
+  <g fill="#121212" font-family="Arial, Helvetica, sans-serif">
+    <text x="120" y="170" font-size="28" font-weight="700" letter-spacing="7">PETR SLAVÍK</text>
+    <text x="120" y="292" font-size="78" font-weight="900">Weby, které</text>
+    <text x="120" y="382" font-size="78" font-weight="900">řeší problém.</text>
+    <text x="120" y="462" font-size="30" font-weight="700">Srozumitelná nabídka, důvěra a více poptávek.</text>
+  </g>
+  <g fill="none" stroke="#121212" stroke-width="5">
+    <path d="M876 172h160v120H876z"/>
+    <path d="M836 334h200v36H836z"/>
+    <path d="M876 414h160"/>
+    <path d="M876 456h120"/>
+  </g>
+</svg>

@@ -14,7 +14,7 @@ export function Footer() {
               Weby pro firmy, které potřebují jasně vysvětlit nabídku, budovat důvěru a získávat relevantní poptávky.
             </p>
             <div className="text-sm text-brand-black font-medium space-y-2">
-              <a href="mailto:petr@petrslavikweb.cz" className="block hover:text-brand-grey-dark transition-colors">petr@petrslavikweb.cz</a>
+              <a href="mailto:petrslavikweb@gmail.com" className="block hover:text-brand-grey-dark transition-colors">petrslavikweb@gmail.com</a>
               <Link to="/kontakt" className="block hover:text-brand-grey-dark transition-colors">Probrat web</Link>
             </div>
           </div>
@@ -41,7 +41,7 @@ export function Footer() {
           <div>
             <h3 className="font-semibold text-brand-black mb-6">Kontakt</h3>
             <ul className="space-y-4 text-sm text-brand-grey-dark">
-              <li><a href="mailto:petr@petrslavikweb.cz" className="hover:text-brand-black transition-colors">petr@petrslavikweb.cz</a></li>
+              <li><a href="mailto:petrslavikweb@gmail.com" className="hover:text-brand-black transition-colors">petrslavikweb@gmail.com</a></li>
               <li><Link to="/kontakt" className="hover:text-brand-black transition-colors">Probrat problém webu</Link></li>
             </ul>
           </div>

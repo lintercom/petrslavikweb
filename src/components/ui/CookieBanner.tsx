@@ -1,24 +1,27 @@
 import { useState, useEffect } from 'react';
-import { Button } from './Button';
 import { Link } from 'react-router-dom';
+import { setCookieConsent } from '@/lib/analytics';
+import { Button } from './Button';
+
+const CONSENT_KEY = 'cookie-consent';
 
 export function CookieBanner() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const consent = localStorage.getItem('cookie-consent');
+    const consent = localStorage.getItem(CONSENT_KEY);
     if (!consent) {
       setIsVisible(true);
     }
   }, []);
 
   const acceptAll = () => {
-    localStorage.setItem('cookie-consent', 'all');
+    setCookieConsent('all');
     setIsVisible(false);
   };
 
   const acceptNecessary = () => {
-    localStorage.setItem('cookie-consent', 'necessary');
+    setCookieConsent('necessary');
     setIsVisible(false);
   };
 
@@ -29,8 +32,8 @@ export function CookieBanner() {
       <div className="container mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="text-sm text-gray-600 max-w-3xl">
           <p>
-            Tento web používá cookies k zajištění základní funkčnosti a analýze návštěvnosti. 
-            Více informací najdete na stránce <Link to="/cookies" className="text-blue-600 hover:underline">Zásady cookies</Link>.
+            Tento web používá cookies k zajištění základní funkčnosti a analýze návštěvnosti. Více informací najdete na stránce{' '}
+            <Link to="/cookies" className="text-blue-600 hover:underline">Zásady cookies</Link>.
           </p>
         </div>
         <div className="flex gap-3 shrink-0 w-full md:w-auto">

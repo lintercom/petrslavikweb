@@ -19,16 +19,16 @@ export function ReferenceDetail() {
   if (!project) {
     return (
       <div className="flex flex-col bg-brand-white">
-        <SEO title="Typ řešení nenalezen | Petr Slavík" description="Požadovaný typ řešení nebyl nalezen." path={`/reference/${slug ?? ''}`} />
+        <SEO title="Scénář nenalezen | Petr Slavík" description="Požadovaný scénář nebyl nalezen." path={`/reference/${slug ?? ''}`} />
         <PageHero title="Detail nenalezen.">
           <Link to="/reference" className="inline-flex items-center gap-2 text-brand-grey-light hover:text-brand-white transition-colors mb-10 font-semibold uppercase tracking-widest text-sm">
-            <ArrowLeft className="w-4 h-4" /> Zpět na projekty
+            <ArrowLeft className="w-4 h-4" /> Zpět na scénáře
           </Link>
         </PageHero>
         <section className="py-16 md:py-24 px-4 bg-brand-white">
           <div className="container mx-auto max-w-3xl">
             <p className="text-lg text-brand-grey-dark leading-relaxed mb-8">Tento detail neexistuje nebo byl přesunut.</p>
-            <Button href="/reference" variant="primary">Zpět na projekty</Button>
+            <Button href="/reference" variant="primary">Zpět na scénáře</Button>
           </div>
         </section>
       </div>
@@ -44,7 +44,7 @@ export function ReferenceDetail() {
       />
       <PageHero title={`${project.title}.`} description={project.desc}>
         <Link to="/reference" className="inline-flex items-center gap-2 text-brand-grey-light hover:text-brand-white transition-colors mb-10 font-semibold uppercase tracking-widest text-sm">
-          <ArrowLeft className="w-4 h-4" /> Zpět na projekty
+          <ArrowLeft className="w-4 h-4" /> Zpět na scénáře
         </Link>
       </PageHero>
 
@@ -57,7 +57,7 @@ export function ReferenceDetail() {
                 Modelový scénář
               </h2>
               <p className="text-base md:text-lg text-brand-grey-dark leading-relaxed">
-                Nejde o falešnou případovou studii s vymyšlenými čísly. Tento detail ukazuje typickou strukturu řešení a oblasti, které se při podobném projektu řeší.
+                Nejde o vymyšlenou případovou studii. Detail ukazuje typický problém firemního webu a způsob, jak bych nad ním přemýšlel při návrhu.
               </p>
             </div>
 
@@ -77,9 +77,9 @@ export function ReferenceDetail() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              ['Co systém umí', project.sections.capabilities],
+              ['Co web řeší', project.sections.capabilities],
               ['Možná rozšíření', project.sections.extensions],
-              ['Typy technologií', project.sections.technologies],
+              ['Technický základ', project.sections.technologies],
             ].map(([title, items]) => (
               <div key={title as string} className="border-2 border-brand-black bg-brand-white p-6">
                 <h3 className="text-xl font-extrabold uppercase tracking-tight text-brand-black mb-6">{title as string}</h3>
@@ -97,10 +97,10 @@ export function ReferenceDetail() {
 
           <div className="mt-16 flex flex-col sm:flex-row gap-4">
             <Button href="/kontakt" variant="primary" size="xl">
-              Domluvit konzultaci
+              Probrat můj web
             </Button>
             <Button href="/reference" variant="outline" size="xl">
-              Zpět na projekty
+              Zpět na scénáře
             </Button>
           </div>
         </div>

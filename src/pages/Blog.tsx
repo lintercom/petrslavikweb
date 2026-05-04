@@ -4,33 +4,46 @@ import { Link } from 'react-router-dom';
 import { BigFooterCTA } from '@/components/blocks/BigFooterCTA';
 import { PageHero } from '@/components/layout/PageHero';
 import { blogPosts } from '@/data/blog';
+import { absoluteUrl, breadcrumbSchema } from '@/lib/seo';
 
 export function Blog() {
   return (
     <div className="flex flex-col bg-brand-white">
       <SEO
         title="Blog | Petr Slavík"
-        description="Články o tvorbě webů na míru, e-shopech, vlastním CMS, SEO, integracích, platebních branách, automatizaci a online systémech."
+        description="Články o tvorbě firemních webů, struktuře nabídky, textech, SEO základu, důvěře a získávání poptávek."
         path="/blog"
+        structuredData={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Blog',
+            name: 'Blog o tvorbě firemních webů',
+            url: absoluteUrl('/blog'),
+            inLanguage: 'cs-CZ',
+            blogPost: blogPosts.map((post) => ({
+              '@type': 'BlogPosting',
+              headline: post.title,
+              description: post.seoDescription,
+              url: absoluteUrl(`/blog/${post.slug}`),
+              datePublished: post.datePublished,
+            })),
+          },
+          breadcrumbSchema([
+            { name: 'Úvod', path: '/' },
+            { name: 'Blog', path: '/blog' },
+          ]),
+        ]}
       />
-      <PageHero 
+      <PageHero
         title="Blog."
-        description="Praktické články o webech, e-shopech, SEO, vlastním CMS, integracích, automatizaci a technologiích pro firmy."
+        description="Praktické články o tom, jak má firemní web vysvětlit nabídku, budovat důvěru a vést návštěvníka ke kontaktu."
       />
 
-      {/* Blog Grid */}
       <section className="py-16 md:py-24 px-4 bg-brand-white">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post, i) => (
-              <motion.div 
-                key={post.slug}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="group cursor-pointer flex flex-col h-full"
-              >
+              <motion.div key={post.slug} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: i * 0.1 }} className="group cursor-pointer flex flex-col h-full">
                 <Link to={`/blog/${post.slug}`} className="flex flex-col h-full">
                   <div className="aspect-[16/10] bg-brand-white border-2 border-brand-black mb-6 overflow-hidden relative shadow-[4px_4px_0px_0px_rgba(18,18,18,1)] group-hover:-translate-y-1 group-hover:shadow-[8px_8px_0px_0px_rgba(18,18,18,1)] transition-[transform,box-shadow] duration-300">
                     <div className="absolute inset-0 p-5 flex flex-col justify-between">

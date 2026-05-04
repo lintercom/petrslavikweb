@@ -10,19 +10,19 @@ export function BigFooterCTA() {
       <SectionSpotlight />
       <div className="relative flex flex-col items-center justify-center px-4 text-center z-10 mix-blend-difference">
         <p className="text-xs md:text-sm font-extrabold uppercase tracking-[0.24em] text-brand-grey-light mb-4">
-          Máte projekt na míru?
+          Nevíte, proč web nefunguje?
         </p>
         <h2
           data-spotlight="true"
           className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-brand-white leading-none select-none uppercase mb-6"
         >
-          Mám zájem
+          Proberme to
         </h2>
         <p className="text-base md:text-xl text-brand-grey-light leading-relaxed max-w-2xl mb-8">
-          Máte web, e-shop nebo systém, který chcete postavit na míru? Napište mi a probereme, co má řešení umět.
+          Napište mi, co má váš web změnit: lépe vysvětlit nabídku, získat poptávky, působit důvěryhodněji nebo se jednodušeji spravovat.
         </p>
         <Button href="/kontakt" variant="onDark" size="xl">
-          Domluvit konzultaci
+          Probrat web
         </Button>
       </div>
     </section>

@@ -2,41 +2,45 @@ import { SEO } from '@/components/ui/SEO';
 import { motion } from 'motion/react';
 import { BigFooterCTA } from '@/components/blocks/BigFooterCTA';
 import { PageHero } from '@/components/layout/PageHero';
+import { breadcrumbSchema } from '@/lib/seo';
 
 export function Process() {
   const steps = [
-    { step: '01', title: 'Úvodní konzultace', desc: 'Projdeme vaše cíle, současný stav a zjistíme, jestli dává smysl nový web, e-shop, CMS nebo integrace.', out: 'Základní doporučení dalšího postupu' },
-    { step: '02', title: 'Návrh rozsahu', desc: 'Sepíšeme, co má řešení umět, jaký obsah bude potřeba, jaké funkce mají prioritu a co se bude řešit později.', out: 'Struktura řešení a rozsah prací' },
-    { step: '03', title: 'Cena a harmonogram', desc: 'Na základě rozsahu připravím cenový rámec, harmonogram a jasné rozdělení etap.', out: 'Nabídka, termíny a plán realizace' },
-    { step: '04', title: 'Design a struktura', desc: 'Navrhnu rozložení stránek, obsahovou logiku a vizuální podobu tak, aby web vedl uživatele ke správné akci.', out: 'Schválený návrh' },
-    { step: '05', title: 'Vývoj a integrace', desc: 'Vyvíjím web, CMS, databázi, formuláře, objednávky, platby, rezervace nebo napojení na další systémy.', out: 'Funkční testovací verze' },
-    { step: '06', title: 'Testování a spuštění', desc: 'Otestuji responzivitu, rychlost, formuláře, měření, základní SEO a funkční části systému.', out: 'Spuštěný projekt' },
-    { step: '07', title: 'Servis a rozvoj', desc: 'Po spuštění můžeme řešit údržbu, zálohy, drobné úpravy, měření, nové funkce a další rozvoj.', out: 'Dlouhodobě udržované řešení' },
+    { step: '01', title: 'Pochopení problému', desc: 'Projdeme, co dnes na webu nefunguje: nejasná nabídka, slabé poptávky, nedůvěra, zastaralý vzhled nebo složitá správa obsahu.', out: 'Jasně pojmenovaný problém webu' },
+    { step: '02', title: 'Návrh struktury', desc: 'Navrhnu, jak má být web poskládaný, aby návštěvník rychle pochopil nabídku, našel důležité informace a věděl, co udělat dál.', out: 'Struktura stránek a cesta ke kontaktu' },
+    { step: '03', title: 'Rozsah a cena', desc: 'Podle struktury, obsahu a technických potřeb určím rozsah práce, cenu a harmonogram.', out: 'Nabídka, termíny a plán realizace' },
+    { step: '04', title: 'Texty a design', desc: 'Připravím obsahovou logiku, texty klíčových sekcí a vizuální podobu webu tak, aby sdělení i vzhled táhly stejným směrem.', out: 'Schválený návrh webu' },
+    { step: '05', title: 'Vývoj webu', desc: 'Postavím responzivní, rychlý a technicky čistý web s formulářem, SEO základem a případně správou vybraného obsahu.', out: 'Funkční testovací verze' },
+    { step: '06', title: 'Testování a spuštění', desc: 'Otestuji mobilní verzi, rychlost, formuláře, metadata, přesměrování a měření hlavních akcí.', out: 'Spuštěný web' },
+    { step: '07', title: 'Vyhodnocení a rozvoj', desc: 'Po spuštění lze upravovat texty, doplňovat sekce, měřit poptávky a zlepšovat web podle reálného chování návštěvníků.', out: 'Web, který se dá dál zlepšovat' },
   ];
 
   return (
     <div className="flex flex-col bg-brand-white">
       <SEO
-        title="Jak pracuji | Petr Slavík"
-        description="Jak probíhá tvorba webu, e-shopu nebo webového systému na míru — od úvodní konzultace přes návrh až po spuštění a správu."
+        title="Jak probíhá tvorba webu | Petr Slavík"
+        description="Postup tvorby firemního webu od pochopení problému přes strukturu, texty, design, vývoj, spuštění a další zlepšování."
         path="/proces"
+        structuredData={breadcrumbSchema([
+          { name: 'Úvod', path: '/' },
+          { name: 'Proces', path: '/proces' },
+        ])}
       />
-      <PageHero 
+      <PageHero
         title="Proces."
-        description="Jasný postup od první konzultace přes návrh, vývoj a integrace až po spuštění a dlouhodobou péči."
+        description="Nejdřív pojmenujeme problém. Až potom navrhuji strukturu, texty, design a technické řešení webu."
       />
 
-      {/* Steps Section */}
       <section className="py-16 md:py-24 px-4 bg-brand-white">
         <div className="container mx-auto max-w-5xl">
           <div className="mb-12 md:mb-16 border-2 border-brand-black bg-brand-white p-6 md:p-8 shadow-[4px_4px_0px_0px_rgba(18,18,18,1)]">
             <p className="text-lg md:text-xl font-medium text-brand-black leading-relaxed">
-              Po každém kroku víte, co je hotové, co se řeší dál a co ode mě nebo od vás bude potřeba.
+              Cílem není jen dodat hotový web. Cílem je, abyste věděli, proč je postavený právě takhle a jaký problém má řešit.
             </p>
           </div>
           <div className="space-y-10 md:space-y-16">
             {steps.map((item, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}

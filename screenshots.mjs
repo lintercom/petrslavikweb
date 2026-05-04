@@ -398,7 +398,7 @@ function generateMd() {
     'reference-karty':'Reference — karty výchozí vs. hover',
   };
 
-  let md = `# Screenshoty webu petrslavik.cz
+  let md = `# Screenshoty webu petrslavikweb.cz
 
 > Vygenerováno automaticky ze skriptu \`screenshots.mjs\`
 > Zdroj: \`${BASE}\`

@@ -1,34 +1,46 @@
 import { SEO } from '@/components/ui/SEO';
 import { motion } from 'motion/react';
-import { TrendingUp, ShieldCheck, LineChart, Settings } from 'lucide-react';
+import { BarChart3, MessageSquare, PenLine, ShieldCheck } from 'lucide-react';
 import { BigFooterCTA } from '@/components/blocks/BigFooterCTA';
 import { PageHero } from '@/components/layout/PageHero';
 import { PageCTA } from '@/components/layout/PageCTA';
+import { breadcrumbSchema, serviceSchema } from '@/lib/seo';
 
 export function ServiceWeb() {
   return (
     <div className="flex flex-col bg-brand-white">
       <SEO
-        title="Tvorba webových stránek na míru | Petr Slavík"
-        description="Tvorba webových stránek na míru s moderním designem, rychlým načítáním, SEO základem, měřením konverzí a možností vlastního CMS."
+        title="Tvorba webových stránek, které řeší problém | Petr Slavík"
+        description="Tvorba firemních webů, které pomáhají vysvětlit nabídku, vybudovat důvěru a získávat poptávky."
         path="/sluzby/webove-stranky"
+        structuredData={[
+          serviceSchema({
+            name: 'Tvorba webových stránek',
+            description: 'Tvorba firemních webů, které jasně vysvětlí nabídku, budují důvěru a vedou návštěvníka ke kontaktu.',
+            path: '/sluzby/webove-stranky',
+          }),
+          breadcrumbSchema([
+            { name: 'Úvod', path: '/' },
+            { name: 'Služby', path: '/sluzby' },
+            { name: 'Tvorba webových stránek', path: '/sluzby/webove-stranky' },
+          ]),
+        ]}
       />
-      <PageHero 
-        title="Webové stránky na míru."
-        description="Web nemá být jen online vizitka. Má srozumitelně vysvětlit, co děláte, vzbudit důvěru a dovést návštěvníka k poptávce."
+      <PageHero
+        title="Webové stránky."
+        description="Web nemá být jen online vizitka. Má návštěvníkovi rychle vysvětlit, jestli jste pro něj správná volba, a dovést ho ke kontaktu."
       />
 
-      {/* Features Grid */}
       <section className="py-16 md:py-24 px-4 bg-brand-white">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {[
-              { icon: TrendingUp, title: "Více poptávek", desc: "Jasná struktura, silná CTA a copy, který vede k akci. Žádné slepé uličky." },
-              { icon: ShieldCheck, title: "Maximální důvěra", desc: "Profesionální design, rychlé načítání a bezchybný mobil přesvědčí i náročné klienty." },
-              { icon: LineChart, title: "Měření a data", desc: "Odevzdávám s nastaveným GA4 a měřením konverzí. Víte, odkud chodí platící klienti." },
-              { icon: Settings, title: "Snadná správa", desc: "Podle rozsahu projektu vytvořím vlastní administraci, ve které můžete upravovat texty, fotky, reference, články nebo další obsah bez programování." }
+              { icon: MessageSquare, title: "Více správných poptávek", desc: "Web povedu kolem otázek, které zákazník řeší před oslovením. Cílem nejsou jen návštěvy, ale relevantní poptávky." },
+              { icon: ShieldCheck, title: "Důvěra před prvním kontaktem", desc: "Struktura, reference, jasné vysvětlení postupu a konkrétní argumenty pomůžou snížit nejistotu návštěvníka." },
+              { icon: PenLine, title: "Texty, které něco říkají", desc: "Pomůžu přepsat obecné fráze do srozumitelného sdělení: co děláte, komu pomáháte a jaký problém řešíte." },
+              { icon: BarChart3, title: "Měření výsledku", desc: "Web může obsahovat měření důležitých akcí, abyste věděli, jestli lidé klikají na kontakt, čtou klíčové stránky a posílají poptávky." }
             ].map((item, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -45,9 +57,9 @@ export function ServiceWeb() {
         </div>
       </section>
 
-      <PageCTA 
-        title="Potřebujete web, který bude pracovat pro vás?"
-        description="Jednodušší weby začínají od 35 000 Kč. Web s vlastním CMS nebo pokročilejšími funkcemi nacením podle rozsahu."
+      <PageCTA
+        title="Potřebujete web, který má jasný úkol?"
+        description="Začneme tím, co má web změnit: vysvětlit nabídku, zvýšit důvěru, získat poptávky nebo zpřehlednit obsah. Až potom řeším podobu stránky."
       />
 
       <BigFooterCTA />

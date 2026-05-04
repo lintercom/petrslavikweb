@@ -6,6 +6,7 @@ import { ArrowLeft } from 'lucide-react';
 import { PageHero } from '@/components/layout/PageHero';
 import { Button } from '@/components/ui/Button';
 import { getBlogPost } from '@/data/blog';
+import { articleSchema, breadcrumbSchema } from '@/lib/seo';
 
 export function BlogDetail() {
   const { slug } = useParams();
@@ -36,6 +37,20 @@ export function BlogDetail() {
         title={`${post.title} | Petr Slavík`}
         description={post.seoDescription}
         path={`/blog/${post.slug}`}
+        type="article"
+        structuredData={[
+          articleSchema({
+            title: post.title,
+            description: post.seoDescription,
+            path: `/blog/${post.slug}`,
+            datePublished: post.datePublished,
+          }),
+          breadcrumbSchema([
+            { name: 'Úvod', path: '/' },
+            { name: 'Blog', path: '/blog' },
+            { name: post.title, path: `/blog/${post.slug}` },
+          ]),
+        ]}
       />
       <PageHero title={`${post.title}.`}>
         <Link to="/blog" className="inline-flex items-center gap-2 text-brand-grey-light hover:text-brand-white transition-colors mb-10 font-semibold uppercase tracking-widest text-sm">
@@ -43,7 +58,6 @@ export function BlogDetail() {
         </Link>
       </PageHero>
 
-      {/* Content Section */}
       <section className="py-16 md:py-24 px-4 bg-brand-white">
         <div className="container mx-auto max-w-3xl">
           <div className="mb-10 flex flex-wrap gap-3 text-xs font-extrabold uppercase tracking-widest text-brand-grey-dark">
@@ -103,13 +117,13 @@ export function BlogDetail() {
           </div>
 
           <div className="mt-16 p-8 md:p-12 bg-brand-white border-2 border-brand-black shadow-[6px_6px_0px_0px_rgba(18,18,18,1)] text-center">
-            <h3 className="text-3xl md:text-4xl font-extrabold uppercase tracking-tight text-brand-black mb-6">Řešíte podobný projekt?</h3>
+            <h3 className="text-3xl md:text-4xl font-extrabold uppercase tracking-tight text-brand-black mb-6">Řešíte podobný web?</h3>
             <p className="text-base md:text-lg text-brand-grey-dark leading-relaxed max-w-xl mx-auto mb-8">
-              Napište mi, co má web, e-shop nebo systém řešit. Navrhnu další postup a realistický rozsah.
+              Napište mi, co dnes na webu nefunguje. Navrhnu další postup a realistický rozsah.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button href="/kontakt" variant="primary" size="xl">
-                Domluvit konzultaci
+                Probrat web
               </Button>
               <Button href="/cenik" variant="outline" size="xl">
                 Zobrazit ceník

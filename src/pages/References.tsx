@@ -10,21 +10,20 @@ export function References() {
   return (
     <div className="flex flex-col bg-brand-white">
       <SEO
-        title="Ukázky typů řešení | Petr Slavík"
-        description="Ukázky typů řešení: firemní weby, e-shopy na míru, vlastní CMS, rezervační systémy a integrace na účetnictví nebo ERP."
+        title="Modelové scénáře webů | Petr Slavík"
+        description="Ukázky typických problémů, které může řešit firemní web: nejasná nabídka, málo poptávek, zastaralý web nebo složitá správa obsahu."
         path="/reference"
       />
-      <PageHero 
-        title="Ukázky typů řešení."
-        description="Modelové scénáře bez falešných klientů a čísel. Ukazují, jak mohou vypadat weby, e-shopy, CMS, rezervace a integrace na míru."
+      <PageHero
+        title="Scénáře webů."
+        description="Nejsou to falešné reference. Jsou to typické situace, podle kterých poznáte, jestli podobný problém řeší i váš web."
       />
 
-      {/* References Grid */}
       <section className="py-16 md:py-24 px-4 bg-brand-white">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {projectTypes.map((c, i) => (
-              <motion.div 
+              <motion.div
                 key={c.slug}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}

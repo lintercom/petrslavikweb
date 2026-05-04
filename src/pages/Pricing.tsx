@@ -6,6 +6,7 @@ import { trackEvent } from '@/lib/analytics';
 import { useEffect } from 'react';
 import { BigFooterCTA } from '@/components/blocks/BigFooterCTA';
 import { PageHero } from '@/components/layout/PageHero';
+import { breadcrumbSchema, serviceSchema } from '@/lib/seo';
 
 export function Pricing() {
   useEffect(() => {
@@ -14,62 +15,63 @@ export function Pricing() {
 
   const pricingPlans = [
     {
-      label: "Web na míru",
-      title: "Web na míru",
+      label: "Startovací web",
+      title: "Jasná nabídka",
       price: "od 35 000 Kč",
-      time: "4–6 týdnů",
-      suitedFor: "živnostníky, služby, osobní značky a menší firmy",
-      desc: "Firemní nebo prezentační web, který jasně vysvětlí vaše služby, budí důvěru a pomáhá získávat poptávky.",
-      features: ["Návrh struktury", "Design na míru", "Responzivní web", "SEO základ", "Rychlé načítání", "Kontaktní formulář", "Základní měření návštěvnosti"]
+      time: "4-6 týdnů",
+      suitedFor: "živnostníky, odborníky, služby a menší firmy",
+      desc: "Firemní web, který srozumitelně vysvětlí, co děláte, komu pomáháte a proč vás má zákazník kontaktovat.",
+      features: ["Návrh struktury", "Design na míru", "Responzivní web", "Základní textace", "SEO základ", "Kontaktní formulář", "Rychlé načítání"]
     },
     {
-      label: "Web s vlastním CMS",
-      title: "Web + administrace",
+      label: "Problémový redesign",
+      title: "Lepší poptávky",
       price: "od 60 000 Kč",
-      time: "6–10 týdnů",
-      suitedFor: "firmy, které chtějí web samy spravovat a pravidelně měnit obsah",
-      desc: "Web s vlastní administrací, databází a možností jednoduché správy obsahu bez programování.",
-      features: ["Vše z webu na míru", "Vlastní CMS", "Databáze", "Správa stránek, článků nebo referencí", "Přihlášení do administrace", "Základní zabezpečení"]
-    },
-    {
-      label: "E-shop na míru",
-      title: "E-shop na míru",
-      price: "od 90 000 Kč",
-      time: "2–3 měsíce",
-      suitedFor: "prodej produktů, poukazů, služeb, termínů nebo objednávek",
-      desc: "E-shopové řešení na míru se správou produktů, objednávek, plateb, dopravy a možností napojení na účetnictví nebo ERP.",
-      features: ["Produktový katalog", "Kategorie", "Košík a objednávkový proces", "Administrace objednávek", "Platební brána", "Doprava", "Základní e-commerce měření", "Možnost napojení na účetnictví / ERP"],
+      time: "6-10 týdnů",
+      suitedFor: "firmy, kterým současný web nevysvětluje nabídku nebo nepřivádí poptávky",
+      desc: "Přestavba webu podle toho, kde se návštěvník ztrácí, čemu nevěří a proč neudělá další krok.",
+      features: ["Audit současného webu", "Nová informační struktura", "Přepsání klíčových textů", "Důvěryhodnostní prvky", "Měření konverzí", "Přesměrování URL", "Kontrola po spuštění"],
       featured: true
     },
     {
-      label: "Webový systém / integrace na míru",
-      title: "Webové systémy",
-      price: "od 120 000 Kč",
-      time: "3+ měsíce",
-      suitedFor: "rezervační systémy, klientské zóny, interní evidence, automatizace a integrace",
-      desc: "Vlastní CMS, klientské zóny, rezervační systémy, interní evidence, API integrace a automatizace firemních procesů.",
-      features: ["Analýza procesu", "Návrh architektury", "Databáze", "Přihlášení a role", "API integrace", "Testování", "Zabezpečení", "Dlouhodobý rozvoj"]
+      label: "Rozsáhlejší firemní web",
+      title: "Web jako obchodní nástroj",
+      price: "od 90 000 Kč",
+      time: "8-12 týdnů",
+      suitedFor: "firmy s více službami, cílovými skupinami nebo pravidelně měněným obsahem",
+      desc: "Větší web s propracovanou strukturou, texty, měřením a volitelnou správou vybraných částí obsahu.",
+      features: ["Více typů služeb", "Obsahová architektura", "Správa vybraného obsahu", "Reference a články", "Pokročilejší SEO základ", "Analytika", "Dlouhodobý rozvoj"]
     }
   ];
 
   return (
     <div className="flex flex-col bg-brand-white">
       <SEO
-        title="Ceník | Petr Slavík"
-        description="Orientační ceník tvorby webů na míru, e-shopů, vlastního CMS, webových systémů a integrací. Přesná cena podle rozsahu projektu."
+        title="Ceník webových stránek | Petr Slavík"
+        description="Orientační ceny tvorby firemních webů podle problému, který mají vyřešit: jasná nabídka, více poptávek nebo rozsáhlejší obchodní web."
         path="/cenik"
+        structuredData={[
+          serviceSchema({
+            name: 'Ceník tvorby webových stránek',
+            description: 'Orientační ceny firemních webů podle rozsahu, obsahu, textů, měření a problému, který má web vyřešit.',
+            path: '/cenik',
+          }),
+          breadcrumbSchema([
+            { name: 'Úvod', path: '/' },
+            { name: 'Ceník', path: '/cenik' },
+          ]),
+        ]}
       />
-      <PageHero 
+      <PageHero
         title="Ceník."
-        description="Orientační cenové rámce podle typu řešení. Přesnou cenu a termín stanovím po úvodní konzultaci, návrhu rozsahu a specifikaci projektu."
+        description="Cena se neodvíjí jen od počtu podstránek. Důležité je, jak moc musíme ujasnit nabídku, přepsat obsah a navrhnout cestu návštěvníka ke kontaktu."
       />
 
-      {/* Pricing Grid */}
       <section className="py-16 md:py-24 px-4 bg-brand-white">
-        <div className="container mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {pricingPlans.map((plan, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -92,7 +94,7 @@ export function Pricing() {
                   <div className={`text-xs font-extrabold uppercase tracking-widest mb-2 ${plan.featured ? 'text-brand-grey-light' : 'text-brand-grey-dark'}`}>Vhodné pro</div>
                   <p className="text-sm font-medium leading-relaxed">{plan.suitedFor}</p>
                 </div>
-                
+
                 <div className="flex-grow mb-8">
                   <h4 className="text-xs font-extrabold uppercase tracking-widest mb-4">V ceně:</h4>
                   <ul className="space-y-3">
@@ -106,12 +108,12 @@ export function Pricing() {
                 </div>
 
                 <Button
-                  href="/kontakt" 
-                  variant={plan.featured ? 'onDark' : 'primary'} 
+                  href="/kontakt"
+                  variant={plan.featured ? 'onDark' : 'primary'}
                   size="lg"
                   className="w-full"
                 >
-                  Poptat projekt
+                  Poptat web
                 </Button>
               </motion.div>
             ))}
@@ -119,63 +121,36 @@ export function Pricing() {
         </div>
       </section>
 
-      {/* Servisní plány */}
       <section className="py-16 md:py-24 px-4 bg-brand-white border-t-2 border-brand-black">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-extrabold uppercase tracking-tight mb-6 text-brand-black">Měsíční servis a rozvoj.</h2>
+              <h2 className="text-4xl md:text-5xl font-extrabold uppercase tracking-tight mb-6 text-brand-black">Péče po spuštění.</h2>
               <p className="text-lg text-brand-grey-dark leading-relaxed max-w-xl">
-                Spuštěním projekt nekončí. Hlídám provoz, bezpečnost, zálohy, drobné úpravy, měření a další rozvoj podle reálných potřeb.
+                Web po spuštění nekončí. Lze průběžně hlídat technický stav, měření, drobné úpravy, nové sekce a obsah podle toho, co ukážou reálné poptávky.
               </p>
             </div>
             <div className="space-y-6">
               <div className="bg-brand-white p-8 border-2 border-brand-black shadow-[4px_4px_0px_0px_rgba(18,18,18,1)]">
-                <h3 className="text-xl font-extrabold uppercase text-brand-black mb-2">Stabilita & Bezpečnost</h3>
+                <h3 className="text-xl font-extrabold uppercase text-brand-black mb-2">Stabilita webu</h3>
                 <div className="text-2xl font-extrabold text-brand-black mb-6">od 2 500 Kč / měsíc</div>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-brand-grey-dark text-sm">
-                  <li className="flex items-center gap-2 font-medium">
-                    <div className="w-1.5 h-1.5 bg-brand-black rounded-full"></div> Zálohy
-                  </li>
-                  <li className="flex items-center gap-2 font-medium">
-                    <div className="w-1.5 h-1.5 bg-brand-black rounded-full"></div> Monitoring dostupnosti
-                  </li>
-                  <li className="flex items-center gap-2 font-medium">
-                    <div className="w-1.5 h-1.5 bg-brand-black rounded-full"></div> Technická kontrola
-                  </li>
-                  <li className="flex items-center gap-2 font-medium">
-                    <div className="w-1.5 h-1.5 bg-brand-black rounded-full"></div> Drobné úpravy
-                  </li>
-                  <li className="flex items-center gap-2 font-medium">
-                    <div className="w-1.5 h-1.5 bg-brand-black rounded-full"></div> Bezpečnostní dohled
-                  </li>
-                  <li className="flex items-center gap-2 font-medium">
-                    <div className="w-1.5 h-1.5 bg-brand-black rounded-full"></div> Prioritní podpora podle tarifu
-                  </li>
+                  {['Zálohy', 'Technická kontrola', 'Drobná údržba', 'Bezpečnostní dohled', 'Kontrola formulářů', 'Prioritní podpora podle tarifu'].map((item) => (
+                    <li key={item} className="flex items-center gap-2 font-medium">
+                      <div className="w-1.5 h-1.5 bg-brand-black rounded-full"></div> {item}
+                    </li>
+                  ))}
                 </ul>
               </div>
               <div className="bg-brand-white p-8 border-2 border-brand-black shadow-[4px_4px_0px_0px_rgba(18,18,18,1)]">
-                <h3 className="text-xl font-extrabold uppercase text-brand-black mb-2">Růst & Integrace</h3>
+                <h3 className="text-xl font-extrabold uppercase text-brand-black mb-2">Rozvoj podle poptávek</h3>
                 <div className="text-2xl font-extrabold text-brand-black mb-6">Individuálně</div>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-brand-grey-dark text-sm">
-                  <li className="flex items-center gap-2 font-medium">
-                    <div className="w-1.5 h-1.5 bg-brand-black rounded-full"></div> Nové funkce
-                  </li>
-                  <li className="flex items-center gap-2 font-medium">
-                    <div className="w-1.5 h-1.5 bg-brand-black rounded-full"></div> Analytika
-                  </li>
-                  <li className="flex items-center gap-2 font-medium">
-                    <div className="w-1.5 h-1.5 bg-brand-black rounded-full"></div> UX úpravy
-                  </li>
-                  <li className="flex items-center gap-2 font-medium">
-                    <div className="w-1.5 h-1.5 bg-brand-black rounded-full"></div> Rozvoj integrací
-                  </li>
-                  <li className="flex items-center gap-2 font-medium">
-                    <div className="w-1.5 h-1.5 bg-brand-black rounded-full"></div> Automatizace
-                  </li>
-                  <li className="flex items-center gap-2 font-medium">
-                    <div className="w-1.5 h-1.5 bg-brand-black rounded-full"></div> Další vývoj podle priorit
-                  </li>
+                  {['Nové sekce', 'Úpravy textů', 'Nové reference', 'Vyhodnocení měření', 'SEO úpravy', 'Zlepšení kontaktní cesty'].map((item) => (
+                    <li key={item} className="flex items-center gap-2 font-medium">
+                      <div className="w-1.5 h-1.5 bg-brand-black rounded-full"></div> {item}
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>

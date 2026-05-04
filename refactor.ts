@@ -65,7 +65,7 @@ fs.writeFileSync('src/components/layout/Header.tsx', header);
 // 8 index.html
 let html = fs.readFileSync('index.html', 'utf8');
 html = html.replace(/<title>/, `<link rel="preconnect" href="https://fonts.googleapis.com">\n    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;800&family=Hind:wght@400;600&display=swap">\n    <title>`);
-html = html.replace(/<meta property="og:image" content="https:\/\/petrslavik\.cz\/og-image\.jpg" \/>\s*<meta property="og:image:width" content="1200" \/>\s*<meta property="og:image:height" content="630" \/>\s*<meta name="twitter:image" content="https:\/\/petrslavik\.cz\/og-image\.jpg" \/>/, `<!-- TODO: přidat public/og-image.jpg (1200x630) -->\n    <!--\n    <meta property="og:image" content="https://petrslavik.cz/og-image.jpg" />\n    <meta property="og:image:width" content="1200" />\n    <meta property="og:image:height" content="630" />\n    <meta name="twitter:image" content="https://petrslavik.cz/og-image.jpg" />\n    -->`);
+html = html.replace(/<meta property="og:image" content="https:\/\/www\.petrslavikweb\.cz\/og-image\.jpg" \/>\s*<meta property="og:image:width" content="1200" \/>\s*<meta property="og:image:height" content="630" \/>\s*<meta name="twitter:image" content="https:\/\/www\.petrslavikweb\.cz\/og-image\.jpg" \/>/, `<!-- TODO: přidat public/og-image.jpg (1200x630) -->\n    <!--\n    <meta property="og:image" content="https://www.petrslavikweb.cz/og-image.jpg" />\n    <meta property="og:image:width" content="1200" />\n    <meta property="og:image:height" content="630" />\n    <meta name="twitter:image" content="https://www.petrslavikweb.cz/og-image.jpg" />\n    -->`);
 html = html.replace(/<div id="root"><\/div>/, `<noscript><div style="padding:2rem;font-family:sans-serif;text-align:center;">Pro zobrazení této stránky je potřeba mít zapnutý JavaScript.</div></noscript>\n    <div id="root"></div>`);
 fs.writeFileSync('index.html', html);
 
@@ -93,11 +93,11 @@ export function SEO({ title, description, path }: { title: string; description: 
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
-      <link rel="canonical" href={\`https://petrslavik.cz\${path}\`} />
+      <link rel="canonical" href={\`https://www.petrslavikweb.cz\${path}\`} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={\`https://petrslavik.cz\${path}\`} />
+      <meta property="og:url" content={\`https://www.petrslavikweb.cz\${path}\`} />
       <meta property="og:locale" content="cs_CZ" />
       <meta property="og:site_name" content="Petr Slavík" />
       <meta name="twitter:card" content="summary_large_image" />

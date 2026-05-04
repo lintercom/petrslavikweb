@@ -11,21 +11,21 @@ export function Footer() {
               <Logo />
             </Link>
             <p className="text-brand-grey-dark text-sm mb-6 leading-relaxed">
-              Weby, e-shopy, vlastní CMS a online systémy na míru pro firmy, které potřebují praktické řešení podle svého provozu.
+              Weby pro firmy, které potřebují jasně vysvětlit nabídku, budovat důvěru a získávat relevantní poptávky.
             </p>
             <div className="text-sm text-brand-black font-medium space-y-2">
-              <a href="mailto:petr@petrslavik.cz" className="block hover:text-brand-grey-dark transition-colors">petr@petrslavik.cz</a>
-              <Link to="/kontakt" className="block hover:text-brand-grey-dark transition-colors">Domluvit konzultaci</Link>
+              <a href="mailto:petr@petrslavikweb.cz" className="block hover:text-brand-grey-dark transition-colors">petr@petrslavikweb.cz</a>
+              <Link to="/kontakt" className="block hover:text-brand-grey-dark transition-colors">Probrat web</Link>
             </div>
           </div>
 
           <div>
-            <h3 className="font-semibold text-brand-black mb-6">Služby</h3>
+            <h3 className="font-semibold text-brand-black mb-6">Weby</h3>
             <ul className="space-y-4 text-sm text-brand-grey-dark">
-              <li><Link to="/sluzby/webove-stranky" className="hover:text-brand-black transition-colors">Weby na míru</Link></li>
-              <li><Link to="/sluzby/e-shop" className="hover:text-brand-black transition-colors">E-shopy na míru</Link></li>
-              <li><Link to="/sluzby/webove-aplikace" className="hover:text-brand-black transition-colors">Vlastní CMS</Link></li>
-              <li><Link to="/sluzby/integrace" className="hover:text-brand-black transition-colors">Integrace a automatizace</Link></li>
+              <li><Link to="/sluzby/webove-stranky" className="hover:text-brand-black transition-colors">Tvorba webu</Link></li>
+              <li><Link to="/sluzby" className="hover:text-brand-black transition-colors">Problémy, které řeším</Link></li>
+              <li><Link to="/cenik" className="hover:text-brand-black transition-colors">Ceník webů</Link></li>
+              <li><Link to="/reference" className="hover:text-brand-black transition-colors">Scénáře webů</Link></li>
             </ul>
           </div>
 
@@ -33,8 +33,6 @@ export function Footer() {
             <h3 className="font-semibold text-brand-black mb-6">Informace</h3>
             <ul className="space-y-4 text-sm text-brand-grey-dark">
               <li><Link to="/proces" className="hover:text-brand-black transition-colors">Proces</Link></li>
-              <li><Link to="/cenik" className="hover:text-brand-black transition-colors">Ceník</Link></li>
-              <li><Link to="/reference" className="hover:text-brand-black transition-colors">Reference</Link></li>
               <li><Link to="/blog" className="hover:text-brand-black transition-colors">Blog</Link></li>
               <li><Link to="/o-mne" className="hover:text-brand-black transition-colors">O mně</Link></li>
             </ul>
@@ -43,9 +41,8 @@ export function Footer() {
           <div>
             <h3 className="font-semibold text-brand-black mb-6">Kontakt</h3>
             <ul className="space-y-4 text-sm text-brand-grey-dark">
-              <li><a href="mailto:petr@petrslavik.cz" className="hover:text-brand-black transition-colors">petr@petrslavik.cz</a></li>
-              <li><Link to="/kontakt" className="hover:text-brand-black transition-colors">Domluvit konzultaci</Link></li>
-              <li><Link to="/integrace/pohoda" className="hover:text-brand-black transition-colors">POHODA integrace</Link></li>
+              <li><a href="mailto:petr@petrslavikweb.cz" className="hover:text-brand-black transition-colors">petr@petrslavikweb.cz</a></li>
+              <li><Link to="/kontakt" className="hover:text-brand-black transition-colors">Probrat problém webu</Link></li>
             </ul>
           </div>
 

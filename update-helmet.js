@@ -57,11 +57,11 @@ pages.forEach(file => {
     newHelmetInner = `
         <title>${rawTitle}</title>
         <meta name="description" content=${rawDesc} />
-        <link rel="canonical" href={\`https://petrslavik.cz/${slugBase}/\${slug}\`} />
+        <link rel="canonical" href={\`https://www.petrslavikweb.cz/${slugBase}/\${slug}\`} />
         <meta property="og:title" content=${titleExprForContent} />
         <meta property="og:description" content=${rawDesc} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={\`https://petrslavik.cz/${slugBase}/\${slug}\`} />
+        <meta property="og:url" content={\`https://www.petrslavikweb.cz/${slugBase}/\${slug}\`} />
         <meta property="og:locale" content="cs_CZ" />
         <meta property="og:site_name" content="Petr Slavík" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -70,7 +70,7 @@ pages.forEach(file => {
 `;
   } else {
     const relPath = paths[file] || '';
-    const fullUrl = `https://petrslavik.cz${relPath}`;
+    const fullUrl = `https://www.petrslavikweb.cz${relPath}`;
     
     newHelmetInner = `
         <title>${rawTitle}</title>

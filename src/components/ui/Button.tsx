@@ -1,4 +1,5 @@
 import React, { forwardRef } from 'react';
+import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { Loader2 } from 'lucide-react';
 
@@ -9,6 +10,8 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   iconLeft?: React.ReactNode;
   iconRight?: React.ReactNode;
   href?: string;
+  target?: string;
+  rel?: string;
 }
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
@@ -39,10 +42,32 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {!isLoading && iconRight && <span className="shrink-0">{iconRight}</span>}
       </>
     );
+    const anchorProps = { ...(props as unknown as React.AnchorHTMLAttributes<HTMLAnchorElement>) };
+    const anchorPropsRecord = anchorProps as Record<string, unknown>;
+    for (const key of ['disabled', 'type', 'form', 'formAction', 'formEncType', 'formMethod', 'formNoValidate', 'formTarget', 'name', 'value']) {
+      delete anchorPropsRecord[key];
+    }
 
     if (href) {
+      const isInternal = href.startsWith('/');
+      if (isInternal) {
+        return (
+          <Link
+            to={href}
+            className={cn(baseStyles, variants[variant], variant !== 'link' ? sizes[size] : '', className)}
+            {...anchorProps}
+          >
+            {content}
+          </Link>
+        );
+      }
+
       return (
-        <a href={href} className={cn(baseStyles, variants[variant], variant !== 'link' ? sizes[size] : '', className)} {...(props as unknown as React.AnchorHTMLAttributes<HTMLAnchorElement>)}>
+        <a
+          href={href}
+          className={cn(baseStyles, variants[variant], variant !== 'link' ? sizes[size] : '', className)}
+          {...anchorProps}
+        >
           {content}
         </a>
       );

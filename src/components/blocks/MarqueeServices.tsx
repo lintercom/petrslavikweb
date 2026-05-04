@@ -1,41 +1,31 @@
+const services = [
+  "FIREMNÍ WEBY",
+  "JASNÁ NABÍDKA",
+  "VÍCE POPTÁVEK",
+  "DŮVĚRYHODNÝ OBSAH",
+  "SEO ZÁKLAD",
+  "MĚŘENÍ KONVERZÍ",
+];
+
 export function MarqueeServices() {
-  const services = [
-    "WEBY NA MÍRU",
-    "E-SHOPY NA MÍRU",
-    "VLASTNÍ CMS",
-    "PLATEBNÍ BRÁNY",
-    "REZERVAČNÍ SYSTÉMY",
-    "ERP INTEGRACE",
-    "AUTOMATIZACE"
-  ];
-
-  const duplicatedServices = [...services, ...services];
-
   return (
-    <section className="py-16 bg-brand-white overflow-hidden flex flex-col items-center justify-center border-y border-brand-black">
-      <div className="relative w-full flex overflow-hidden whitespace-nowrap">
-        <div className="flex items-center gap-8 md:gap-16 animate-marquee">
-          {duplicatedServices.map((service, index) => (
-            <div key={index} className="flex items-center gap-6 md:gap-12">
-              <span className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-brand-black uppercase">
-                {service}
-              </span>
-              <div className="w-16 h-8 md:w-24 md:h-12 rounded-full bg-brand-grey-light overflow-hidden relative shrink-0 grayscale">
-                <img 
-                  src={`https://picsum.photos/seed/${index}/400/200?blur=2`} 
-                  alt="" 
-                  width={96}
-                  height={48}
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full h-full object-cover"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
+    <div className="w-full overflow-hidden bg-brand-white border-y-2 border-brand-black py-8 md:py-10">
+      <div className="flex animate-marquee whitespace-nowrap">
+        {[...services, ...services].map((service, index) => (
+          <div key={`${service}-${index}`} className="flex items-center mx-8 md:mx-12">
+            <div className="w-20 h-10 md:w-24 md:h-12 rounded-full overflow-hidden mr-8 border-2 border-brand-black bg-brand-off-white">
+              <img
+                src={`https://picsum.photos/seed/${service}/200/100?grayscale`}
+                alt=""
+                className="w-full h-full object-cover"
+              />
             </div>
-          ))}
-        </div>
+            <span className="text-4xl md:text-6xl font-extrabold uppercase tracking-tight text-brand-black">
+              {service}
+            </span>
+          </div>
+        ))}
       </div>
-    </section>
+    </div>
   );
 }

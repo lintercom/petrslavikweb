@@ -54,15 +54,22 @@ export function Contact() {
 
   return (
     <div className="flex flex-col bg-brand-white">
-      <SEO title="Kontakt | Petr Slavík" description="Napište mi, co má váš firemní web vyřešit: jasnější nabídku, více poptávek, redesign nebo snadnější správu obsahu." path="/kontakt" />
-      <PageHero title="Kontakt." description="Pojďme probrat, co dnes na vašem webu nefunguje a jaký výsledek od nového webu očekáváte." />
+      <SEO
+        title="Kontakt | Petr Slavík"
+        description="Napište mi, co má váš firemní web vyřešit: jasnější nabídku, více poptávek, redesign nebo snazší správu obsahu."
+        path="/kontakt"
+      />
+      <PageHero
+        title="Kontakt."
+        description="Pojďme probrat, co dnes na vašem webu nefunguje a jaký výsledek od nového webu očekáváte."
+      />
 
       <section className="py-24 px-4 bg-brand-white">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <div>
-              <div className="mb-12 md:mb-16">
-                <h3 className="text-xs font-extrabold uppercase tracking-widest text-brand-grey-dark mb-6">Kde mě najdete</h3>
+            <div className="space-y-12">
+              <div>
+                <h3 className="text-xs font-extrabold uppercase tracking-widest text-brand-grey-dark mb-6">Email</h3>
                 <div className="space-y-6 text-xl font-extrabold text-brand-black">
                   <p>
                     <span className="block text-xs text-brand-grey-dark mb-1 uppercase tracking-widest">Email</span>
@@ -73,12 +80,28 @@ export function Contact() {
                   </p>
                 </div>
               </div>
+
+              <div className="border-2 border-brand-black bg-brand-white p-8 shadow-[4px_4px_0px_0px_rgba(18,18,18,1)]">
+                <h3 className="text-xs font-extrabold uppercase tracking-widest text-brand-grey-dark mb-6">Fakturační údaje</h3>
+                <div className="space-y-2 text-base text-brand-black leading-relaxed">
+                  <p className="font-extrabold">Petr Slavík</p>
+                  <p>Nová 114</p>
+                  <p>768 21 Kvasice</p>
+                  <p className="pt-3">IČO: 05695961</p>
+                  <p>DIČ: CZ9308234782</p>
+                  <p className="pt-3">Fyzická osoba podnikající dle živnostenského zákona, zapsaná v živnostenském rejstříku.</p>
+                </div>
+              </div>
             </div>
 
             <div>
               {isSubmitted ? (
-                <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="bg-brand-black text-brand-white p-12 border-2 border-brand-black text-center h-full flex flex-col items-center justify-center">
-                  <h3 className="text-3xl font-extrabold uppercase tracking-tight mb-4">Děkuji!</h3>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  className="bg-brand-black text-brand-white p-12 border-2 border-brand-black text-center h-full flex flex-col items-center justify-center"
+                >
+                  <h3 className="text-3xl font-extrabold uppercase tracking-tight mb-4">Děkuji.</h3>
                   <p className="text-lg text-brand-grey-light">Brzy se vám ozvu na zadaný e-mail.</p>
                 </motion.div>
               ) : (
@@ -123,7 +146,14 @@ export function Contact() {
 
                   <div className="relative">
                     <label htmlFor="message" className={labelClass}>Co dnes nefunguje? *</label>
-                    <textarea required id="message" name="message" rows={4} placeholder="Popište stručně současný web, cíle a problém, který chcete vyřešit..." className={`${inputClass} resize-none`}></textarea>
+                    <textarea
+                      required
+                      id="message"
+                      name="message"
+                      rows={4}
+                      placeholder="Popište stručně současný web, cíle a problém, který chcete vyřešit..."
+                      className={`${inputClass} resize-none`}
+                    ></textarea>
                   </div>
 
                   {submitError && (
@@ -133,7 +163,7 @@ export function Contact() {
                   )}
 
                   <Button type="submit" variant="primary" disabled={isSubmitting} className="w-full py-6 text-lg font-extrabold uppercase tracking-widest">
-                    {isSubmitting ? 'Odesílám...' : 'Odeslat poptávku'}
+                    {isSubmitting ? 'Odesílám...' : 'Domluvit konzultaci'}
                   </Button>
                 </form>
               )}

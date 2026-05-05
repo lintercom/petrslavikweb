@@ -46,10 +46,10 @@ export function HeroInteractive() {
           className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
         >
           <Button href="/kontakt" variant="onDark" size="xl" className="w-full sm:w-auto">
-            Probrat problém webu
+            Domluvit konzultaci
           </Button>
           <Button href="/sluzby" variant="outline" size="xl" className="w-full sm:w-auto border-brand-white text-brand-white hover:bg-brand-white hover:text-brand-black focus-visible:ring-brand-white ring-offset-brand-black">
-            Jak pracuji
+            Co nabízím
           </Button>
         </motion.div>
       </div>

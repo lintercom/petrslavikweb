@@ -31,7 +31,7 @@ export function About() {
               <p className="text-lg text-brand-grey-dark leading-relaxed mb-10">
                 Komunikujete přímo se mnou. Bez předávání mezi obchodníkem, grafikem a vývojářem. Od prvního rozhovoru až po spuštění řešíme, co má web změnit.
               </p>
-              <Button href="/kontakt" variant="primary" className="py-4 px-10 text-base uppercase tracking-widest font-extrabold">Napište mi</Button>
+              <Button href="/kontakt" variant="primary" className="py-4 px-10 text-base uppercase tracking-widest font-extrabold">Domluvit konzultaci</Button>
             </motion.div>
             <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="aspect-[4/5] bg-brand-black border-2 border-brand-black overflow-hidden relative">
               <div className="w-full h-full flex items-center justify-center text-brand-white">

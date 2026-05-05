@@ -22,7 +22,7 @@ export function BigFooterCTA() {
           Napište mi, co má váš web změnit: lépe vysvětlit nabídku, získat poptávky, působit důvěryhodněji nebo se jednodušeji spravovat.
         </p>
         <Button href="/kontakt" variant="onDark" size="xl">
-          Probrat web
+          Domluvit konzultaci
         </Button>
       </div>
     </section>

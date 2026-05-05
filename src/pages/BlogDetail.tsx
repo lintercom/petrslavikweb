@@ -123,7 +123,7 @@ export function BlogDetail() {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button href="/kontakt" variant="primary" size="xl">
-                Probrat web
+                Domluvit konzultaci
               </Button>
               <Button href="/cenik" variant="outline" size="xl">
                 Zobrazit ceník

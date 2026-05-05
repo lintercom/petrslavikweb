@@ -13,10 +13,11 @@ import { personSchema, professionalServiceSchema, websiteSchema } from '@/lib/se
 
 export function Home() {
   const faqItems = [
-    { title: "Kolik stojí web?", content: "Menší firemní web obvykle začíná od 35 000 Kč. Web s propracovanější strukturou, více podstránkami, měřením a přípravou obsahu se většinou pohybuje od 60 000 Kč. Přesný rozsah určím až podle toho, jaký problém má web vyřešit." },
+    { title: "Kolik stojí web?", content: "Nový web obvykle začíná od 35 000 Kč. Redesign nefunkčního nebo zastaralého webu většinou začíná od 60 000 Kč. Rozšíření a úpravy webu řeším individuálně podle rozsahu. Péče po spuštění je součástí každého řešení." },
     { title: "Jak dlouho to trvá?", content: "Jednodušší firemní web obvykle 4-6 týdnů. Pokud je potřeba nejdřív ujasnit nabídku, strukturu, texty nebo více typů zákazníků, počítejte spíš s 6-10 týdny." },
     { title: "Co když nevím, co má na webu být?", content: "To je běžná situace. Nezačínám barvami ani efekty, ale tím, co má web přinést: poptávky, důvěru, lepší vysvětlení nabídky nebo méně zbytečných dotazů. Z toho vznikne struktura a texty." },
     { title: "Pomůžete i s texty?", content: "Ano. Pomůžu pojmenovat hlavní sdělení, rozdělit nabídku do srozumitelných sekcí a napsat texty tak, aby návštěvník rychle pochopil, proč má kontaktovat právě vás." },
+    { title: "Budu web vlastnit?", content: "Ano. Hotový web je určený pro vaše podnikání a po spuštění máte jasno v tom, co bylo vytvořeno, co se spravuje a jak s webem dál pracovat." },
     { title: "Budu si moct web upravovat?", content: "Podle rozsahu projektu lze připravit jednoduchou správu vybraných částí webu, například textů, referencí, článků nebo často kladených dotazů." },
     { title: "Jak poznám, že web funguje?", content: "Součástí může být měření hlavních akcí: kliknutí na kontakt, odeslání formuláře nebo návštěvy důležitých stránek. Web pak není jen hotová prezentace, ale nástroj, který se dá vyhodnocovat a zlepšovat." }
   ];
@@ -74,7 +75,7 @@ export function Home() {
 
       <LogoGrid />
 
-      <section className="py-16 md:py-24 px-4 bg-brand-white border-t-2 border-brand-black">
+      <section className="py-16 md:py-24 px-4 bg-brand-white">
         <div className="container mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 40 }}

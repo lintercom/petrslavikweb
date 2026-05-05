@@ -1,8 +1,20 @@
 export interface ProjectType {
   slug: string;
   title: string;
-  category: string;
   desc: string;
+  websiteUrl: string;
+  websiteLabel: string;
+  logo: string;
+  logoAlt: string;
+  detail: {
+    introBody: string;
+    situationTitle: string;
+    goalTitle: string;
+    solutionTitle: string;
+    capabilitiesTitle: string;
+    extensionsTitle: string;
+    technologiesTitle: string;
+  };
   sections: {
     situation: string;
     goal: string;
@@ -15,61 +27,92 @@ export interface ProjectType {
 
 export const projectTypes: ProjectType[] = [
   {
-    slug: 'web-ktery-nevysvetluje-nabidku',
-    title: 'Web, který nevysvětluje nabídku',
-    category: 'Jasnější sdělení',
-    desc: 'Typický scénář firmy, která má dobrou službu, ale web ji popisuje obecně a návštěvník rychle nepochopí, proč se ozvat.',
+    slug: 'web-pro-farmu-pod-janovou-horou',
+    title: 'Web pro Farmu pod Janovou horou',
+    desc: 'Web s rezervačním systémem pro farmu a tábory. Navrhl jsem řešení, integroval specializovaný systém a dlouhodobě ho udržuji a rozvíjím.',
+    websiteUrl: 'https://www.farmapodjanovouhorou.cz/',
+    websiteLabel: 'Navštívit web farmy',
+    logo: '/references/farma-pod-janovou-horou-logo-black.png',
+    logoAlt: 'Farma pod Janovou horou',
+    detail: {
+      introBody: 'Pro rodinnou farmu jsem navrhl a vytvořil webový systém, který řeší rezervace pobytů, táborů a dalších služeb bez nutnosti ruční komunikace.',
+      situationTitle: 'Výchozí situace',
+      goalTitle: 'Cíl řešení',
+      solutionTitle: 'Dodané řešení',
+      capabilitiesTitle: 'Co jsem vyřešil',
+      extensionsTitle: 'Klíčová přidaná hodnota',
+      technologiesTitle: 'Moje role v projektu',
+    },
     sections: {
-      situation: 'Firma má několik služeb, zkušenosti a dobré výsledky, ale web používá obecné fráze. Návštěvník nevidí rozdíl oproti konkurenci a odchází bez kontaktu.',
-      goal: 'Přepsat web kolem skutečných otázek zákazníka: co firma řeší, pro koho je vhodná, jak probíhá spolupráce a proč jí věřit.',
-      solution: 'Web dostane novou strukturu nabídky, jasné vstupní sdělení, přehled služeb, důvěryhodnostní prvky a kontaktní body na správných místech.',
-      capabilities: ['jasná nabídka', 'lepší texty', 'struktura služeb', 'důvěryhodnost', 'kontaktní cesta'],
-      extensions: ['reference', 'FAQ', 'články', 'měření poptávek', 'správa obsahu'],
-      technologies: ['responzivní frontend', 'SEO základ', 'analytika', 'formulář'],
+      situation: 'Původně vše probíhalo přes telefon a zprávy, což bylo časově náročné a nepřehledné. Rezervace, kapacity a komunikace se zákazníky nebyly na jednom místě a další růst by bez změny znamenal ještě více ruční práce.',
+      goal: 'Vytvořit řešení, které zjednoduší provoz, odstraní chaos v rezervacích a připraví farmu na další rozvoj služeb bez závislosti na ručním přepisování a dohledávání informací.',
+      solution: 'Navrhl jsem logiku celého webového systému, integroval specializovanou platformu Přihláškárna a postavil web tak, aby služby fungovaly jako produkty s řízenou kapacitou, přehlednými termíny a sjednocenou komunikací.',
+      capabilities: [
+        'odstranění ručního řešení rezervací',
+        'přehled kapacit a termínů',
+        'sjednocení komunikace se zákazníky',
+        'profesionální prezentaci farmy',
+      ],
+      extensions: [
+        'integrace systému Přihláškárna',
+        'automatické řešení přihlášek bez ručního chaosu',
+        'logika služeb postavených jako produkty',
+        'systémově řízená kapacita',
+        'základ připravený na poukazy, e-shop a nové služby',
+      ],
+      technologies: [
+        'návrh celé logiky systému a struktury služeb',
+        'výběr a integrace rezervační platformy',
+        'kompletní vývoj webu',
+        'nasazení',
+        'dlouhodobá správa a další rozvoj',
+      ],
     },
   },
   {
-    slug: 'web-ktery-neprivadi-poptavky',
-    title: 'Web, který nepřivádí poptávky',
-    category: 'Více kontaktů',
-    desc: 'Modelový scénář webu, který má návštěvnost, ale návštěvníci neudělají další krok a neposílají poptávky.',
-    sections: {
-      situation: 'Lidé na web přicházejí, ale chybí jim jasná cesta. Kontaktní tlačítka jsou slabá, důležité informace zapadnou a web nepracuje s námitkami.',
-      goal: 'Zjednodušit cestu od první návštěvy ke kontaktu a posílit důvody, proč má zákazník odeslat poptávku.',
-      solution: 'Upraví se struktura stránek, výzvy k akci, kontaktní bloky, důvěryhodnostní prvky a měření hlavních konverzí.',
-      capabilities: ['konverzní struktura', 'CTA', 'měření formulářů', 'mobilní použitelnost', 'důvěra'],
-      extensions: ['landing page', 'A/B textů', 'rozšíření FAQ', 'nové sekce služeb', 'obsahový plán'],
-      technologies: ['frontend', 'analytika', 'rychlost webu', 'SEO základ'],
+    slug: 'web-pro-osobniho-fitness-trenera',
+    title: 'Web pro osobního fitness trenéra',
+    desc: 'Web s rezervačním systémem, který nahrazuje ruční domlouvání klientů. Navrhl jsem řešení, implementoval integraci a dlouhodobě ho udržuji a rozvíjím.',
+    websiteUrl: 'https://martin-stastny.cz/',
+    websiteLabel: 'Navštívit web trenéra',
+    logo: '/references/martin-stastny-logo-black.png',
+    logoAlt: 'Martin Šťastný fitness coach',
+    detail: {
+      introBody: 'Pro osobního trenéra Martina Šťastného jsem navrhl a vytvořil kompletní webový systém, který řeší získávání klientů i jejich objednávky.',
+      situationTitle: 'Výchozí situace',
+      goalTitle: 'Cíl řešení',
+      solutionTitle: 'Dodané řešení',
+      capabilitiesTitle: 'Co jsem vyřešil',
+      extensionsTitle: 'Klíčová přidaná hodnota',
+      technologiesTitle: 'Moje role v projektu',
     },
-  },
-  {
-    slug: 'zastaraly-web',
-    title: 'Zastaralý firemní web',
-    category: 'Redesign',
-    desc: 'Scénář firmy, jejíž současný web už neodpovídá kvalitě práce, nabídce ani očekávání zákazníků na mobilu.',
     sections: {
-      situation: 'Web vznikl před lety, špatně se čte na telefonu, graficky působí zastarale a texty neodpovídají tomu, co firma dnes opravdu nabízí.',
-      goal: 'Postavit nový web bez zbytečného zahazování všeho, co funguje: zachovat dobrý obsah, opravit slabá místa a připravit jasnější prezentaci.',
-      solution: 'Nejdřív proběhne audit současného webu. Potom vznikne nová struktura, upravené texty, modernější vizuální vrstva a technicky čisté spuštění.',
-      capabilities: ['audit webu', 'redesign', 'přesměrování URL', 'mobilní verze', 'rychlost'],
-      extensions: ['nové reference', 'blog', 'správa obsahu', 'měření poptávek', 'SEO rozšíření'],
-      technologies: ['React frontend', 'responzivní CSS', 'SEO metadata', 'analytika'],
-    },
-  },
-  {
-    slug: 'web-se-snadnou-spravou',
-    title: 'Web se snadnou správou obsahu',
-    category: 'Správa obsahu',
-    desc: 'Scénář webu, kde firma potřebuje pravidelně upravovat texty, reference, články nebo FAQ bez každého drobného zásahu vývojáře.',
-    sections: {
-      situation: 'Obsah webu se mění, ale každá úprava jde přes vývojáře. Firma proto aktualizace odkládá a web postupně přestává odpovídat realitě.',
-    goal: 'Umožnit jednoduchou správu vybraných částí webu bez zbytečně složitého rozhraní.',
-      solution: 'Navrhne se, které části má smysl spravovat. Administrace zůstane úzká a praktická: texty, reference, články, FAQ nebo vybrané bloky.',
-      capabilities: ['správa textů', 'reference', 'články', 'FAQ', 'jednoduché workflow'],
-      extensions: ['role uživatelů', 'náhled změn', 'publikační plán', 'SEO pole', 'technická péče'],
-      technologies: ['frontend', 'správa obsahu', 'strukturovaný obsah', 'zabezpečení'],
+      situation: 'Klient měl problém s roztříštěnou komunikací přes zprávy, sociální sítě a telefon. Neexistoval jednotný způsob, jak efektivně přijímat nové klienty a objednávky se musely domlouvat ručně.',
+      goal: 'Navrhnout web jako prodejní systém, který jasně představí služby a ceny, sjednotí poptávky a napojí objednávky na rezervační nástroj bez nutnosti ruční koordinace.',
+      solution: 'Vytvořil jsem webovou prezentaci s jasnou strukturou služeb a napojením na rezervační systém Reenio. Návštěvník si díky tomu může vybrat službu a vyřešit objednávku během pár kliknutí.',
+      capabilities: [
+        'sjednocení všech poptávek do jednoho systému',
+        'jasná prezentace služeb a cen s méně zbytečnými dotazy',
+        'automatizace objednávek přes rezervační systém',
+        'profesionální prezentace, která zvyšuje důvěru',
+      ],
+      extensions: [
+        'integrace rezervačního systému Reenio',
+        'automatická správa rezervací',
+        'objednávka bez ručního domlouvání termínů',
+        'samostatná cesta zákazníka od výběru služby po rezervaci',
+      ],
+      technologies: [
+        'návrh celé struktury webu a logiky',
+        'výběr a implementace rezervačního řešení',
+        'kompletní vývoj frontend aplikace',
+        'nasazení a optimalizace',
+        'dlouhodobá správa a rozvoj systému',
+      ],
     },
   },
 ];
 
 export const getProjectType = (slug?: string) => projectTypes.find((project) => project.slug === slug);
+
+export const featuredReferences = projectTypes;

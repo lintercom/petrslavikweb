@@ -15,45 +15,55 @@ export function Pricing() {
 
   const pricingPlans = [
     {
-      label: "Startovací web",
-      title: "Jasná nabídka",
+      label: "Jasná prezentace služby",
+      title: "Základní web",
       price: "od 35 000 Kč",
       time: "4-6 týdnů",
-      suitedFor: "živnostníky, odborníky, služby a menší firmy",
-      desc: "Firemní web, který srozumitelně vysvětlí, co děláte, komu pomáháte a proč vás má zákazník kontaktovat.",
-      features: ["Návrh struktury", "Design na míru", "Responzivní web", "Základní textace", "SEO základ", "Kontaktní formulář", "Rychlé načítání"]
+      suitedFor: "klienty, kteří začínají, potřebují jednoduchý funkční web a chtějí jasně vysvětlit nabídku",
+      desc: "Základní web pro situace, kdy potřebujete, aby návštěvník rychle pochopil, co děláte, pro koho to je a proč vás má kontaktovat.",
+      features: ["Ujasnění sdělení", "Návrh jednoduché struktury", "Design na míru", "Responzivní zpracování", "Základní textace", "SEO základ", "Kontaktní formulář", "Rychlé načítání", "Péče po spuštění"],
+      notIncluded: ["Hlubší práce s konverzí", "Více cílových skupin", "Obsahová strategie", "Analytika"]
     },
     {
-      label: "Problémový redesign",
-      title: "Lepší poptávky",
+      label: "Web jako nástroj pro klienty",
+      title: "Pokročilý web",
       price: "od 60 000 Kč",
       time: "6-10 týdnů",
-      suitedFor: "firmy, kterým současný web nevysvětluje nabídku nebo nepřivádí poptávky",
-      desc: "Přestavba webu podle toho, kde se návštěvník ztrácí, čemu nevěří a proč neudělá další krok.",
-      features: ["Audit současného webu", "Nová informační struktura", "Přepsání klíčových textů", "Důvěryhodnostní prvky", "Měření konverzí", "Přesměrování URL", "Kontrola po spuštění"],
+      suitedFor: "klienty, kteří chtějí z webu poptávky, mají konkurenci a potřebují víc než jen vizitku",
+      desc: "Web, který neřeší jen vzhled, ale hlavně chování návštěvníka a cestu k akci. Cílem je dovést správného člověka ke kontaktu nebo poptávce.",
+      features: ["Struktura podle rozhodování zákazníka", "Konverzní cesta a CTA", "Více typů návštěvníků", "Cílenější textace", "Důvěryhodnostní prvky", "Pokročilejší SEO základ", "Měření a konverze", "Optimalizace mobilu a rychlosti", "Péče po spuštění"],
       featured: true
     },
     {
-      label: "Rozsáhlejší firemní web",
-      title: "Web jako obchodní nástroj",
-      price: "od 90 000 Kč",
-      time: "8-12 týdnů",
-      suitedFor: "firmy s více službami, cílovými skupinami nebo pravidelně měněným obsahem",
-      desc: "Větší web s propracovanou strukturou, texty, měřením a volitelnou správou vybraných částí obsahu.",
-      features: ["Více typů služeb", "Obsahová architektura", "Správa vybraného obsahu", "Reference a články", "Pokročilejší SEO základ", "Analytika", "Dlouhodobý rozvoj"]
+      label: "Přestavba webu",
+      title: "Redesign webu",
+      price: "od 60 000 Kč",
+      time: "6-10 týdnů",
+      suitedFor: "weby, které nepřinášejí poptávky, působí zastarale nebo nevysvětlují nabídku",
+      desc: "Přestavba nefunkčního nebo zastaralého webu. Řeším, kde se návštěvník ztrácí, proč neudělá další krok a co snižuje důvěru.",
+      features: ["Analýza současného webu", "Nová struktura", "Úprava nebo přepsání textů", "Zlepšení konverzní cesty", "Technické SEO", "Přesměrování URL", "Měření výsledků", "Péče po spuštění"]
+    },
+    {
+      label: "Rozvoj webu",
+      title: "Rozšíření a úpravy",
+      price: "individuálně",
+      time: "podle rozsahu",
+      suitedFor: "klienty, kteří už web mají a chtějí ho posouvat dál",
+      desc: "Vývoj funkcionalit a postupné vylepšování webu podle konkrétních potřeb, reálného používání a dalšího růstu firmy.",
+      features: ["Nové sekce nebo stránky", "Formuláře", "Logika a interakce", "Napojení na systémy", "Úpravy UX", "Zlepšení výkonu", "Dlouhodobý rozvoj", "Péče po spuštění"]
     }
   ];
 
   return (
     <div className="flex flex-col bg-brand-white">
       <SEO
-        title="Ceník webových stránek | Petr Slavík"
-        description="Orientační ceny tvorby firemních webů podle problému, který mají vyřešit: jasná nabídka, více poptávek nebo rozsáhlejší obchodní web."
+        title="Ceník webových služeb | Petr Slavík"
+        description="Orientační ceny pro základní web, pokročilý web, redesign, rozšíření webu a péči po spuštění, která je součástí každého řešení."
         path="/cenik"
         structuredData={[
           serviceSchema({
-            name: 'Ceník tvorby webových stránek',
-            description: 'Orientační ceny firemních webů podle rozsahu, obsahu, textů, měření a problému, který má web vyřešit.',
+            name: 'Ceník tvorby webu, redesignu a rozvoje',
+            description: 'Orientační ceny podle rozsahu projektu, složitosti webu, obsahu, funkcionalit a dlouhodobé péče.',
             path: '/cenik',
           }),
           breadcrumbSchema([
@@ -64,12 +74,12 @@ export function Pricing() {
       />
       <PageHero
         title="Ceník."
-        description="Cena se neodvíjí jen od počtu podstránek. Důležité je, jak moc musíme ujasnit nabídku, přepsat obsah a navrhnout cestu návštěvníka ke kontaktu."
+        description="Cena závisí na složitosti projektu, stavu současného webu, rozsahu obsahu a funkcích, které má web řešit. Péče po spuštění je součástí každého řešení."
       />
 
       <section className="py-16 md:py-24 px-4 bg-brand-white">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
             {pricingPlans.map((plan, i) => (
               <motion.div
                 key={i}
@@ -105,6 +115,18 @@ export function Pricing() {
                       </li>
                     ))}
                   </ul>
+                  {plan.notIncluded && (
+                    <div className={`mt-8 pt-6 border-t ${plan.featured ? 'border-brand-grey-light/30' : 'border-brand-black/20'}`}>
+                      <h4 className="text-xs font-extrabold uppercase tracking-widest mb-4">Není součástí:</h4>
+                      <ul className="space-y-3">
+                        {plan.notIncluded.map((item) => (
+                          <li key={item} className={`font-medium text-sm ${plan.featured ? 'text-brand-grey-light' : 'text-brand-grey-dark'}`}>
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
 
                 <Button
@@ -127,15 +149,15 @@ export function Pricing() {
             <div>
               <h2 className="text-4xl md:text-5xl font-extrabold uppercase tracking-tight mb-6 text-brand-black">Péče po spuštění.</h2>
               <p className="text-lg text-brand-grey-dark leading-relaxed max-w-xl">
-                Web po spuštění nekončí. Lze průběžně hlídat technický stav, měření, drobné úpravy, nové sekce a obsah podle toho, co ukážou reálné poptávky.
+                Web po spuštění nekončí. Péče po spuštění je součástí každého mého řešení, protože web není jednorázová věc. Bez údržby a průběžných úprav postupně ztrácí výkon.
               </p>
             </div>
             <div className="space-y-6">
               <div className="bg-brand-white p-8 border-2 border-brand-black shadow-[4px_4px_0px_0px_rgba(18,18,18,1)]">
                 <h3 className="text-xl font-extrabold uppercase text-brand-black mb-2">Stabilita webu</h3>
-                <div className="text-2xl font-extrabold text-brand-black mb-6">od 2 500 Kč / měsíc</div>
+                <div className="text-2xl font-extrabold text-brand-black mb-6">součást každého řešení</div>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-brand-grey-dark text-sm">
-                  {['Zálohy', 'Technická kontrola', 'Drobná údržba', 'Bezpečnostní dohled', 'Kontrola formulářů', 'Prioritní podpora podle tarifu'].map((item) => (
+                  {['Technická údržba', 'Drobné úpravy', 'Kontrola funkčnosti', 'Bezpečnostní dohled', 'Kontrola formulářů', 'Průběžná zlepšení'].map((item) => (
                     <li key={item} className="flex items-center gap-2 font-medium">
                       <div className="w-1.5 h-1.5 bg-brand-black rounded-full"></div> {item}
                     </li>
@@ -146,7 +168,7 @@ export function Pricing() {
                 <h3 className="text-xl font-extrabold uppercase text-brand-black mb-2">Rozvoj podle poptávek</h3>
                 <div className="text-2xl font-extrabold text-brand-black mb-6">Individuálně</div>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-brand-grey-dark text-sm">
-                  {['Nové sekce', 'Úpravy textů', 'Nové reference', 'Vyhodnocení měření', 'SEO úpravy', 'Zlepšení kontaktní cesty'].map((item) => (
+                  {['Nové sekce', 'Úpravy textů', 'Nové funkcionality', 'Vyhodnocení měření', 'SEO úpravy', 'Zlepšení kontaktní cesty'].map((item) => (
                     <li key={item} className="flex items-center gap-2 font-medium">
                       <div className="w-1.5 h-1.5 bg-brand-black rounded-full"></div> {item}
                     </li>

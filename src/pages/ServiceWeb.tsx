@@ -10,35 +10,35 @@ export function ServiceWeb() {
   return (
     <div className="flex flex-col bg-brand-white">
       <SEO
-        title="Tvorba webových stránek, které řeší problém | Petr Slavík"
-        description="Tvorba firemních webů, které pomáhají vysvětlit nabídku, vybudovat důvěru a získávat poptávky."
+        title="Tvorba webu, redesign a rozvoj | Petr Slavík"
+        description="Tvorba webu na míru, redesign nefunkčního webu, rozšíření funkcionalit a měsíční správa jako součást každého řešení."
         path="/sluzby/webove-stranky"
         structuredData={[
           serviceSchema({
-            name: 'Tvorba webových stránek',
-            description: 'Tvorba firemních webů, které jasně vysvětlí nabídku, budují důvěru a vedou návštěvníka ke kontaktu.',
+            name: 'Tvorba webu, redesign a rozvoj',
+            description: 'Tvorba webů na míru podle složitosti projektu, redesign stávajících webů, rozšíření funkcionalit a dlouhodobá správa.',
             path: '/sluzby/webove-stranky',
           }),
           breadcrumbSchema([
             { name: 'Úvod', path: '/' },
             { name: 'Služby', path: '/sluzby' },
-            { name: 'Tvorba webových stránek', path: '/sluzby/webove-stranky' },
+            { name: 'Tvorba webu', path: '/sluzby/webove-stranky' },
           ]),
         ]}
       />
       <PageHero
-        title="Webové stránky."
-        description="Web nemá být jen online vizitka. Má návštěvníkovi rychle vysvětlit, jestli jste pro něj správná volba, a dovést ho ke kontaktu."
+        title="Tvorba webu."
+        description="Od jednoduchého webu přes redesign až po rozšíření funkcionalit. Začínám tím, co má web říkat, komu má prodávat a jak má vést k poptávce."
       />
 
       <section className="py-16 md:py-24 px-4 bg-brand-white">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {[
-              { icon: MessageSquare, title: "Více správných poptávek", desc: "Web povedu kolem otázek, které zákazník řeší před oslovením. Cílem nejsou jen návštěvy, ale relevantní poptávky." },
-              { icon: ShieldCheck, title: "Důvěra před prvním kontaktem", desc: "Struktura, reference, jasné vysvětlení postupu a konkrétní argumenty pomůžou snížit nejistotu návštěvníka." },
-              { icon: PenLine, title: "Texty, které něco říkají", desc: "Pomůžu přepsat obecné fráze do srozumitelného sdělení: co děláte, komu pomáháte a jaký problém řešíte." },
-              { icon: BarChart3, title: "Měření výsledku", desc: "Web může obsahovat měření důležitých akcí, abyste věděli, jestli lidé klikají na kontakt, čtou klíčové stránky a posílají poptávky." }
+              { icon: MessageSquare, title: "Tvorba webu", desc: "Nový web na míru podle aktuální situace. Od jednoduché prezentace až po rozsáhlejší řešení se strukturou, obsahem a analytikou." },
+              { icon: ShieldCheck, title: "Redesign webu", desc: "Přestavba webu, který neplní roli: zákazník nechápe nabídku, web nepůsobí důvěryhodně nebo nevede k dalšímu kroku." },
+              { icon: PenLine, title: "Rozšíření a úpravy", desc: "Nové sekce, formuláře, interakce, napojení na systémy nebo zlepšení použitelnosti podle reálných potřeb firmy." },
+              { icon: BarChart3, title: "Měsíční správa", desc: "Součást každého řešení. Web dlouhodobě hlídám, udržuji, drobně upravuji a posouvám podle toho, jak se firma vyvíjí." }
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -58,8 +58,8 @@ export function ServiceWeb() {
       </section>
 
       <PageCTA
-        title="Potřebujete web, který má jasný úkol?"
-        description="Začneme tím, co má web změnit: vysvětlit nabídku, zvýšit důvěru, získat poptávky nebo zpřehlednit obsah. Až potom řeším podobu stránky."
+        title="Potřebujete web, který řeší konkrétní problém?"
+        description="Začneme tím, co má web změnit: získat klienty, vysvětlit nabídku, nahradit zastaralou prezentaci nebo rozšířit současné řešení."
       />
 
       <BigFooterCTA />

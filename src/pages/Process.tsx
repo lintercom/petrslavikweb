@@ -6,13 +6,13 @@ import { breadcrumbSchema } from '@/lib/seo';
 
 export function Process() {
   const steps = [
-    { step: '01', title: 'Pochopení problému', desc: 'Projdeme, co dnes na webu nefunguje: nejasná nabídka, slabé poptávky, nedůvěra, zastaralý vzhled nebo složitá správa obsahu.', out: 'Jasně pojmenovaný problém webu' },
-    { step: '02', title: 'Návrh struktury', desc: 'Navrhnu, jak má být web poskládaný, aby návštěvník rychle pochopil nabídku, našel důležité informace a věděl, co udělat dál.', out: 'Struktura stránek a cesta ke kontaktu' },
-    { step: '03', title: 'Rozsah a cena', desc: 'Podle struktury, obsahu a technických potřeb určím rozsah práce, cenu a harmonogram.', out: 'Nabídka, termíny a plán realizace' },
-    { step: '04', title: 'Texty a design', desc: 'Připravím obsahovou logiku, texty klíčových sekcí a vizuální podobu webu tak, aby sdělení i vzhled táhly stejným směrem.', out: 'Schválený návrh webu' },
-    { step: '05', title: 'Vývoj webu', desc: 'Postavím responzivní, rychlý a technicky čistý web s formulářem, SEO základem a případně správou vybraného obsahu.', out: 'Funkční testovací verze' },
-    { step: '06', title: 'Testování a spuštění', desc: 'Otestuji mobilní verzi, rychlost, formuláře, metadata, přesměrování a měření hlavních akcí.', out: 'Spuštěný web' },
-    { step: '07', title: 'Vyhodnocení a rozvoj', desc: 'Po spuštění lze upravovat texty, doplňovat sekce, měřit poptávky a zlepšovat web podle reálného chování návštěvníků.', out: 'Web, který se dá dál zlepšovat' },
+    { step: '01', title: 'Pochopení problému', desc: 'Projdeme, co dnes na webu nefunguje: nejasná nabídka, slabé poptávky, nedůvěra, zastaralý vzhled nebo složitá správa obsahu.', out: 'Jasně pojmenovaný problém webu', time: 'obvykle 1 hovor', client: 'Dodáte kontext, odkaz na web a cíle.' },
+    { step: '02', title: 'Návrh struktury', desc: 'Navrhnu, jak má být web poskládaný, aby návštěvník rychle pochopil nabídku, našel důležité informace a věděl, co udělat dál.', out: 'Struktura stránek a cesta ke kontaktu', time: 'přibližně 3-7 dní', client: 'Schválíte směr a doplníte poznámky k obsahu.' },
+    { step: '03', title: 'Rozsah a cena', desc: 'Podle struktury, obsahu a technických potřeb určím rozsah práce, cenu a harmonogram.', out: 'Nabídka, termíny a plán realizace', time: '1-2 dny', client: 'Potvrdíte rozsah a priority.' },
+    { step: '04', title: 'Texty a design', desc: 'Připravím obsahovou logiku, texty klíčových sekcí a vizuální podobu webu tak, aby sdělení i vzhled táhly stejným směrem.', out: 'Schválený návrh webu', time: '1-3 týdny podle rozsahu', client: 'Dodáte podklady, připomínky a schválení.' },
+    { step: '05', title: 'Vývoj webu', desc: 'Postavím responzivní, rychlý a technicky čistý web s formulářem, SEO základem a případně správou vybraného obsahu.', out: 'Funkční testovací verze', time: '1-3 týdny podle rozsahu', client: 'Kontrolujete průběh a testujete klíčové části.' },
+    { step: '06', title: 'Testování a spuštění', desc: 'Otestuji mobilní verzi, rychlost, formuláře, metadata, přesměrování a měření hlavních akcí.', out: 'Spuštěný web', time: '2-5 dní', client: 'Potvrdíte finální obsah a přístupy k doméně nebo hostingu.' },
+    { step: '07', title: 'Vyhodnocení a rozvoj', desc: 'Po spuštění lze upravovat texty, doplňovat sekce, měřit poptávky a zlepšovat web podle reálného chování návštěvníků.', out: 'Web, který se dá dál zlepšovat', time: 'průběžně', client: 'Posíláte zpětnou vazbu a rozhodujete o dalších úpravách.' },
   ];
 
   return (
@@ -57,6 +57,16 @@ export function Process() {
                   <div className="inline-flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 px-5 md:px-6 py-3 border-2 border-brand-black bg-brand-white shadow-[4px_4px_0px_0px_rgba(18,18,18,1)]">
                     <span className="text-xs font-extrabold uppercase tracking-widest text-brand-grey-dark">Výstup:</span>
                     <span className="text-sm md:text-base font-extrabold text-brand-black uppercase">{item.out}</span>
+                  </div>
+                  <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-2xl">
+                    <div className="border-2 border-brand-black bg-brand-white px-4 py-3">
+                      <div className="text-xs font-extrabold uppercase tracking-widest text-brand-grey-dark mb-1">Časový rámec</div>
+                      <div className="text-sm font-semibold text-brand-black">{item.time}</div>
+                    </div>
+                    <div className="border-2 border-brand-black bg-brand-white px-4 py-3">
+                      <div className="text-xs font-extrabold uppercase tracking-widest text-brand-grey-dark mb-1">Co dodá klient</div>
+                      <div className="text-sm font-semibold text-brand-black">{item.client}</div>
+                    </div>
                   </div>
                 </div>
               </motion.div>

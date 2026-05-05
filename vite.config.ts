@@ -15,17 +15,17 @@ const seoRoutes = [
   {
     path: '/sluzby',
     title: 'Služby | Petr Slavík',
-    description: 'Tvorba firemních webů podle problému, který mají vyřešit: jasnější nabídka, více poptávek, redesign nebo snadná správa obsahu.',
+    description: 'Tvorba webu, redesign, rozšíření webu a měsíční správa. Weby navržené podle problému, který mají klientovi vyřešit.',
   },
   {
     path: '/sluzby/webove-stranky',
-    title: 'Tvorba webových stránek, které řeší problém | Petr Slavík',
-    description: 'Tvorba firemních webů, které pomáhají vysvětlit nabídku, vybudovat důvěru a získávat poptávky.',
+    title: 'Tvorba webu, redesign a rozvoj | Petr Slavík',
+    description: 'Tvorba webu na míru, redesign nefunkčního webu, rozšíření funkcionalit a měsíční správa jako součást každého řešení.',
   },
   {
     path: '/cenik',
-    title: 'Ceník webových stránek | Petr Slavík',
-    description: 'Orientační ceny tvorby firemních webů podle problému, který mají vyřešit: jasná nabídka, více poptávek nebo rozsáhlejší obchodní web.',
+    title: 'Ceník webových služeb | Petr Slavík',
+    description: 'Orientační ceny pro tvorbu webu, redesign, rozšíření webu a měsíční péči, která je součástí každého řešení.',
   },
   {
     path: '/proces',
@@ -97,8 +97,18 @@ const seoRoutes = [
   },
   {
     path: '/reference',
-    title: 'Modelové scénáře webů | Petr Slavík',
-    description: 'Ukázky typických problémů, které může řešit firemní web: nejasná nabídka, málo poptávek, zastaralý web nebo složitá správa obsahu.',
+    title: 'Reference webů | Petr Slavík',
+    description: 'Ukázky webů, které jsem navrhl a vytvořil pro klienty včetně rezervačních systémů a dlouhodobé správy.',
+  },
+  {
+    path: '/reference/web-pro-farmu-pod-janovou-horou',
+    title: 'Web pro Farmu pod Janovou horou | Petr Slavík',
+    description: 'Reference projektu pro Farmu pod Janovou horou: web s rezervačním systémem, integrací Přihláškárny a dlouhodobým rozvojem.',
+  },
+  {
+    path: '/reference/web-pro-osobniho-fitness-trenera',
+    title: 'Web pro osobního fitness trenéra | Petr Slavík',
+    description: 'Reference projektu pro osobního fitness trenéra: web s rezervačním systémem Reenio, jasnou prezentací služeb a automatizací objednávek.',
   },
 ];
 

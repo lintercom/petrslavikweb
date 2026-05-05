@@ -1,10 +1,10 @@
 const services = [
-  "FIREMNÍ WEBY",
-  "JASNÁ NABÍDKA",
-  "VÍCE POPTÁVEK",
-  "DŮVĚRYHODNÝ OBSAH",
-  "SEO ZÁKLAD",
-  "MĚŘENÍ KONVERZÍ",
+  "TVORBA WEBU",
+  "REDESIGN WEBU",
+  "ROZŠÍŘENÍ WEBU",
+  "MĚSÍČNÍ SPRÁVA",
+  "REZERVAČNÍ SYSTÉMY",
+  "DLOUHODOBÝ ROZVOJ",
 ];
 
 export function MarqueeServices() {

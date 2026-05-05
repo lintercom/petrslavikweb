@@ -13,16 +13,25 @@ export function Privacy() {
 
       <section className="py-32 px-4 bg-brand-white">
         <div className="container mx-auto max-w-3xl prose prose-2xl text-brand-grey-medium">
-          <p>Tato stránka obsahuje informace o tom, jak zpracováváme vaše osobní údaje v souladu s nařízením GDPR.</p>
-          
-          <h2 className="text-brand-black">1. Kdo údaje zpracovává</h2>
-          <p>Správcem vašich osobních údajů je Petr Slavík (IČO: 12345678), se sídlem Příkladová 123, Praha.</p>
+          <p>Správcem osobních údajů je Petr Slavík, IČO: 05695961, se sídlem Nová 114, 768 21 Kvasice.</p>
 
-          <h2 className="text-brand-black">2. Jaké údaje zpracováváme</h2>
-          <p>Zpracováváme údaje, které nám poskytnete přes kontaktní formulář (jméno, e-mail, telefon) za účelem vyřízení vaší poptávky a následné komunikace.</p>
+          <h2 className="text-brand-black">Jaké údaje zpracovávám</h2>
+          <p>Zpracovávám pouze údaje, které mi sami poskytnete prostřednictvím kontaktního formuláře, zejména jméno, e-mail a obsah zprávy.</p>
 
-          <h2 className="text-brand-black">3. Vaše práva</h2>
-          <p>Máte právo na přístup k údajům, jejich opravu, výmaz nebo omezení zpracování. Pro uplatnění svých práv mě kontaktujte na petrslavikweb@gmail.com.</p>
+          <h2 className="text-brand-black">Účel zpracování</h2>
+          <p>Údaje slouží výhradně pro vyřízení vašeho dotazu nebo poptávky.</p>
+
+          <h2 className="text-brand-black">Doba uchování</h2>
+          <p>Údaje uchovávám po dobu nezbytně nutnou pro vyřízení komunikace, nejdéle po dobu 1 roku.</p>
+
+          <h2 className="text-brand-black">Předání údajů</h2>
+          <p>Osobní údaje nejsou předávány třetím stranám, s výjimkou technického zajištění provozu webu.</p>
+
+          <h2 className="text-brand-black">Analytika</h2>
+          <p>Na webu používám nástroj Google Analytics pro anonymní analýzu návštěvnosti.</p>
+
+          <h2 className="text-brand-black">Vaše práva</h2>
+          <p>Máte právo požadovat přístup ke svým údajům, jejich opravu nebo výmaz. V případě dotazů mě můžete kontaktovat na e-mailu petrslavikweb@gmail.com.</p>
         </div>
       </section>
     </div>

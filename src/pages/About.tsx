@@ -9,27 +9,36 @@ export function About() {
     <div className="flex flex-col bg-brand-white">
       <SEO
         title="O mně | Petr Slavík"
-        description="Jsem Petr Slavík. Navrhuji a stavím firemní weby, které pomáhají vysvětlit nabídku, budovat důvěru a získávat poptávky."
+        description="Pomáhám klientům vytvářet weby, které mají jasný cíl, přivádí poptávky a dávají smysl i z pohledu návratnosti."
         path="/o-mne"
       />
       <PageHero
         title="O mně."
-        description="Stavím weby jako obchodní nástroj. Nejdřív řeším sdělení, strukturu a problém klienta, až potom vizuální podobu."
+        description="Pomáhám klientům vytvářet weby, které mají jasný cíl a dávají smysl i z pohledu návratnosti."
       />
 
       <section className="py-24 px-4 bg-brand-white">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
-              <h2 className="text-3xl md:text-5xl font-extrabold uppercase tracking-tight mb-6 text-brand-black">Jsem Petr Slavík.</h2>
+              <h2 className="text-3xl md:text-5xl font-extrabold uppercase tracking-tight mb-6 text-brand-black">Web jako investice.</h2>
               <p className="text-lg text-brand-grey-dark leading-relaxed mb-6">
-                Navrhuji a stavím firemní weby pro lidi, kteří nechtějí jen novou prezentaci. Potřebují, aby zákazník rychle pochopil nabídku, získal důvěru a udělal další krok.
+                Web pro mě není jen vizitka. Je to investice, která se musí vrátit. Má přivádět zákazníky, proměňovat je v poptávky a zapadat do fungování firmy. Proto neřeším jen design nebo technologie, ale celý proces od prvního kliknutí až po odeslanou poptávku.
               </p>
               <p className="text-lg text-brand-grey-dark leading-relaxed mb-6">
-                Na web se nedívám jen jako na vzhled. Řeším strukturu, texty, rozhodovací cestu návštěvníka, měření a technické zpracování, které se dá dál rozvíjet.
+                Mám zkušenosti s vývojem i firemními systémy, takže při návrhu webu přemýšlím nad tím, jak bude vydělávat nebo šetřit čas. Řeším strukturu, obsah i funkce tak, aby dávaly smysl z pohledu byznysu, ne jen vzhledu.
+              </p>
+              <p className="text-lg text-brand-grey-dark leading-relaxed mb-6">
+                Na začátku vždy řešíme, co má web konkrétně přinést. Kolik poptávek má generovat, jaký typ zákazníků má oslovit a jak má celý proces fungovat. Díky tomu nevznikají weby pro pocit, ale nástroje, které mají jasný účel a měřitelný výsledek.
+              </p>
+              <p className="text-lg text-brand-grey-dark leading-relaxed mb-6">
+                Pracuji přímo s klienty, bez zbytečných mezikroků. Domlouváme se na jasném rozsahu, ceně i termínu. Říkám věci narovinu. Pokud něco nedává smysl z pohledu návratnosti nebo funkčnosti, vše vysvětlím a navrhnu alternativní postup.
+              </p>
+              <p className="text-lg text-brand-grey-dark leading-relaxed mb-6">
+                Působím ve Zlínském kraji a spolupracuji s klienty po celé České republice.
               </p>
               <p className="text-lg text-brand-grey-dark leading-relaxed mb-10">
-                Komunikujete přímo se mnou. Bez předávání mezi obchodníkem, grafikem a vývojářem. Od prvního rozhovoru až po spuštění řešíme, co má web změnit.
+                Pokud chcete web, který nebude jen náklad, ale investice, která se vrací, ozvěte se mi.
               </p>
               <Button href="/kontakt" variant="primary" className="py-4 px-10 text-base uppercase tracking-widest font-extrabold">Domluvit konzultaci</Button>
             </motion.div>
@@ -49,10 +58,10 @@ export function About() {
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {[
-              { title: "Začínám problémem", desc: "Neptám se jen na barvy a počet podstránek. Nejdřív hledám, proč web dnes nefunguje a co má pro firmu změnit." },
-              { title: "Přemýšlím nad sdělením", desc: "Pomůžu vaši nabídku rozdělit, zjednodušit a popsat tak, aby jí rozuměl člověk, který vás ještě nezná." },
-              { title: "Spojuju návrh a vývoj", desc: "Struktura, texty, design a technické řešení drží pohromadě. Web nevzniká jako slepenec oddělených rozhodnutí." },
-              { title: "Po spuštění lze zlepšovat", desc: "Web se dá měřit, upravovat a rozvíjet podle toho, co návštěvníci skutečně dělají a jaké poptávky chodí." }
+              { title: "Řeším návratnost", desc: "Web nemá být jen náklad. Už na začátku řešíme, co má přinést, jaké zákazníky má oslovit a jak má pomoci byznysu." },
+              { title: "Myslím na celý proces", desc: "Neřeším jen jednotlivé obrazovky. Dívám se na cestu návštěvníka od prvního kliknutí až po odeslanou poptávku." },
+              { title: "Spojuju web a systémy", desc: "Díky zkušenostem s vývojem a firemními systémy přemýšlím i nad tím, kde může web vydělávat nebo šetřit čas." },
+              { title: "Mluvím narovinu", desc: "Domlouváme se na jasném rozsahu, ceně i termínu. Když něco nedává smysl, vysvětlím proč a navrhnu lepší postup." }
             ].map((item, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: i * 0.1 }} className="bg-brand-white p-12 border-2 border-brand-black hover:-translate-y-1 hover:shadow-[8px_8px_0px_0px_rgba(18,18,18,1)] transition-[transform,box-shadow] duration-300">
                 <h3 className="text-2xl font-extrabold uppercase tracking-tight mb-6 text-brand-black">{item.title}</h3>

@@ -88,7 +88,6 @@ export function Contact() {
                   <p>Nová 114</p>
                   <p>768 21 Kvasice</p>
                   <p className="pt-3">IČO: 05695961</p>
-                  <p>DIČ: CZ9308234782</p>
                   <p className="pt-3">Fyzická osoba podnikající dle živnostenského zákona, zapsaná v živnostenském rejstříku.</p>
                 </div>
               </div>

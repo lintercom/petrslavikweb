@@ -16,7 +16,6 @@ export function Footer() {
             <div className="space-y-3 text-sm text-brand-black leading-relaxed">
               <p className="font-semibold">Petr Slavík</p>
               <p>IČO: 05695961</p>
-              <p>DIČ: CZ9308234782</p>
               <p>Nová 114, 768 21 Kvasice</p>
               <p>Fyzická osoba podnikající dle živnostenského zákona, zapsaná v živnostenském rejstříku.</p>
               <a href="mailto:petrslavikweb@gmail.com" className="block hover:text-brand-grey-dark transition-colors">

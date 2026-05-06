@@ -73,8 +73,6 @@ export function Home() {
         </div>
       </section>
 
-      <LogoGrid />
-
       <section className="py-16 md:py-24 px-4 bg-brand-white">
         <div className="container mx-auto max-w-6xl">
           <motion.div
@@ -157,6 +155,8 @@ export function Home() {
           </div>
         </div>
       </section>
+
+      <LogoGrid />
 
       <section className="py-16 md:py-24 px-4 bg-brand-white">
         <div className="container mx-auto max-w-4xl">

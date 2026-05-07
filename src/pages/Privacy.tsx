@@ -13,7 +13,7 @@ export function Privacy() {
 
       <section className="py-32 px-4 bg-brand-white">
         <div className="container mx-auto max-w-3xl prose prose-2xl text-brand-grey-medium">
-          <p>Správcem osobních údajů je Petr Slavík, IČO: 05695961, se sídlem Nová 114, 768 21 Kvasice.</p>
+          <p>Správcem osobních údajů je Petr Slavík.</p>
 
           <h2 className="text-brand-black">Jaké údaje zpracovávám</h2>
           <p>Zpracovávám pouze údaje, které mi sami poskytnete prostřednictvím kontaktního formuláře, zejména jméno, e-mail a obsah zprávy.</p>

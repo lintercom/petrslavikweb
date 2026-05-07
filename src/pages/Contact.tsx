@@ -5,11 +5,22 @@ import { trackEvent } from '@/lib/analytics';
 import { BigFooterCTA } from '@/components/blocks/BigFooterCTA';
 import { PageHero } from '@/components/layout/PageHero';
 import { SEO } from '@/components/ui/SEO';
+import { ChevronDown } from 'lucide-react';
+
+const serviceOptions = [
+  'Tvorba webu',
+  'Redesign webu',
+  'Rozšíření a úpravy webu',
+  'Měsíční správa',
+  'Jiné',
+];
 
 export function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState('');
+  const [selectedService, setSelectedService] = useState('');
+  const [isServiceOpen, setIsServiceOpen] = useState(false);
   const formEndpoint = 'https://formsubmit.co/ajax/petrslavikweb@gmail.com';
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -20,6 +31,11 @@ export function Contact() {
 
     if (!form.checkValidity()) {
       form.reportValidity();
+      return;
+    }
+
+    if (!selectedService) {
+      setSubmitError('Vyberte prosím službu, o kterou máte zájem.');
       return;
     }
 
@@ -40,7 +56,9 @@ export function Contact() {
       }
 
       form.reset();
-      trackEvent('form_submit');
+      setSelectedService('');
+      trackEvent('form_submit', { form_id: 'contact_form', service: selectedService });
+      trackEvent('form_submit_success', { form_id: 'contact_form', service: selectedService });
       setIsSubmitted(true);
     } catch {
       setSubmitError('Zprávu se nepodařilo odeslat. Napište mi prosím přímo na petrslavikweb@gmail.com.');
@@ -50,7 +68,7 @@ export function Contact() {
   };
 
   const labelClass = 'block text-xs font-extrabold uppercase tracking-widest text-brand-grey-dark mb-2';
-  const inputClass = 'w-full bg-transparent border-b-2 border-brand-black py-4 text-lg font-medium focus:border-brand-black outline-none transition-colors placeholder:text-brand-grey-dark text-brand-black';
+  const inputClass = 'w-full bg-transparent border-b-2 border-brand-black py-4 text-lg font-medium focus:border-brand-black focus:bg-brand-white outline-none transition-colors placeholder:text-brand-grey-dark text-brand-black autofill:shadow-[inset_0_0_0px_1000px_#F3F2EE]';
 
   return (
     <div className="flex flex-col bg-brand-white">
@@ -67,28 +85,25 @@ export function Contact() {
       <section className="py-24 px-4 bg-brand-white">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <div className="space-y-12">
+            <div>
               <div>
                 <h3 className="text-xs font-extrabold uppercase tracking-widest text-brand-grey-dark mb-6">Email</h3>
                 <div className="space-y-6 text-xl font-extrabold text-brand-black">
                   <p>
                     <span className="block text-xs text-brand-grey-dark mb-1 uppercase tracking-widest">Email</span>
-                    <a href="mailto:petrslavikweb@gmail.com" className="hover:underline">petrslavikweb@gmail.com</a>
+                    <a
+                      href="mailto:petrslavikweb@gmail.com"
+                      className="hover:underline"
+                      data-gtm-event="email_click"
+                      data-gtm-target="petrslavikweb@gmail.com"
+                      onClick={() => trackEvent('email_click', { email: 'petrslavikweb@gmail.com' })}
+                    >
+                      petrslavikweb@gmail.com
+                    </a>
                   </p>
                   <p className="text-base font-medium text-brand-grey-dark leading-relaxed">
                     Nejrychlejší cesta je poslat stručný popis toho, co má web změnit. Nemusíte mít hotové zadání, stačí popsat současný problém.
                   </p>
-                </div>
-              </div>
-
-              <div className="border-2 border-brand-black bg-brand-white p-8 shadow-[4px_4px_0px_0px_rgba(18,18,18,1)]">
-                <h3 className="text-xs font-extrabold uppercase tracking-widest text-brand-grey-dark mb-6">Fakturační údaje</h3>
-                <div className="space-y-2 text-base text-brand-black leading-relaxed">
-                  <p className="font-extrabold">Petr Slavík</p>
-                  <p>Nová 114</p>
-                  <p>768 21 Kvasice</p>
-                  <p className="pt-3">IČO: 05695961</p>
-                  <p className="pt-3">Fyzická osoba podnikající dle živnostenského zákona, zapsaná v živnostenském rejstříku.</p>
                 </div>
               </div>
             </div>
@@ -99,12 +114,20 @@ export function Contact() {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   className="bg-brand-black text-brand-white p-12 border-2 border-brand-black text-center h-full flex flex-col items-center justify-center"
+                  data-gtm-event="form_submit_success"
+                  data-gtm-form="contact_form"
                 >
                   <h3 className="text-3xl font-extrabold uppercase tracking-tight mb-4">Děkuji.</h3>
                   <p className="text-lg text-brand-grey-light">Brzy se vám ozvu na zadaný e-mail.</p>
                 </motion.div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-10" noValidate>
+                <form
+                  onSubmit={handleSubmit}
+                  className="space-y-10"
+                  noValidate
+                  data-gtm-form="contact_form"
+                  data-gtm-event="form_submit_success"
+                >
                   <input type="hidden" name="_subject" value="Nová poptávka z petrslavikweb.cz" />
                   <input type="hidden" name="_template" value="table" />
                   <input type="hidden" name="_captcha" value="false" />
@@ -131,15 +154,40 @@ export function Contact() {
                       <input type="tel" id="phone" name="phone" autoComplete="tel" placeholder="+420 ..." className={inputClass} />
                     </div>
                     <div className="relative">
-                      <label htmlFor="type" className={labelClass}>Co má web řešit *</label>
-                      <select required id="type" name="type" className={`${inputClass} text-brand-black`}>
-                        <option value="">Vyberte...</option>
-                        <option value="nabidka">Lépe vysvětlit nabídku</option>
-                        <option value="poptavky">Získávat více poptávek</option>
-                        <option value="redesign">Nahradit zastaralý web</option>
-                        <option value="obsah">Lépe spravovat obsah</option>
-                        <option value="other">Jiné</option>
-                      </select>
+                      <label id="service-label" className={labelClass}>O jakou službu máte zájem *</label>
+                      <input type="hidden" name="service" value={selectedService} />
+                      <button
+                        type="button"
+                        aria-labelledby="service-label"
+                        aria-expanded={isServiceOpen}
+                        className={`${inputClass} flex items-center justify-between text-left`}
+                        onClick={() => setIsServiceOpen((open) => !open)}
+                        onBlur={() => window.setTimeout(() => setIsServiceOpen(false), 120)}
+                      >
+                        <span className={selectedService ? 'text-brand-black' : 'text-brand-grey-dark'}>
+                          {selectedService || 'Vyberte službu...'}
+                        </span>
+                        <ChevronDown className={`h-5 w-5 shrink-0 transition-transform ${isServiceOpen ? 'rotate-180' : ''}`} />
+                      </button>
+                      {isServiceOpen && (
+                        <div className="absolute left-0 right-0 top-full z-20 mt-2 border-2 border-brand-black bg-brand-white shadow-[4px_4px_0px_0px_rgba(18,18,18,1)]">
+                          {serviceOptions.map((option) => (
+                            <button
+                              key={option}
+                              type="button"
+                              className="block w-full px-4 py-3 text-left text-base font-extrabold uppercase tracking-wide text-brand-black hover:bg-brand-black hover:text-brand-white focus:bg-brand-black focus:text-brand-white focus:outline-none transition-colors"
+                              onMouseDown={(event) => event.preventDefault()}
+                              onClick={() => {
+                                setSelectedService(option);
+                                setIsServiceOpen(false);
+                                setSubmitError('');
+                              }}
+                            >
+                              {option}
+                            </button>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </div>
 
@@ -161,7 +209,14 @@ export function Contact() {
                     </p>
                   )}
 
-                  <Button type="submit" variant="primary" disabled={isSubmitting} className="w-full py-6 text-lg font-extrabold uppercase tracking-widest">
+                  <Button
+                    type="submit"
+                    variant="primary"
+                    disabled={isSubmitting}
+                    className="w-full py-6 text-lg font-extrabold uppercase tracking-widest"
+                    data-gtm-event="contact_form_submit_click"
+                    data-gtm-form="contact_form"
+                  >
                     {isSubmitting ? 'Odesílám...' : 'Domluvit konzultaci'}
                   </Button>
                 </form>

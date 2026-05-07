@@ -48,7 +48,7 @@ export default function App() {
               <Route path="/" element={<Layout />}>
                 <Route index element={<Home />} />
                 <Route path="sluzby" element={<Services />} />
-                <Route path="sluzby/webove-stranky" element={<ServiceWeb />} />
+                <Route path="sluzby/:serviceSlug" element={<ServiceWeb />} />
                 <Route path="cenik" element={<Pricing />} />
                 <Route path="reference" element={<References />} />
                 <Route path="reference/:slug" element={<ReferenceDetail />} />

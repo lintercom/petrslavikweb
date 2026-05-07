@@ -2,6 +2,8 @@ export type EventName =
   | 'click_cta_primary'
   | 'click_cta_secondary'
   | 'form_submit'
+  | 'form_submit_success'
+  | 'email_click'
   | 'calendar_click'
   | 'case_study_open'
   | 'pricing_view';

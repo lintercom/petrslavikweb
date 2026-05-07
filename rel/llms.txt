@@ -6,7 +6,10 @@
 
 - [Úvod](https://www.petrslavikweb.cz/): Přehled nabídky a hlavní problém, který web řeší.
 - [Služby](https://www.petrslavikweb.cz/sluzby): Tvorba webů podle problému klienta.
-- [Tvorba webových stránek](https://www.petrslavikweb.cz/sluzby/webove-stranky): Detail služby tvorby firemních webů.
+- [Tvorba webu](https://www.petrslavikweb.cz/sluzby/tvorba-webu): Detail služby tvorby firemních webů.
+- [Redesign webu](https://www.petrslavikweb.cz/sluzby/redesign-webu): Detail přestavby nefunkčního nebo zastaralého webu.
+- [Rozšíření a úpravy webu](https://www.petrslavikweb.cz/sluzby/rozsireni-upravy-webu): Detail rozvoje existujícího webu.
+- [Měsíční správa](https://www.petrslavikweb.cz/sluzby/mesicni-sprava): Detail dlouhodobé péče o web po spuštění.
 - [Ceník](https://www.petrslavikweb.cz/cenik): Orientační ceny tvorby webů.
 - [Proces](https://www.petrslavikweb.cz/proces): Postup spolupráce od pochopení problému po spuštění.
 - [Blog](https://www.petrslavikweb.cz/blog): Články o struktuře webu, textech, SEO základu, důvěře a poptávkách.

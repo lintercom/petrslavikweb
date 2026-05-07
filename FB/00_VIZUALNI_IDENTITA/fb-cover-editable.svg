@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1640" height="924" viewBox="0 0 1640 924">
+  <rect width="1640" height="924" fill="#121212"/>
+  <rect x="82" y="82" width="1430" height="720" fill="#F3F2EE"/>
+  <rect x="110" y="110" width="1374" height="664" fill="none" stroke="#121212" stroke-width="8"/>
+  <g id="logo-light" font-family="Arial, Helvetica, sans-serif">
+    <circle cx="190" cy="155" r="10" fill="#121212"/>
+    <text x="216" y="164" fill="#121212" font-size="24" font-weight="700" letter-spacing="10">PETR</text>
+    <rect x="166" y="188" width="210" height="52" fill="#121212"/>
+    <text x="186" y="226" fill="#F3F2EE" font-size="38" font-weight="800" letter-spacing="2">SLAVÍK</text>
+  </g>
+  <text x="150" y="340" font-family="Arial, Helvetica, sans-serif" font-size="86" font-weight="900" fill="#121212">VYTVOŘÍM VÁM WEB,</text>
+  <text x="150" y="440" font-family="Arial, Helvetica, sans-serif" font-size="86" font-weight="900" fill="#121212">KTERÝ PŘIVEDE</text>
+  <text x="150" y="540" font-family="Arial, Helvetica, sans-serif" font-size="86" font-weight="900" fill="#121212">SPRÁVNÉ KLIENTY.</text>
+  <text x="150" y="665" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700" fill="#555555">Sdělení, struktura, důvěra a cesta k poptávce.</text>
+  <rect x="150" y="705" width="390" height="70" fill="#121212"/>
+  <text x="198" y="750" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="900" letter-spacing="2" fill="#F3F2EE">PETRSLAVIKWEB.CZ</text>
+</svg>

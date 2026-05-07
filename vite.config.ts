@@ -18,14 +18,29 @@ const seoRoutes = [
     description: 'Tvorba webu, redesign, rozšíření webu a měsíční správa. Weby navržené podle problému, který mají klientovi vyřešit.',
   },
   {
-    path: '/sluzby/webove-stranky',
-    title: 'Tvorba webu, redesign a rozvoj | Petr Slavík',
-    description: 'Tvorba webu na míru, redesign nefunkčního webu, rozšíření funkcionalit a měsíční správa jako součást každého řešení.',
+    path: '/sluzby/tvorba-webu',
+    title: 'Tvorba webu | Petr Slavík',
+    description: 'Tvorba webu na míru: sdělení, struktura, textace, design, vývoj, SEO základ, kontaktní formulář a nasazení.',
+  },
+  {
+    path: '/sluzby/redesign-webu',
+    title: 'Redesign webu | Petr Slavík',
+    description: 'Redesign webu jako přestavba nefunkční prezentace: analýza, nová struktura, texty, důvěra, kontaktní cesta, SEO a přesměrování.',
+  },
+  {
+    path: '/sluzby/rozsireni-upravy-webu',
+    title: 'Rozšíření a úpravy webu | Petr Slavík',
+    description: 'Rozšíření a úpravy webu: nové sekce, formuláře, interakce, napojení na systémy, UX úpravy, rychlost a technické opravy.',
+  },
+  {
+    path: '/sluzby/mesicni-sprava',
+    title: 'Měsíční správa webu | Petr Slavík',
+    description: 'Měsíční správa webu: technická kontrola, drobné úpravy, kontrola formulářů, rozvoj obsahu, měření a dlouhodobá péče.',
   },
   {
     path: '/cenik',
     title: 'Ceník webových služeb | Petr Slavík',
-    description: 'Orientační ceny pro tvorbu webu, redesign, rozšíření webu a měsíční péči, která je součástí každého řešení.',
+    description: 'Orientační ceny pro tvorbu webu, redesign, rozšíření webu a navazující péči po spuštění řešenou měsíčním paušálem podle rozsahu.',
   },
   {
     path: '/proces',

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#121212"/>
+  <rect x="80" y="160" width="920" height="1440" fill="#F3F2EE"/>
+  <rect x="120" y="200" width="840" height="1360" fill="none" stroke="#121212" stroke-width="8"/>
+  <g id="logo-light" font-family="Arial, Helvetica, sans-serif">
+    <circle cx="210" cy="280" r="10" fill="#121212"/>
+    <text x="237" y="289" fill="#121212" font-size="24" font-weight="700" letter-spacing="10">PETR</text>
+    <rect x="186" y="314" width="210" height="52" fill="#121212"/>
+    <text x="206" y="352" fill="#F3F2EE" font-size="38" font-weight="800" letter-spacing="2">SLAVÍK</text>
+  </g>
+  <text x="155" y="655" font-family="Arial, Helvetica, sans-serif" font-size="96" font-weight="900" fill="#121212">KDY VÁM</text>
+  <text x="155" y="775" font-family="Arial, Helvetica, sans-serif" font-size="86" font-weight="900" fill="#121212">WEB PŘESTÁVÁ</text>
+  <text x="155" y="895" font-family="Arial, Helvetica, sans-serif" font-size="96" font-weight="900" fill="#121212">VYDĚLÁVAT?</text>
+  <text x="155" y="1115" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="700" fill="#555555">Napište mi slovo WEB a pošlu vám první otázky k auditu.</text>
+  <rect x="155" y="1380" width="520" height="84" fill="#121212"/>
+  <text x="245" y="1435" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="900" letter-spacing="3" fill="#F3F2EE">JDEME NA TO</text>
+</svg>

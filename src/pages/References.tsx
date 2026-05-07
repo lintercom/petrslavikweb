@@ -38,7 +38,7 @@ export function References() {
                       alt={project.logoAlt}
                       loading="lazy"
                       decoding="async"
-                      className="max-h-24 w-full object-contain"
+                      className="max-h-36 md:max-h-44 w-full object-contain"
                     />
                   </div>
 

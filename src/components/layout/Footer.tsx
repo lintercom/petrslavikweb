@@ -16,9 +16,12 @@ export function Footer() {
             <div className="space-y-3 text-sm text-brand-black leading-relaxed">
               <p className="font-semibold">Petr Slavík</p>
               <p>IČO: 05695961</p>
-              <p>Nová 114, 768 21 Kvasice</p>
-              <p>Fyzická osoba podnikající dle živnostenského zákona, zapsaná v živnostenském rejstříku.</p>
-              <a href="mailto:petrslavikweb@gmail.com" className="block hover:text-brand-grey-dark transition-colors">
+              <a
+                href="mailto:petrslavikweb@gmail.com"
+                className="block hover:text-brand-grey-dark transition-colors"
+                data-gtm-event="email_click"
+                data-gtm-target="petrslavikweb@gmail.com"
+              >
                 petrslavikweb@gmail.com
               </a>
             </div>
@@ -27,7 +30,7 @@ export function Footer() {
           <div>
             <h3 className="font-semibold text-brand-black mb-6">Weby</h3>
             <ul className="space-y-4 text-sm text-brand-grey-dark">
-              <li><Link to="/sluzby/webove-stranky" className="hover:text-brand-black transition-colors">Tvorba webu</Link></li>
+              <li><Link to="/sluzby/tvorba-webu" className="hover:text-brand-black transition-colors">Tvorba webu</Link></li>
               <li><Link to="/sluzby" className="hover:text-brand-black transition-colors">Problémy, které řeším</Link></li>
               <li><Link to="/cenik" className="hover:text-brand-black transition-colors">Ceník webů</Link></li>
               <li><Link to="/reference" className="hover:text-brand-black transition-colors">Reference</Link></li>
@@ -40,7 +43,16 @@ export function Footer() {
               <li><Link to="/proces" className="hover:text-brand-black transition-colors">Proces</Link></li>
               <li><Link to="/blog" className="hover:text-brand-black transition-colors">Blog</Link></li>
               <li><Link to="/o-mne" className="hover:text-brand-black transition-colors">O mně</Link></li>
-              <li><Link to="/kontakt" className="hover:text-brand-black transition-colors">Domluvit konzultaci</Link></li>
+              <li>
+                <Link
+                  to="/kontakt"
+                  className="hover:text-brand-black transition-colors"
+                  data-gtm-event="cta_contact_click"
+                  data-gtm-target="/kontakt"
+                >
+                  Domluvit konzultaci
+                </Link>
+              </li>
             </ul>
           </div>
 

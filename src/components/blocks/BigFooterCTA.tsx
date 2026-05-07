@@ -16,7 +16,7 @@ export function BigFooterCTA() {
           data-spotlight="true"
           className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-brand-white leading-none select-none uppercase mb-6"
         >
-          Proberme to
+          Jdeme na to
         </h2>
         <p className="text-base md:text-xl text-brand-grey-light leading-relaxed max-w-2xl mb-8">
           Napište mi, co má váš web změnit: lépe vysvětlit nabídku, získat poptávky, působit důvěryhodněji nebo se jednodušeji spravovat.

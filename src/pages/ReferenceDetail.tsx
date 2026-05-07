@@ -55,22 +55,26 @@ export function ReferenceDetail() {
               <img
                 src={project.logo}
                 alt={project.logoAlt}
-                className="mb-8 h-28 w-full object-contain"
+                className="mb-8 h-32 md:h-36 w-full object-contain"
               />
               <p className="text-base md:text-lg text-brand-grey-dark leading-relaxed mb-6">
                 {project.detail.introBody}
               </p>
               {project.websiteUrl && (
-                <Button
-                  href={project.websiteUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  variant="outline"
-                  className="w-full sm:w-auto"
-                  iconRight={<ArrowUpRight className="h-4 w-4" />}
-                >
-                  {project.websiteLabel ?? 'Navštívit web'}
-                </Button>
+                <div className="flex justify-center">
+                  <Button
+                    href={project.websiteUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    variant="outline"
+                    className="w-full sm:w-auto"
+                    iconRight={<ArrowUpRight className="h-4 w-4" />}
+                    data-gtm-event="project_website_click"
+                    data-gtm-project={project.slug}
+                  >
+                    {project.websiteLabel ?? 'Navštívit web'}
+                  </Button>
+                </div>
               )}
             </div>
 
@@ -113,7 +117,16 @@ export function ReferenceDetail() {
               Domluvit konzultaci
             </Button>
             {project.websiteUrl ? (
-              <Button href={project.websiteUrl} target="_blank" rel="noreferrer" variant="outline" size="xl" iconRight={<ArrowUpRight className="h-4 w-4" />}>
+              <Button
+                href={project.websiteUrl}
+                target="_blank"
+                rel="noreferrer"
+                variant="outline"
+                size="xl"
+                iconRight={<ArrowUpRight className="h-4 w-4" />}
+                data-gtm-event="project_website_click"
+                data-gtm-project={project.slug}
+              >
                 Otevřít živý web
               </Button>
             ) : (

@@ -21,7 +21,7 @@ export function Pricing() {
       time: "4-6 týdnů",
       suitedFor: "klienty, kteří začínají, potřebují jednoduchý funkční web a chtějí jasně vysvětlit nabídku",
       desc: "Základní web pro situace, kdy potřebujete, aby návštěvník rychle pochopil, co děláte, pro koho to je a proč vás má kontaktovat.",
-      features: ["Ujasnění sdělení", "Návrh jednoduché struktury", "Design na míru", "Responzivní zpracování", "Základní textace", "SEO základ", "Kontaktní formulář", "Rychlé načítání", "Péče po spuštění"],
+      features: ["Ujasnění sdělení", "Návrh jednoduché struktury", "Design na míru", "Responzivní zpracování", "Základní textace", "SEO základ", "Kontaktní formulář", "Rychlé načítání", "Nastavení navazující péče"],
       notIncluded: ["Hlubší práce s konverzí", "Více cílových skupin", "Obsahová strategie", "Analytika"]
     },
     {
@@ -31,7 +31,7 @@ export function Pricing() {
       time: "6-10 týdnů",
       suitedFor: "klienty, kteří chtějí z webu poptávky, mají konkurenci a potřebují víc než jen vizitku",
       desc: "Web, který neřeší jen vzhled, ale hlavně chování návštěvníka a cestu k akci. Cílem je dovést správného člověka ke kontaktu nebo poptávce.",
-      features: ["Struktura podle rozhodování zákazníka", "Konverzní cesta a CTA", "Více typů návštěvníků", "Cílenější textace", "Důvěryhodnostní prvky", "Pokročilejší SEO základ", "Měření a konverze", "Optimalizace mobilu a rychlosti", "Péče po spuštění"],
+      features: ["Struktura podle rozhodování zákazníka", "Konverzní cesta a CTA", "Více typů návštěvníků", "Cílenější textace", "Důvěryhodnostní prvky", "Pokročilejší SEO základ", "Měření a konverze", "Optimalizace mobilu a rychlosti", "Nastavení navazující péče"],
       featured: true
     },
     {
@@ -41,7 +41,7 @@ export function Pricing() {
       time: "6-10 týdnů",
       suitedFor: "weby, které nepřinášejí poptávky, působí zastarale nebo nevysvětlují nabídku",
       desc: "Přestavba nefunkčního nebo zastaralého webu. Řeším, kde se návštěvník ztrácí, proč neudělá další krok a co snižuje důvěru.",
-      features: ["Analýza současného webu", "Nová struktura", "Úprava nebo přepsání textů", "Zlepšení konverzní cesty", "Technické SEO", "Přesměrování URL", "Měření výsledků", "Péče po spuštění"]
+      features: ["Analýza současného webu", "Nová struktura", "Úprava nebo přepsání textů", "Zlepšení konverzní cesty", "Technické SEO", "Přesměrování URL", "Měření výsledků", "Nastavení navazující péče"]
     },
     {
       label: "Rozvoj webu",
@@ -50,7 +50,7 @@ export function Pricing() {
       time: "podle rozsahu",
       suitedFor: "klienty, kteří už web mají a chtějí ho posouvat dál",
       desc: "Vývoj funkcionalit a postupné vylepšování webu podle konkrétních potřeb, reálného používání a dalšího růstu firmy.",
-      features: ["Nové sekce nebo stránky", "Formuláře", "Logika a interakce", "Napojení na systémy", "Úpravy UX", "Zlepšení výkonu", "Dlouhodobý rozvoj", "Péče po spuštění"]
+      features: ["Nové sekce nebo stránky", "Formuláře", "Logika a interakce", "Napojení na systémy", "Úpravy UX", "Zlepšení výkonu", "Dlouhodobý rozvoj", "Nastavení navazující péče"]
     }
   ];
 
@@ -58,7 +58,7 @@ export function Pricing() {
     <div className="flex flex-col bg-brand-white">
       <SEO
         title="Ceník webových služeb | Petr Slavík"
-        description="Orientační ceny pro základní web, pokročilý web, redesign, rozšíření webu a péči po spuštění, která je součástí každého řešení."
+        description="Orientační ceny pro základní web, pokročilý web, redesign, rozšíření webu a navazující péči po spuštění řešenou měsíčním paušálem podle rozsahu."
         path="/cenik"
         structuredData={[
           serviceSchema({
@@ -74,7 +74,7 @@ export function Pricing() {
       />
       <PageHero
         title="Ceník."
-        description="Cena závisí na složitosti projektu, stavu současného webu, rozsahu obsahu a funkcích, které má web řešit. Péče po spuštění je součástí každého řešení."
+        description="Cena závisí na složitosti projektu, stavu současného webu, rozsahu obsahu a funkcích, které má web řešit. Po spuštění navazuje péče řešená měsíčním paušálem podle rozsahu spolupráce."
       />
 
       <section className="py-16 md:py-24 px-4 bg-brand-white">
@@ -149,13 +149,13 @@ export function Pricing() {
             <div>
               <h2 className="text-4xl md:text-5xl font-extrabold uppercase tracking-tight mb-6 text-brand-black">Péče po spuštění.</h2>
               <p className="text-lg text-brand-grey-dark leading-relaxed max-w-xl">
-                Web po spuštění nekončí. Péče po spuštění je součástí každého mého řešení, protože web není jednorázová věc. Bez údržby a průběžných úprav postupně ztrácí výkon.
+                Web po spuštění nekončí. Proto na každý projekt navazuje péče po spuštění, řešená měsíčním paušálem. Jeho výše závisí na tom, co ode mě budete pravidelně potřebovat: od technické kontroly přes drobné úpravy až po průběžný rozvoj webu.
               </p>
             </div>
             <div className="space-y-6">
               <div className="bg-brand-white p-8 border-2 border-brand-black shadow-[4px_4px_0px_0px_rgba(18,18,18,1)]">
                 <h3 className="text-xl font-extrabold uppercase text-brand-black mb-2">Stabilita webu</h3>
-                <div className="text-2xl font-extrabold text-brand-black mb-6">součást každého řešení</div>
+                <div className="text-2xl font-extrabold text-brand-black mb-6">měsíční paušál podle rozsahu</div>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-brand-grey-dark text-sm">
                   {['Technická údržba', 'Drobné úpravy', 'Kontrola funkčnosti', 'Bezpečnostní dohled', 'Kontrola formulářů', 'Průběžná zlepšení'].map((item) => (
                     <li key={item} className="flex items-center gap-2 font-medium">

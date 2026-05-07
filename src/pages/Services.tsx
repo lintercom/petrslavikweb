@@ -11,25 +11,25 @@ export function Services() {
     {
       title: "Tvorba webu",
       desc: "Web na míru podle složitosti projektu. Pokrývá vše od jednoduchého webu s jasnou nabídkou přes firemní prezentaci až po komplexnější řešení se strukturou, obsahem a analytikou.",
-      link: "/sluzby/webove-stranky",
+      link: "/sluzby/tvorba-webu",
       features: ["Nový web", "Jasná nabídka", "Struktura obsahu", "Cesta k poptávce", "SEO základ", "Možnost dalšího růstu"]
     },
     {
       title: "Redesign webu",
       desc: "Přestavba nefunkčního nebo zastaralého webu. Pro weby, které už existují, ale nepřinášejí poptávky, špatně vysvětlují nabídku nebo nepůsobí důvěryhodně.",
-      link: "/sluzby/webove-stranky",
+      link: "/sluzby/redesign-webu",
       features: ["Analýza webu", "Nová struktura", "Přepsání klíčových částí", "Konverzní cesta", "SEO a přesměrování", "Důvěryhodnost"]
     },
     {
       title: "Rozšíření a úpravy webu",
       desc: "Vývoj funkcionalit a postupné vylepšování. Pro klienty, kteří už web mají a chtějí doplnit nové části, formuláře, logiku, napojení na systémy nebo zlepšit použitelnost.",
-      link: "/sluzby/webove-stranky",
+      link: "/sluzby/rozsireni-upravy-webu",
       features: ["Nové sekce", "Nové stránky", "Formuláře", "Interakce", "Napojení na systémy", "UX a výkon"]
     },
     {
       title: "Měsíční správa",
-      desc: "Web bez starostí a s dlouhodobým rozvojem. Tahle služba není volitelná, je součástí každého projektu, protože web není jednorázová věc a bez správy postupně ztrácí výkon.",
-      link: "/sluzby/webove-stranky",
+      desc: "Web bez starostí a s dlouhodobým rozvojem. Po spuštění navazuje měsíční péče placená paušálem podle toho, co budete pravidelně potřebovat: údržbu, drobné úpravy, kontrolu funkčnosti nebo další rozvoj.",
+      link: "/sluzby/mesicni-sprava",
       features: ["Technická údržba", "Drobné úpravy", "Kontrola funkčnosti", "Průběžná zlepšení", "Dohled nad webem", "Dlouhodobý rozvoj"]
     }
   ];

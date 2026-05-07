@@ -2,7 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.petrslavikweb.cz/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://www.petrslavikweb.cz/sluzby</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.petrslavikweb.cz/sluzby/webove-stranky</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.petrslavikweb.cz/sluzby/tvorba-webu</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.petrslavikweb.cz/sluzby/redesign-webu</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.petrslavikweb.cz/sluzby/rozsireni-upravy-webu</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.petrslavikweb.cz/sluzby/mesicni-sprava</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.petrslavikweb.cz/reference</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.petrslavikweb.cz/reference/web-pro-farmu-pod-janovou-horou</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.petrslavikweb.cz/reference/web-pro-osobniho-fitness-trenera</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>

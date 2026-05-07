@@ -50,11 +50,19 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
     if (href) {
       const isInternal = href.startsWith('/');
+      const defaultGtmProps = href === '/kontakt'
+        ? {
+            'data-gtm-event': 'cta_contact_click',
+            'data-gtm-target': href,
+          }
+        : {};
+
       if (isInternal) {
         return (
           <Link
             to={href}
             className={cn(baseStyles, variants[variant], variant !== 'link' ? sizes[size] : '', className)}
+            {...defaultGtmProps}
             {...anchorProps}
           >
             {content}
@@ -66,6 +74,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         <a
           href={href}
           className={cn(baseStyles, variants[variant], variant !== 'link' ? sizes[size] : '', className)}
+          {...defaultGtmProps}
           {...anchorProps}
         >
           {content}

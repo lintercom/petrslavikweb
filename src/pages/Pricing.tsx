@@ -25,7 +25,7 @@ export function Pricing() {
       notIncluded: ["Hlubší práce s konverzí", "Více cílových skupin", "Obsahová strategie", "Analytika"]
     },
     {
-      label: "Web jako nástroj pro klienty",
+      label: "Web jako nástroj",
       title: "Pokročilý web",
       price: "od 60 000 Kč",
       time: "6-10 týdnů",
@@ -37,7 +37,7 @@ export function Pricing() {
     {
       label: "Přestavba webu",
       title: "Redesign webu",
-      price: "od 60 000 Kč",
+      price: "individuálně",
       time: "6-10 týdnů",
       suitedFor: "weby, které nepřinášejí poptávky, působí zastarale nebo nevysvětlují nabídku",
       desc: "Přestavba nefunkčního nebo zastaralého webu. Řeším, kde se návštěvník ztrácí, proč neudělá další krok a co snižuje důvěru.",
@@ -92,7 +92,7 @@ export function Pricing() {
                 <div className={`text-xs font-extrabold uppercase tracking-widest mb-6 ${plan.featured ? 'text-brand-grey-light' : 'text-brand-grey-dark'}`}>
                   {plan.label}
                 </div>
-                <h3 className="text-2xl font-extrabold uppercase tracking-tight mb-4">{plan.title}</h3>
+                <h3 className={`text-2xl font-extrabold uppercase tracking-tight mb-4 ${plan.featured ? '!text-brand-white' : '!text-brand-black'}`}>{plan.title}</h3>
                 <div className="text-2xl font-extrabold mb-2">{plan.price}</div>
                 <div className={`text-xs font-extrabold uppercase tracking-widest mb-6 ${plan.featured ? 'text-brand-grey-light/60' : 'text-brand-grey-dark/60'}`}>
                   {plan.time}
@@ -106,12 +106,12 @@ export function Pricing() {
                 </div>
 
                 <div className="flex-grow mb-8">
-                  <h4 className="text-xs font-extrabold uppercase tracking-widest mb-4">V ceně:</h4>
+                  <h4 className={`text-xs font-extrabold uppercase tracking-widest mb-4 ${plan.featured ? '!text-brand-white' : '!text-brand-black'}`}>V ceně:</h4>
                   <ul className="space-y-3">
                     {plan.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-3">
                         <ShieldCheck className={`w-4 h-4 shrink-0 mt-0.5 ${plan.featured ? 'text-brand-white' : 'text-brand-black'}`} />
-                        <span className="font-medium text-sm">{feature}</span>
+                        <span className={`font-medium text-sm ${plan.featured ? 'text-brand-grey-light' : 'text-brand-grey-dark'}`}>{feature}</span>
                       </li>
                     ))}
                   </ul>

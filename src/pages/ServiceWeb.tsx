@@ -210,7 +210,7 @@ export function ServiceWeb() {
   if (!service) {
     return (
       <div className="flex flex-col bg-brand-white">
-        <SEO title="Služba nenalezena | Petr Slavík" description="Požadovaný detail služby nebyl nalezen." path={`/sluzby/${serviceSlug ?? ''}`} />
+        <SEO title="Služba nenalezena | Petr Slavík" description="Požadovaný detail služby nebyl nalezen." path={`/sluzby/${serviceSlug ?? ''}`} noIndex />
         <PageHero title="Služba nenalezena." description="Tento detail služby neexistuje nebo byl přesunut." />
         <section className="py-16 md:py-24 px-4 bg-brand-white">
           <div className="container mx-auto max-w-3xl">

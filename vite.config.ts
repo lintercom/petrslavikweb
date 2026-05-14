@@ -2,7 +2,8 @@ import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import fs from 'fs';
 import path from 'path';
-import { defineConfig, loadEnv, type Plugin } from 'vite';
+import { pathToFileURL } from 'url';
+import { build, defineConfig, loadEnv, type Plugin } from 'vite';
 
 const siteUrl = 'https://www.petrslavikweb.cz';
 
@@ -125,17 +126,41 @@ const seoRoutes = [
     title: 'Web pro osobního fitness trenéra | Petr Slavík',
     description: 'Reference projektu pro osobního fitness trenéra: web s rezervačním systémem Reenio, jasnou prezentací služeb a automatizací objednávek.',
   },
+  {
+    path: '/ochrana-osobnich-udaju',
+    title: 'Ochrana osobních údajů | Petr Slavík',
+    description: 'Informace o zpracování osobních údajů na webu Petr Slavík.',
+  },
+  {
+    path: '/cookies',
+    title: 'Cookies | Petr Slavík',
+    description: 'Informace o používání cookies na webu Petr Slavík.',
+  },
 ];
 
 function escapeHtml(value: string) {
   return value.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
+function stripHeadTagsFromRenderedHtml(html: string) {
+  return html
+    .replace(/<title>[\s\S]*?<\/title>/g, '')
+    .replace(/<meta\b[^>]*\/?>/g, '')
+    .replace(/<link\b[^>]*\/?>/g, '')
+    .replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g, '');
+}
+
+function extractStructuredDataScripts(html: string) {
+  return Array.from(html.matchAll(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g))
+    .map((match) => match[0])
+    .join('');
+}
+
 function staticRouteHtmlPlugin(): Plugin {
   return {
     name: 'static-route-html',
     apply: 'build',
-    closeBundle() {
+    async closeBundle() {
       const distDir = path.resolve(__dirname, 'dist');
       const indexPath = path.join(distDir, 'index.html');
 
@@ -144,11 +169,48 @@ function staticRouteHtmlPlugin(): Plugin {
       }
 
       const baseHtml = fs.readFileSync(indexPath, 'utf8');
+      let renderRoute: ((routePath: string) => { html: string; scripts: string }) | undefined;
+
+      try {
+        const ssrDir = path.resolve(__dirname, 'dist-ssr');
+        await build({
+          configFile: false,
+          root: __dirname,
+          plugins: [react(), tailwindcss()],
+          resolve: {
+            alias: {
+              '@': path.resolve(__dirname, './src'),
+            },
+          },
+          define: {
+            'import.meta.env.APP_URL': JSON.stringify(siteUrl),
+          },
+          build: {
+            ssr: path.resolve(__dirname, 'src/entry-server.tsx'),
+            outDir: ssrDir,
+            emptyOutDir: true,
+            rollupOptions: {
+              output: {
+                entryFileNames: 'entry-server.js',
+              },
+            },
+          },
+        });
+
+        const serverEntry = path.join(ssrDir, 'entry-server.js');
+        const moduleUrl = `${pathToFileURL(serverEntry).href}?t=${Date.now()}`;
+        const serverModule = await import(moduleUrl);
+        renderRoute = serverModule.renderRoute;
+      } catch (error) {
+        this.warn(`Static prerender failed, route HTML will contain SEO head only: ${error}`);
+      }
+
       const withRouteHead = (route: (typeof seoRoutes)[number]) => {
         const url = `${siteUrl}${route.path === '/' ? '' : route.path}`;
         const title = escapeHtml(route.title);
         const description = escapeHtml(route.description);
         const type = route.type ?? 'website';
+        const rendered = renderRoute?.(route.path);
 
         let html = baseHtml
           .replace(/<title>.*?<\/title>/, `<title>${title}</title>`)
@@ -160,6 +222,13 @@ function staticRouteHtmlPlugin(): Plugin {
 
         html = html.replace(/<link rel="canonical" href=".*?" \/>\n\s*/g, '');
         html = html.replace('</title>', `</title>\n    <link rel="canonical" href="${url}" />`);
+        if (rendered) {
+          html = html.replace('<div id="root"></div>', `<div id="root">${stripHeadTagsFromRenderedHtml(rendered.html)}</div>`);
+          const structuredDataScripts = rendered.scripts || extractStructuredDataScripts(rendered.html);
+          if (structuredDataScripts) {
+            html = html.replace('</head>', `    ${structuredDataScripts}\n  </head>`);
+          }
+        }
         return html;
       };
 

@@ -15,7 +15,7 @@ export function BlogDetail() {
   if (!post) {
     return (
       <div className="flex flex-col bg-brand-white">
-        <SEO title="Článek nenalezen | Petr Slavík" description="Požadovaný článek nebyl nalezen." path={`/blog/${slug ?? ''}`} />
+        <SEO title="Článek nenalezen | Petr Slavík" description="Požadovaný článek nebyl nalezen." path={`/blog/${slug ?? ''}`} noIndex />
         <PageHero title="Článek nenalezen.">
           <Link to="/blog" className="inline-flex items-center gap-2 text-brand-grey-light hover:text-brand-white transition-colors mb-10 font-semibold uppercase tracking-widest text-sm">
             <ArrowLeft className="w-4 h-4" /> Zpět na blog

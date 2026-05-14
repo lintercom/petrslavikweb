@@ -48,11 +48,19 @@ export function professionalServiceSchema() {
     name: 'Petr Slavík - tvorba firemních webů',
     url: SITE_URL,
     email: SITE_EMAIL,
+    taxID: '05695961',
+    priceRange: 'od 35 000 Kč',
     image: absoluteUrl('/og-image.svg'),
-    areaServed: {
-      '@type': 'Country',
-      name: 'Česko',
-    },
+    areaServed: [
+      {
+        '@type': 'Country',
+        name: 'Česko',
+      },
+      {
+        '@type': 'AdministrativeArea',
+        name: 'Zlínský kraj',
+      },
+    ],
     serviceType: [
       'tvorba webových stránek',
       'firemní weby',
@@ -60,6 +68,32 @@ export function professionalServiceSchema() {
       'SEO základ',
       'měření poptávek',
     ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Webové služby',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          name: 'Tvorba webu',
+          url: absoluteUrl('/sluzby/tvorba-webu'),
+        },
+        {
+          '@type': 'Offer',
+          name: 'Redesign webu',
+          url: absoluteUrl('/sluzby/redesign-webu'),
+        },
+        {
+          '@type': 'Offer',
+          name: 'Rozšíření a úpravy webu',
+          url: absoluteUrl('/sluzby/rozsireni-upravy-webu'),
+        },
+        {
+          '@type': 'Offer',
+          name: 'Měsíční správa webu',
+          url: absoluteUrl('/sluzby/mesicni-sprava'),
+        },
+      ],
+    },
     founder: {
       '@id': `${SITE_URL}/#person`,
     },

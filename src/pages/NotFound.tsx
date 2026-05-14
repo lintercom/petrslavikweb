@@ -11,6 +11,7 @@ export function NotFound() {
         title="Stránka nenalezena | Petr Slavík"
         description="Požadovaná stránka neexistuje nebo byla přesunuta."
         path="/404"
+        noIndex
       />
       <PageHero title="Stránka nenalezena.">
         <Link to="/" className="inline-flex items-center gap-2 text-brand-grey-light hover:text-brand-white transition-colors mb-10 font-semibold uppercase tracking-widest text-sm">

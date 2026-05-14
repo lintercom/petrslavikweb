@@ -7,9 +7,10 @@ interface SEOProps {
   image?: string;
   type?: 'website' | 'article';
   structuredData?: Record<string, unknown> | Record<string, unknown>[];
+  noIndex?: boolean;
 }
 
-export function SEO({ title, description, path, image = '/og-image.svg', type = 'website', structuredData }: SEOProps) {
+export function SEO({ title, description, path, image = '/og-image.svg', type = 'website', structuredData, noIndex = false }: SEOProps) {
   const siteUrl = import.meta.env.APP_URL || 'https://www.petrslavikweb.cz';
   const url = `${siteUrl}${path}`;
   const imageUrl = `${siteUrl}${image}`;
@@ -19,6 +20,7 @@ export function SEO({ title, description, path, image = '/og-image.svg', type = 
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
+      {noIndex && <meta name="robots" content="noindex,follow" />}
       <link rel="canonical" href={url} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />

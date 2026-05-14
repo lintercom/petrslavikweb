@@ -19,7 +19,7 @@ export function ReferenceDetail() {
   if (!project) {
     return (
       <div className="flex flex-col bg-brand-white">
-        <SEO title="Reference nenalezena | Petr Slavík" description="Požadovaný detail nebyl nalezen." path={`/reference/${slug ?? ''}`} />
+        <SEO title="Reference nenalezena | Petr Slavík" description="Požadovaný detail nebyl nalezen." path={`/reference/${slug ?? ''}`} noIndex />
         <PageHero title="Detail nenalezen.">
           <Link to="/reference" className="inline-flex items-center gap-2 text-brand-grey-light hover:text-brand-white transition-colors mb-10 font-semibold uppercase tracking-widest text-sm">
             <ArrowLeft className="w-4 h-4" /> Zpět na reference

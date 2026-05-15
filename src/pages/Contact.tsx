@@ -21,7 +21,7 @@ export function Contact() {
   const [submitError, setSubmitError] = useState('');
   const [selectedService, setSelectedService] = useState('');
   const [isServiceOpen, setIsServiceOpen] = useState(false);
-  const formEndpoint = 'https://formsubmit.co/ajax/petrslavikweb@gmail.com';
+  const formEndpoint = '/contact.php';
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -52,7 +52,8 @@ export function Contact() {
       });
 
       if (!response.ok) {
-        throw new Error('Form submit failed');
+        const payload = await response.json().catch(() => null);
+        throw new Error(payload?.message || 'Form submit failed');
       }
 
       form.reset();

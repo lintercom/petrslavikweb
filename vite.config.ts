@@ -10,7 +10,7 @@ const siteUrl = 'https://www.petrslavikweb.cz';
 const seoRoutes = [
   {
     path: '/',
-    title: 'Petr Slavík | Weby, které řeší problém',
+    title: 'Tvorba webových stránek na míru | Petr Slavík',
     description: 'Tvorba firemních webů, které jasně vysvětlí nabídku, budují důvěru a pomáhají získávat poptávky.',
   },
   {

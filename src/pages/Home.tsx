@@ -38,7 +38,7 @@ export function Home() {
   return (
     <div className="flex flex-col bg-brand-white">
       <SEO
-        title="Petr Slavík | Weby, které řeší problém"
+        title="Tvorba webových stránek na míru | Petr Slavík"
         description="Tvorba firemních webů, které jasně vysvětlí nabídku, budují důvěru a pomáhají získávat poptávky."
         path="/"
         structuredData={[personSchema(), websiteSchema(), professionalServiceSchema(), faqSchema]}
@@ -58,7 +58,7 @@ export function Home() {
           >
             <div>
               <p className="text-xl md:text-2xl font-medium leading-relaxed text-brand-black">
-                Stavím weby pro firmy, které potřebují jasně vysvětlit svou nabídku, získávat poptávky a nepůsobit jako další zaměnitelná prezentace.
+                Stavím weby pro klienty, kteří potřebují jasně vysvětlit svou nabídku, získávat poptávky a nepůsobit jako další zaměnitelná prezentace.
               </p>
             </div>
             <div className="flex flex-col justify-between">
@@ -125,8 +125,8 @@ export function Home() {
             transition={{ duration: 0.8 }}
             className="mb-16"
           >
-            <SpotlightHeading as="h2" text="Kdy vám pomůžu." size="md" className="mb-4" />
-            <p className="text-xl text-brand-grey-light max-w-2xl">Weby pro firmy a živnostníky, kteří potřebují, aby návštěvník rychle pochopil hodnotu jejich práce.</p>
+            <SpotlightHeading as="h2" text="S čím vám pomůžu." size="md" className="mb-4" />
+            <p className="text-xl text-brand-grey-light max-w-2xl">Weby pro klienty, kteří potřebují, aby návštěvník rychle pochopil hodnotu jejich práce.</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-16">

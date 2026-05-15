@@ -156,6 +156,39 @@ function extractStructuredDataScripts(html: string) {
     .join('');
 }
 
+function removeStructuredDataScripts(html: string) {
+  return html.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g, '');
+}
+
+function removeDuplicateHeadTags(html: string) {
+  let seenTitle = false;
+  let seenCanonical = false;
+  const seenMeta = new Set<string>();
+
+  return html
+    .replace(/<title>[\s\S]*?<\/title>/g, (match) => {
+      if (seenTitle) return '';
+      seenTitle = true;
+      return match;
+    })
+    .replace(/<link rel="canonical" href=".*?" \/?>/g, (match) => {
+      if (seenCanonical) return '';
+      seenCanonical = true;
+      return match;
+    })
+    .replace(/<meta\b[^>]*\/?>/g, (match) => {
+      const key =
+        match.match(/\bname="([^"]+)"/)?.[1] ??
+        match.match(/\bproperty="([^"]+)"/)?.[1];
+
+      if (!key) return match;
+      if (seenMeta.has(key)) return '';
+
+      seenMeta.add(key);
+      return match;
+    });
+}
+
 function staticRouteHtmlPlugin(): Plugin {
   return {
     name: 'static-route-html',
@@ -213,23 +246,27 @@ function staticRouteHtmlPlugin(): Plugin {
         const rendered = renderRoute?.(route.path);
 
         let html = baseHtml
-          .replace(/<title>.*?<\/title>/, `<title>${title}</title>`)
-          .replace(/<meta name="description" content=".*?" \/>/, `<meta name="description" content="${description}" />`)
-          .replace(/<meta property="og:title" content=".*?" \/>/, `<meta property="og:title" content="${title}" />`)
-          .replace(/<meta property="og:description" content=".*?" \/>/, `<meta property="og:description" content="${description}" />`)
-          .replace(/<meta property="og:type" content=".*?" \/>/, `<meta property="og:type" content="${type}" />`)
-          .replace(/<meta property="og:url" content=".*?" \/>/, `<meta property="og:url" content="${url}" />`);
+          .replace(/<title>.*?<\/title>/, `<title data-rh="true">${title}</title>`)
+          .replace(/<meta name="description" content=".*?" \/>/, `<meta data-rh="true" name="description" content="${description}" />`)
+          .replace(/<meta property="og:title" content=".*?" \/>/, `<meta data-rh="true" property="og:title" content="${title}" />`)
+          .replace(/<meta property="og:description" content=".*?" \/>/, `<meta data-rh="true" property="og:description" content="${description}" />`)
+          .replace(/<meta property="og:type" content=".*?" \/>/, `<meta data-rh="true" property="og:type" content="${type}" />`)
+          .replace(/<meta property="og:url" content=".*?" \/>/, `<meta data-rh="true" property="og:url" content="${url}" />`);
 
         html = html.replace(/<link rel="canonical" href=".*?" \/>\n\s*/g, '');
-        html = html.replace('</title>', `</title>\n    <link rel="canonical" href="${url}" />`);
+        html = html.replace('</title>', `</title>\n    <link data-rh="true" rel="canonical" href="${url}" />`);
         if (rendered) {
-          html = html.replace('<div id="root"></div>', `<div id="root">${stripHeadTagsFromRenderedHtml(rendered.html)}</div>`);
+          const renderedBody = stripHeadTagsFromRenderedHtml(removeStructuredDataScripts(rendered.html));
+          html = html.replace('<div id="root"></div>', `<div id="root">${renderedBody}</div>`);
           const structuredDataScripts = rendered.scripts || extractStructuredDataScripts(rendered.html);
           if (structuredDataScripts) {
-            html = html.replace('</head>', `    ${structuredDataScripts}\n  </head>`);
+            html = html.replace(
+              '</head>',
+              `    ${structuredDataScripts.replace(/<script /g, '<script data-rh="true" ')}\n  </head>`,
+            );
           }
         }
-        return html;
+        return removeDuplicateHeadTags(html);
       };
 
       for (const route of seoRoutes) {

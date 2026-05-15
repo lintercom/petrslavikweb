@@ -15,6 +15,7 @@ export function SEO({ title, description, path, image = '/og-image.svg', type = 
   const url = `${siteUrl}${path}`;
   const imageUrl = `${siteUrl}${image}`;
   const jsonLd = Array.isArray(structuredData) ? structuredData : structuredData ? [structuredData] : [];
+  const shouldRenderStructuredData = typeof window === 'undefined';
 
   return (
     <Helmet>
@@ -35,7 +36,7 @@ export function SEO({ title, description, path, image = '/og-image.svg', type = 
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={imageUrl} />
-      {jsonLd.map((data, index) => (
+      {shouldRenderStructuredData && jsonLd.map((data, index) => (
         <script key={index} type="application/ld+json">
           {JSON.stringify(data)}
         </script>

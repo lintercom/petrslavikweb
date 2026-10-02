@@ -3,7 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Google Tag Manager -->
+    <!-- Consent is restored before any Google tag can send data. -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+      });
+      try {
+        if (window.localStorage.getItem('cookie-consent') === 'all') {
+          gtag('consent', 'update', { analytics_storage: 'granted' });
+        }
+      } catch (_) {
+        // Storage can be unavailable; keep the default until the user chooses.
+      }
+    </script>
+    <!-- Google Tag Manager: GA4 events are sent directly via gtag.js. -->
     <script>
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -11,15 +29,9 @@
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-KBNLBZ73');
     </script>
-    <!-- End Google Tag Manager -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6M866VDMWK"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('consent', 'default', {
-        analytics_storage: 'denied',
-      });
       gtag('js', new Date());
       gtag('config', 'G-6M866VDMWK');
     </script>
@@ -66,7 +78,7 @@
         "sameAs": []
       }
     </script>
-    <script type="module" crossorigin src="/assets/index-SWT-7_HD.js"></script>
+    <script type="module" crossorigin src="/assets/index-wx9xCe0r.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-DZhWaAVR.css">
       <script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"Blog o tvorbě firemních webů","url":"https://www.petrslavikweb.cz/blog","inLanguage":"cs-CZ","blogPost":[{"@type":"BlogPosting","headline":"Proč web nepřivádí poptávky","description":"Proč firemní web nepřivádí poptávky a jak zlepšit strukturu, texty, důvěru a cestu návštěvníka ke kontaktu.","url":"https://www.petrslavikweb.cz/blog/proc-web-neprivadi-poptavky","datePublished":"2026-01-12"},{"@type":"BlogPosting","headline":"Jak vysvětlit nabídku na webu","description":"Jak na webu srozumitelně vysvětlit nabídku, strukturovat služby a ukázat zákazníkovi důvod ke kontaktu.","url":"https://www.petrslavikweb.cz/blog/jak-vysvetlit-nabidku-na-webu","datePublished":"2026-01-19"},{"@type":"BlogPosting","headline":"Kdy dává smysl redesign webu","description":"Kdy dává smysl redesign firemního webu a jak poznat, že problém není jen ve vzhledu, ale ve struktuře a sdělení.","url":"https://www.petrslavikweb.cz/blog/redesign-webu-kdy-dava-smysl","datePublished":"2026-01-26"},{"@type":"BlogPosting","headline":"Kolik stojí firemní web","description":"Kolik stojí firemní web, co cenu ovlivňuje a proč nejde cenu dobře určit jen podle počtu podstránek.","url":"https://www.petrslavikweb.cz/blog/kolik-stoji-firemni-web","datePublished":"2026-02-02"},{"@type":"BlogPosting","headline":"Tvorba webu pro služby","description":"Jak má fungovat web pro firmy a odborníky, kteří prodávají služby: jasná nabídka, důvěra, postup spolupráce a cesta k poptávce.","url":"https://www.petrslavikweb.cz/blog/tvorba-webu-pro-sluzby","datePublished":"2026-02-09"},{"@type":"BlogPosting","headline":"SEO základ firemního webu","description":"Co má obsahovat SEO základ firemního webu: struktura stránek, titulky, metadata, interní odkazy, rychlost, sitemap, schema.org a měření výsledků.","url":"https://www.petrslavikweb.cz/blog/seo-zaklad-firemniho-webu","datePublished":"2026-02-16"},{"@type":"BlogPosting","headline":"Web pro lokální podnikání","description":"Jak postavit web pro lokální podnikání: důvěryhodnost, lokální dohledatelnost, jasné služby, kontaktní cesta a obsah pro zákazníky z okolí.","url":"https://www.petrslavikweb.cz/blog/web-pro-lokalni-podnikani","datePublished":"2026-02-23"},{"@type":"BlogPosting","headline":"Jak vybrat tvůrce webu","description":"Podle čeho vybrat tvůrce webu pro firemní web: strategie, texty, technické SEO, měření, komunikace a schopnost řešit obchodní problém.","url":"https://www.petrslavikweb.cz/blog/jak-vybrat-tvurce-webu","datePublished":"2026-03-02"}]}</script><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Úvod","item":"https://www.petrslavikweb.cz/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.petrslavikweb.cz/blog"}]}</script>
   </head>

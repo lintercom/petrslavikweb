@@ -1,18 +1,16 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { setCookieConsent } from '@/lib/analytics';
+import { getCookieConsent, setCookieConsent } from '@/lib/analytics';
 import { Button } from './Button';
-
-const CONSENT_KEY = 'cookie-consent';
 
 export function CookieBanner() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const consent = localStorage.getItem(CONSENT_KEY);
-    if (!consent) {
-      setIsVisible(true);
-    }
+    setIsVisible(getCookieConsent() === null);
+    const openSettings = () => setIsVisible(true);
+    window.addEventListener('cookie-settings-open', openSettings);
+    return () => window.removeEventListener('cookie-settings-open', openSettings);
   }, []);
 
   const acceptAll = () => {
@@ -28,7 +26,7 @@ export function CookieBanner() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 md:p-6 shadow-[0_-10px_40px_rgba(0,0,0,0.1)] z-50">
+    <div role="dialog" aria-label="Nastavení cookies" className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 md:p-6 shadow-[0_-10px_40px_rgba(0,0,0,0.1)] z-50">
       <div className="container mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="text-sm text-gray-600 max-w-3xl">
           <p>
@@ -41,7 +39,7 @@ export function CookieBanner() {
             Jen nezbytné
           </Button>
           <Button onClick={acceptAll} variant="primary" size="sm" className="flex-1 md:flex-none">
-            Přijmout vše
+            Povolit analytiku
           </Button>
         </div>
       </div>

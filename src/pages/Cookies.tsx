@@ -1,5 +1,7 @@
 import { PageHero } from '@/components/layout/PageHero';
 import { SEO } from '@/components/ui/SEO';
+import { Button } from '@/components/ui/Button';
+import { openCookieSettings } from '@/lib/analytics';
 
 export function Cookies() {
   return (
@@ -21,11 +23,14 @@ export function Cookies() {
           <h2 className="text-brand-black">Jaké cookies používáme</h2>
           <ul>
             <li><strong>Nezbytné:</strong> Pro správné fungování webu a uložení vašich preferencí.</li>
-            <li><strong>Analytické:</strong> Pro anonymní měření návštěvnosti a chování uživatelů (Google Analytics).</li>
+            <li><strong>Analytické:</strong> Pro měření návštěvnosti a chování uživatelů (Google Analytics), pokud analytiku povolíte.</li>
           </ul>
 
           <h2 className="text-brand-black">Správa souhlasu</h2>
-          <p>Svůj souhlas s používáním cookies můžete kdykoliv změnit v nastavení svého prohlížeče.</p>
+          <p>Svůj souhlas s analytickými cookies můžete kdykoliv změnit tlačítkem níže.</p>
+          <Button type="button" onClick={openCookieSettings} variant="outline" className="mt-6">
+            Změnit nastavení cookies
+          </Button>
         </div>
       </section>
     </div>

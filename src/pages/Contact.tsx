@@ -58,7 +58,6 @@ export function Contact() {
 
       form.reset();
       setSelectedService('');
-      trackEvent('form_submit', { form_id: 'contact_form', service: selectedService });
       trackEvent('form_submit_success', { form_id: 'contact_form', service: selectedService });
       setIsSubmitted(true);
     } catch {
@@ -115,7 +114,6 @@ export function Contact() {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   className="bg-brand-black text-brand-white p-12 border-2 border-brand-black text-center h-full flex flex-col items-center justify-center"
-                  data-gtm-event="form_submit_success"
                   data-gtm-form="contact_form"
                 >
                   <h3 className="text-3xl font-extrabold uppercase tracking-tight mb-4">Děkuji.</h3>
@@ -127,7 +125,6 @@ export function Contact() {
                   className="space-y-10"
                   noValidate
                   data-gtm-form="contact_form"
-                  data-gtm-event="form_submit_success"
                 >
                   <input type="hidden" name="_subject" value="Nová poptávka z petrslavikweb.cz" />
                   <input type="hidden" name="_template" value="table" />

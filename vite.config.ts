@@ -5,6 +5,8 @@ import path from 'path';
 import { pathToFileURL } from 'url';
 import { build, defineConfig, loadEnv, type Plugin } from 'vite';
 
+import { consultantPlugin } from './server/consultant/api.mjs';
+
 const siteUrl = 'https://www.petrslavikweb.cz';
 
 const seoRoutes = [
@@ -289,7 +291,7 @@ export default defineConfig(({ mode }) => {
 
   return {
     base: '/',
-    plugins: [react(), tailwindcss(), staticRouteHtmlPlugin()],
+    plugins: [react(), tailwindcss(), staticRouteHtmlPlugin(), consultantPlugin(env)],
     define: {
       'import.meta.env.APP_URL': JSON.stringify(env.APP_URL || 'https://www.petrslavikweb.cz'),
     },

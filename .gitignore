@@ -8,3 +8,9 @@ screenshots/
 *.log
 .env*
 !.env.example
+
+.consultant-usage.json*
+
+consultant-private/
+server/consultant-php/state/
+server/consultant-php/sessions/

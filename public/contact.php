@@ -33,38 +33,11 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit;
 }
 
-$recipient = 'petrslavikweb@gmail.com';
-$subject = 'Nová poptávka z petrslavikweb.cz';
-$safeName = str_replace(["\r", "\n"], ' ', $name);
-$safeEmail = str_replace(["\r", "\n"], '', $email);
-$safeService = str_replace(["\r", "\n"], ' ', $service);
-$safePhone = str_replace(["\r", "\n"], ' ', $phone);
-
-$body = implode("\r\n", [
-    'Nová poptávka z webu petrslavikweb.cz',
-    '',
-    'Jméno: ' . $safeName,
-    'E-mail: ' . $safeEmail,
-    'Telefon: ' . ($safePhone !== '' ? $safePhone : '-'),
-    'Služba: ' . $safeService,
-    '',
-    'Zpráva:',
-    $message,
+require_once __DIR__ . '/contact-mail.php';
+$sent = sendContactMail([
+    'name' => $name, 'email' => $email, 'phone' => $phone,
+    'service' => $service, 'message' => $message,
 ]);
-
-$headers = [
-    'From: Petr Slavík web <noreply@petrslavikweb.cz>',
-    'Reply-To: ' . $safeName . ' <' . $safeEmail . '>',
-    'Content-Type: text/plain; charset=UTF-8',
-    'MIME-Version: 1.0',
-];
-
-$sent = mail(
-    $recipient,
-    '=?UTF-8?B?' . base64_encode($subject) . '?=',
-    $body,
-    implode("\r\n", $headers)
-);
 
 if (!$sent) {
     http_response_code(500);

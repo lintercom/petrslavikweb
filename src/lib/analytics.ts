@@ -5,7 +5,12 @@ export type EventName =
   | 'email_click'
   | 'calendar_click'
   | 'case_study_open'
-  | 'pricing_view';
+  | 'pricing_view'
+  | 'consultant_started'
+  | 'consultant_proposal_shown'
+  | 'consultant_contact_opened'
+  | 'consultant_lead_submitted'
+  | 'consultant_fallback_used';
 
 export type CookieConsent = 'all' | 'necessary';
 const CONSENT_KEY = 'cookie-consent';
